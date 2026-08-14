@@ -1,0 +1,1330 @@
+title_decisions = {
+	# Caesarian ability - forcefully romanize tribal county
+	caesar_forceful_romanization = {
+		only_playable = yes
+		ai_check_interval = 3
+		
+		from_potential = {
+			is_ruler = yes
+			is_government_potential = legion_government
+		}
+		
+		potential = {
+			tier = COUNT
+			location = { NOT = { culture = FROM } }
+			holder_scope = {
+				OR = {
+					is_liege_or_above = FROM
+					character = FROM
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {
+				prestige = 100
+			}
+			location = {
+				NOT = { culture = FROM }
+				NOT = { religion = FROM }
+				owner = { NOT = { culture = PREV } } # Cannot convert counties of owners who has that culture
+				has_castle = no
+				has_temple = yes
+			}
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -100
+				wealth = 100
+				hidden_tooltip = { character_event = { id = CLRE.6 } }
+			}
+			location = {
+				culture = FROM
+				religion = FROM
+				add_province_modifier = {
+					name = depopulated_3
+					duration = -1
+				}
+				set_province_flag = recent_depopulation_3
+				save_event_target = target_forced_romanization
+			}
+			hidden_tooltip = {
+				if = { # Notify county owner
+					limit = {
+						holder_scope = { NOT = { character = FROM } }
+					}
+#					holder_scope = { character_event = { id = HF.23125 } }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+settlement_decisions = {
+
+	pillage_settlement_legion = {
+		only_independent = yes
+		filter = owned
+		ai_target_filter = owned
+		is_high_prio = yes
+		ai_check_interval = 3
+		
+		from_potential = {
+			is_playable = yes
+				government = legion_government
+			has_dlc = "Horse Lords"
+		}
+		
+		potential = {
+			NOT = { holding_type = nomad }
+			OR = {
+				NOT = { holding_type = tribal }
+				FROM = { is_tribal = no }
+			}
+			OR = {
+				FROM = { is_nomadic = yes }
+				location = {
+					num_of_settlements = 2
+				}
+			}
+			owner = { character = FROM }
+		}
+		
+		allow = {
+			NOT = { has_holding_modifier = recently_burnt_the_land }
+			owner = { independent = yes }
+			has_siege = no
+			custom_tooltip = {
+				text = stop_pillaging_custom_tooltip
+				hidden_tooltip = {
+					NOT = { has_holding_modifier = stop_burning_land }
+				}
+			}
+		}
+		
+		effect = {
+			
+			hidden_tooltip = {
+				location = { save_event_target_as = nickname_target }
+				FROM = { save_event_target_as = nickname_receiver }
+				if = {
+					limit = {
+						owner = { 
+							has_nickname = no
+							is_adult = yes
+							NOT = { trait = incapable }
+						}
+					}
+					random_list = {
+						5 = {
+							owner = { give_nickname = nick_the_destroyer }
+						}
+						5 = {
+							owner = { give_nickname = nick_the_scourge_of_god }
+							modifier = {
+								factor = 0
+								event_target:nickname_target = { religion = FROM }
+							}
+						}
+						5 = {
+							owner = { give_nickname = nick_the_slayer_of_culture }
+							modifier = {
+								factor = 0
+								event_target:nickname_target = { culture = FROM }
+							}
+						}
+						5 = {
+							owner = { give_nickname = nick_the_terror_of_provincename }
+						}
+						5 = {
+							owner = { give_nickname = nick_the_culture_marauder }
+							modifier = {
+								factor = 0
+								event_target:nickname_target = { culture = FROM }
+							}
+						}
+						75 = {}
+					}
+				}
+			}
+			
+			location = {
+				random_list = {
+					15 = {
+						random_list = {
+							33 = { change_random_civ_tech = -1 }
+							34 = { change_random_eco_tech = -1 }
+							33 = { change_random_mil_tech  = -1 }
+						}
+					}
+					85 = {
+					
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { holding_type = tribal } }
+				FROM = {
+					wealth = 50
+				}
+				custom_tooltip = {
+					text = gain_tech_custom_tooltip
+					hidden_tooltip = {
+						FROM = {
+							random_list = {
+								10 = { military_techpoints = 10 }
+								10 = { economy_techpoints = 10 }
+								10 = { culture_techpoints = 10 }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { holding_type = tribal }
+				FROM = { 
+					wealth = 25 
+					population = 150 
+				}
+			}
+			
+			custom_tooltip = {
+				text = "PILLAGE_DESTROY_BUILDINGS"
+				hidden_tooltip = {
+					destroy_random_building = THIS
+					destroy_random_building = THIS
+					add_holding_modifier = {
+						modifier = recently_burnt_the_land
+						months = 7
+					}
+				}
+			}
+			
+			location = {
+				random = {
+					chance = 5
+					increase_depopulation_effect = yes
+				}
+			}
+			hidden_tooltip = {
+			
+				location = {
+					add_province_modifier = {
+						modifier = rampaging_nomads
+						years = 10
+					}
+				}
+
+				location = {
+					add_province_modifier = {
+						modifier = burnt_the_land
+						years = 10
+					}
+				}
+			
+				if = {
+					limit = {
+						OR = {
+							FROM = { 
+								NOT = { has_character_modifier = pillage_cooldown } 
+							}
+							FROM = {
+								NOT = {
+									any_realm_province = {
+										any_province_holding = {
+											owner = { character = FROM }
+											has_holding_modifier = recently_burnt_the_land
+											NOT = { has_holding_modifier = stop_burning_land }
+										}
+									}
+								}
+							}
+						}
+					}
+					FROM = { character_event = { id = HL.4800 days = 180 } }
+					FROM = {
+						add_character_modifier = {
+							modifier = pillage_cooldown
+							hidden = yes
+							months = 6
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					num_of_buildings == 0
+				}
+				hidden_tooltip = {
+					location = {
+						province_event = { id = HL.4810 days = 1 }
+						province_event = { id = HL.4814 days = 2 random = 2 }
+					}
+				}
+				destroy_settlement = THIS
+			}
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = { # Only for tribal holdings
+				factor = 0
+				NOT = { holding_type = tribal }
+				NOT = {
+					FROM = {
+						government = raider_government
+					}
+				}
+			}
+			modifier = { # Only for tribal holdings
+				factor = 0
+				holding_type = tribal 
+				FROM = {
+					government = raider_government
+				}
+			}
+		}
+	}
+	stop_pillage_settlement_legion = {
+		only_playable = yes
+		filter = owned
+		ai_target_filter = owned
+		
+		from_potential = {
+			is_playable = yes
+				government = legion_government
+			has_dlc = "Horse Lords"
+		}
+		
+		potential = {
+			has_holding_modifier = recently_burnt_the_land
+			NOT = { has_holding_modifier = stop_burning_land }
+			NOT = { holding_type = nomad }
+			owner = { character = FROM }
+		}
+		
+		allow = {
+			has_holding_modifier = recently_burnt_the_land
+			hidden_tooltip = {
+				NOT = { has_holding_modifier = stop_burning_land }
+			}
+		}
+		
+		effect = {
+			
+			hidden_tooltip = {
+				add_holding_modifier = {
+					modifier = stop_burning_land
+					hidden = yes
+					years = 1
+				}
+			}
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+}
+
+decisions = {    
+	
+	delve_into_classics_caesar_decision = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 400 #check only once every 400 months.
+		potential = {
+			is_adult = yes
+			is_heretic = no #Must belong to a dominant denomination of the faith.
+			OR = { #Must be of the interested cultures.
+				culture_group = byzantine
+				culture_group = great_basin
+				culture_group = amerohellene
+				culture_group = californian
+				culture_group = west_texan
+				culture_group = mountaineer
+				culture_group = plainslander
+			}
+			OR = { #Must be eccentric or crazy.
+				trait = lunatic 
+				trait = possessed
+				trait = scholar
+				trait = mystic
+				trait = eccentric
+				has_focus = focus_scholarship
+			} 
+			NOT = { #Must not have used this decision or be an hellen already.
+				is_theocracy = yes
+				religion = cult_of_mars
+				secret_religion = cult_of_mars
+				has_character_modifier = military_insight
+				has_character_modifier = diplomacy_insight
+				has_character_modifier = rulership_insight
+				has_character_flag = flag_delving_into_classics
+			}
+			capital_scope = { 
+				OR = { 
+                    			region = world_southwest					
+				} 
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			NOT = { trait = incapable }
+			learning = 6
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = tooltip_delve_into_classics
+			}
+			hidden_tooltip = {
+				set_character_flag = flag_delving_into_classics
+				character_event = { id = CLE.24 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_roman_culture = {
+	    is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			OR = {
+				religion = cult_of_mars
+				religion = cult_of_pompeius
+			}
+			NOT = (
+				culture = roman
+			}
+		}
+		
+		effect = {
+		    piety = 100
+			hidden_tooltip = {
+				ROOT = {
+					character_event = { id = CLE.42 }
+				}
+		    
+		    }
+	
+	    }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	celebrate_caesars_ascension = {
+		only_playable = yes
+		ai_check_interval = 2
+
+		potential = {
+			is_playable = yes
+			  OR = {
+                is_feudal = yes
+                is_tribal = yes
+                is_nomadic = yes
+            }
+			prisoner = no
+			religion = cult_of_mars
+			NOT = {	has_character_modifier = celebrated_caesar_ascension }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 2
+			NOT = {
+				month = 3
+			}
+			wealth = 50
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				name = celebrated_caesar_ascension
+				duration = 364
+			}			
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = 36999 days = 150 } } # Safety catch flag clearing
+			hidden_tooltip = { 
+				narrative_event = { id = CLRE.4  }
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+	celebrate_victoria_day = {
+		only_playable = yes
+		ai_check_interval = 2
+
+		potential = {
+			is_playable = yes
+			  OR = {
+                is_feudal = yes
+                is_tribal = yes
+                is_nomadic = yes
+            }
+			prisoner = no
+			OR = {
+			    religion = cult_of_mars
+			    religion = cult_of_pompeius
+			}
+			culture = riman
+			NOT = {	has_character_modifier = celebrated_victoria_day }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 4
+			NOT = {
+				month = 5
+			}
+			wealth = 50
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				name = celebrated_victoria_day
+				duration = 364
+			}			
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = 36999 days = 150 } } # Safety catch flag clearing
+			hidden_tooltip = { 
+				narrative_event = { id = CLRE.5  }
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+	celebrate_belizarius_day = {
+		only_playable = yes
+		ai_check_interval = 2
+
+		potential = {
+			is_playable = yes
+			  OR = {
+                is_feudal = yes
+                is_tribal = yes
+                is_nomadic = yes
+            }
+			prisoner = no
+			OR = {
+			    religion = cult_of_mars
+			    religion = cult_of_pompeius
+			}
+			OR = { 
+			    culture = rhomaion 
+			    culture = roman
+			}
+			NOT = {	has_character_modifier = celebrated_belisarius_day }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 4
+			NOT = {
+				month = 5
+			}
+			wealth = 50
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				name = celebrated_belisarius_day
+				duration = 364
+			}			
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = 36999 days = 150 } } # Safety catch flag clearing
+			hidden_tooltip = { 
+				narrative_event = { id = CLRE.12  }
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+	form_nova_roma = { #Scope to only be accessible to whoever forms Nova Roma
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		potential = {
+			form_empire_potential = yes
+			capital_scope = { region = world_southwest }
+			e_nova_roma = {
+				has_holder = no
+			}
+			religion = cult_of_mars
+			prisoner = no
+			has_regent = no
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = all_relevant_titles_must_be_owned_or_owned_by_vassals_tt
+			}
+			form_empire_allow = yes
+			#Control Western Rome
+				k_arizona = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_mojave = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_navajoland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_zuni = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_new_mexico = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_mescalero = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_nevada = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_yuta = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_westslope = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_frontrange = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_renoland = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_shasta = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_redwood = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_sacramento = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_francisco = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_the_valley = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_allay = { show_scope_change = no province_completely_controls_trigger = yes }
+				k_baja_california = { show_scope_change = no province_completely_controls_trigger = yes }
+		}
+
+		effect = {
+			custom_tooltip = {
+				text = form_rome_tt
+				e_nova_roma = {
+					gain_empire_effect = yes
+					add_law_w_cooldown = succ_roman_military_elective
+					add_law_w_cooldown = revoke_title_law_2
+					add_law_w_cooldown = ze_administration_laws_2
+					add_law_w_cooldown = vassal_wars_law_2
+					set_government_type = roman_imperial_martian_government
+				}
+#				e_italy = { unsafe_destroy_landed_title = THIS }
+			}
+			
+			
+
+			hidden_tooltip = {
+				###De Jure Fuckery
+				k_arizona = { de_jure_liege = e_nova_roma }
+				k_mojave = { de_jure_liege = e_nova_roma }
+				k_navajoland = { de_jure_liege = e_nova_roma }
+				k_zuni = { de_jure_liege = e_nova_roma }
+				k_new_mexico = { de_jure_liege = e_nova_roma }
+				k_mescalero = { de_jure_liege = e_nova_roma }
+				k_nevada = { de_jure_liege = e_nova_roma }
+				k_yuta = { de_jure_liege = e_nova_roma }
+				k_westslope = { de_jure_liege = e_nova_roma }
+				k_frontrange = { de_jure_liege = e_nova_roma }
+				k_renoland = { de_jure_liege = e_nova_roma }
+				k_shassta = { de_jure_liege = e_nova_roma }
+				k_redwood = { de_jure_liege = e_nova_roma }
+				k_sacramento = { de_jure_liege = e_nova_roma }
+				k_francisco = { de_jure_liege = e_nova_roma }
+				k_the_valley = { de_jure_liege = e_nova_roma }
+				k_allay = { de_jure_liege = e_nova_roma }
+				k_baja_california = { de_jure_liege = e_nova_roma }
+			}
+			ROOT = {
+					narrative_event = { id = CLRE.3 }
+				}
+				any_playable_ruler = {
+					narrative_event = { id = CLRE.3 }
+				}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_caesars_legion = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			OR = { 
+				religion = cult_of_mars 
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOR = { 
+	    	    has_global_flag = legion_formed
+	    		has_global_flag = vegas_romans			
+		    }
+			NOT = { has_global_flag = legion_disbanded }
+			NOT = { 
+			    tier = EMPEROR 
+			}
+			NOR = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			k_caesar_legion = {
+			    OR = {
+				has_holder = no 
+				}
+			}
+			NOT = { government = oligarchic_republic }
+		}
+		allow = {
+			wealth = 1000
+			k_caesar_legion = {
+			    OR = {
+				has_holder = no 
+				}
+			}
+		}
+		effect = {
+			set_global_flag = legion_formed
+			narrative_event = { id = CLE.44 tooltip = EVTTOOLTICLE.44 }
+			add_artifact = crown_face_of_mars		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_collegium_pontificum_caesarian = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			is_random_world = no
+			religion = cult_of_mars
+			NOT = { has_global_flag = collegium_created }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			tier = EMPEROR
+			piety = 300
+			custom_tooltip = {
+				text = COLLEGIUM_GOODSPRINGS_REQUIREMENT
+				b_goodsprings_NV = {
+					holder_scope = {
+						OR = {
+							character = ROOT
+							is_vassal_or_below_of = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = collegium_created
+			piety = -300
+			activate_title = { title = d_cult_of_mars status = yes }
+			hidden_tooltip = {
+				create_random_priest = {
+					random_traits = yes
+					religion = cult_of_mars
+					culture = ROOT
+					dynasty = random
+					female = no
+					age = 41
+				}
+				new_character = {
+					b_goodsprings_NV = {
+						usurp_title = PREV
+					}
+					d_cult_of_mars = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+					narrative_event = { id = CLRE.7 }
+				}
+			}
+			religion_authority = {
+				modifier = pontifex_created
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_collegium_pontificum_pompeian = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			is_random_world = no
+			religion = cult_of_pompeius
+			NOT = { has_global_flag = collegium_created_pompeians }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			tier = EMPEROR
+			piety = 300
+		}
+		effect = {
+			set_global_flag = collegium_created_pompeians
+			piety = -300
+			activate_title = { title = d_cult_of_pompeius status = yes }
+			hidden_tooltip = {
+				create_random_priest = {
+					random_traits = yes
+					religion = cult_of_pompeius
+					culture = ROOT
+					dynasty = random
+					female = no
+					age = 41
+				}
+				new_character = {
+					d_cult_of_pompeius = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+					narrative_event = { id = CLRE.7 }
+				}
+			}
+			religion_authority = {
+				modifier = pontifex_created
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	organize_praetorian_guard = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			higher_tier_than = count
+			religion = cult_of_mars
+			has_regent = no
+			NOT = { has_global_flag = praetorian_guard_founded }
+		}
+		allow = {
+			tier = emperor
+			d_cult_of_mars = { owner = { always = yes } } # There is currently a Pontifex Maximus
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = praetorian_guard_founded
+			prestige = -300
+			wealth = -300
+			activate_title = { title = d_cohors_praetoria status = yes }
+			hidden_tooltip = {
+				narrative_event = { id = CLRE.8 }
+				create_character = {
+					random_traits = yes
+					religion = ROOT
+					culture = ROOT
+					dynasty = NONE
+					female = no
+					age = 34
+					trait = skilled_tactician
+				}
+				new_character = {
+					prestige = 300
+					wealth = 300
+					d_cohors_praetoria = {
+						grant_title = PREV
+					}
+					set_government_type = order_government
+					set_defacto_liege = ROOT
+				}
+			}
+			religion_authority = {
+				modifier = religious_order_formed
+				years = 10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_imperial_army_rome = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			higher_tier_than = count
+			OR = { 
+			    is_neo_roman_trigger = yes 
+			    is_roman_gods_cultist_trigger = yes
+			}
+			has_regent = no
+			d_imperial_army = { has_holder = no }
+		}
+		allow = {
+			tier = emperor
+			prestige = 500
+			wealth = 1000
+		}
+		effect = {
+			set_global_flag = imperial_army_founded
+			prestige = -500
+			wealth = -1000		    
+			activate_title = { title = d_imperial_army status = yes }
+			hidden_tooltip = {
+				narrative_event = { id = CLRE.11 }
+					create_character = {
+					random_traits = yes
+					religion = ROOT
+					culture = roman
+					dynasty = NONE
+					female = no
+					age = 34
+					trait = skilled_tactician
+				}
+				new_character = {
+					d_imperial_army = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+				set_global_flag = imperial_army_founded
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	make_vegas_capital_caesarian = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential = {
+			is_playable = yes
+			primary_title = { title = k_caesar_legion }
+			NOT = { has_global_flag = nova_roma_established }
+			c_las_vegas = {
+				has_holder = yes
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_vassal_or_below_of = ROOT
+					}
+				}
+			}
+			b_mccarren_NV = {
+				has_holder = yes
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_vassal_or_below_of = ROOT
+					}
+				}
+			}
+		}
+		allow = {
+			completely_controls = c_las_vegas
+		}
+		effect = {
+			custom_tooltip = { text = NOVA_ROMA_CAPITAL_EFFECT }
+			hidden_tooltip = {
+				d_las_vegas = {
+					usurp_title = ROOT
+					set_name = "Nova Roma"
+				}
+				c_las_vegas = {
+					usurp_title = ROOT
+					set_name = "Nova Roma"
+				}
+				b_mccarren_NV = {
+					usurp_title = ROOT
+					province_capital = yes
+					set_name = "Caesar's Palace"
+					ROOT = { capital = PREV }
+				}
+				b_goodsprings_NV = {
+					usurp_title = ROOT
+					province_capital = yes
+					set_name = "Mars Invictus"
+					ROOT = { capital = PREV }
+				}
+				b_las_vegas_NV = {
+					usurp_title = ROOT
+					province_capital = yes
+					set_name = "Nova Roma"
+					ROOT = { capital = PREV }
+				}
+				2073 = {
+					culture = roman
+					religion = cult_of_mars
+				}
+			}
+			set_global_flag = nova_roma_established
+			set_character_flag = founded_nova_roma
+			prestige = 500
+			narrative_event = { id = CLRE.39 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	caesarian_conversion_book = {
+		filter = self
+		ai_check_interval = 12
+		#this decision doesn't need a from_potential, because it targets yourself, so there's no difference between the player character and the character being targeted
+		potential = {
+			NOT = {
+				religion = cult_of_mars
+			}
+			any_artifact = {
+				artifact_type = commentaries_of_gallic_war
+				count = 1
+			}			
+			prisoner = no
+			has_regent = no
+		}
+#		allow = {
+#
+#		}
+		effect = {
+			religion = cult_of_mars
+			achievement_intriguing_reading_done_effect = yes
+			if = {
+			    limit = { 
+				    NOT = { has_global_flag = cult_of_mars_created }
+				}
+				ROOT = {
+                    character_event = { id = CLE.36 }					
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	# Create Stoics - Roman Monks
+	create_stoics = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			NOT = {
+				has_global_flag = flag_restored_stoic_intelligentia
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Mystics"
+			age = 16
+			NOT = { has_religion_feature = religion_dogmatic }
+			OR = { 
+				religion = cult_of_mars
+				religion = cult_of_pompeius
+				AND = { 
+				culture_group = caesarian
+				culture = roman
+					OR = { #Somewhat compatible when mixed with Roman culture.
+					religion_group = christian 
+					religion_group = jewish_group 
+					religion_group = buddhist_group
+					religion_group = esoteric
+					religion_group = syncratic_group
+					}
+				}
+			}
+			NOT = { trait = excommunicated }
+			NOT = { 
+				monastic_order_stoics = {
+					society_has_members = yes								
+				}
+			}
+		}
+		
+		allow = {
+			is_in_society = no
+			NOR = { 
+				trait = incapable
+			}
+			OR = { #Must have one of the Stoic virtues to restart the movement.
+				trait = temperate
+				trait = erudite
+				trait = brave
+				trait = just
+			}
+			higher_tier_than = KING
+			learning = 15
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.25
+		}
+		
+		effect = {
+			scaled_wealth = -0.25
+			custom_tooltip = { text = create_stoics_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_restored_stoic_intelligentia 
+				join_society = monastic_order_stoics
+				set_society_grandmaster = yes # Set character as Grand Master
+				add_society_currency_massive_effect = yes
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 16
+					}
+					new_character = { join_society = monastic_order_stoics }
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 18
+					}
+					new_character = { join_society = monastic_order_stoics }
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 20
+					}
+					new_character = { join_society = monastic_order_stoics }
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 25
+					}
+					new_character = { join_society = monastic_order_stoics }
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 26
+					}
+					new_character = { join_society = monastic_order_stoics }
+					create_random_priest = {
+						random_traits = yes
+						dynasty = random
+						religion = ROOT
+						culture = ROOT
+						attributes = {
+							learning = 10
+						}
+						female = no
+						age = 28
+					}
+					new_character = { join_society = monastic_order_stoics }
+				any_vassal = {
+					limit = {
+						ai = yes
+						can_join_society = monastic_order_stoics
+					}
+					join_society = monastic_order_stoics
+				}
+				any_independent_ruler = {
+					limit = {
+						ai = yes
+						can_join_society = monastic_order_stoics
+						is_within_diplo_range = ROOT
+					}
+					random = { chance = 35 join_society = monastic_order_stoics }
+				}
+				any_player = {
+					limit = {
+						OR = {
+							religion = cult_of_mars
+							religion = cult_of_pompeius
+							culture = roman
+							is_within_diplo_range = ROOT
+						}
+					}
+					narrative_event = { id = HF.23123 }
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
