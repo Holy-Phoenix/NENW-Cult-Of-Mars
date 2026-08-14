@@ -1,0 +1,120 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_delve_into_classics_caesar_decision"
+		texturefile = "gfx\\interface\\decision_icon_delve_into_classics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_convert_to_roman_culture"
+		texturefile = "gfx\\interface\\decision_icon_roman_renaissance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_celebrate_caesars_ascension"
+		texturefile = "gfx\\interface\\decision_icon_summerfair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_celebrate_belizarius_day"
+		texturefile = "gfx\\interface\\decision_icon_summerfair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_celebrate_victoria_day"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_third_rome"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_second_rome"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_nova_roma"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_caesars_legion"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_create_collegium_pontificum_caesarian"
+		texturefile = "gfx\\interface\\decision_icon_found_religious_cult.dds"
+	}
+	
+	spriteType = {
+		name = "create_collegium_pontificum_pompeian"
+		texturefile = "gfx\\interface\\decision_icon_found_religious_cult.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_praetorian_guard"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_create_imperial_army_russia"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_create_imperial_army_greece"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_create_imperial_army_rome"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_third_roman_republic"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_second_rome_republic"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_first_rome_republic"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_form_third_roman_republic"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_make_rome_capital_caesarian"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_make_make_moscow_capital_caesarian"
+		texturefile = "gfx\\interface\\decision_icon_restore_roman_empire.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_caesarian_conversion_book"
+		texturefile = "gfx\\interface\\decision_icon_delve_into_classics.dds"
+	}
+	spriteType = {
+		name = "GFX_make_vegas_capital_caesarian"
+		texturefile = "gfx\\interface\\decision_icon_legion.dds"
+	}
+	spriteType = {
+		name = "GFX_create_stoics"
+		texturefile = "gfx\\interface\\decision_icon_create_stoics.dds"
+	}
+}	

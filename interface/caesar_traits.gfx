@@ -1,0 +1,19 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_trait_caesar_reborn"
+		texturefile = "gfx/traits/caesar_reborn.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_caesar_himself"
+		texturefile = "gfx/traits/caesar_reborn.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	
+}

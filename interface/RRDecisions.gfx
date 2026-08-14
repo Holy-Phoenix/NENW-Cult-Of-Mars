@@ -1,0 +1,61 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_found_legio_system"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_i_italica"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_vi_ferrata"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_v_alaudae"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_xiii_gemina"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_iii_cyrenaica"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_xxii_deiotariana"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_ix_hispana"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_xv_apollinaris"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_iv_macedonica"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_xx_valeria_victrix"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_organize_legio_x_fretensis"
+		texturefile = "gfx\\interface\\helmet.dds"
+	}
+}	

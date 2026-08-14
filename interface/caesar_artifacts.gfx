@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_crown_face_of_mars"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crown_lanius.dds"
+	}
+	spriteType = {
+		name = "GFX_crown_face_of_mars_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crown_lanius_small.dds"
+	}
+
+    spriteType = {
+		name = "GFX_bust_of_caesar"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bust_of_caesar.dds"
+	}
+	spriteType = {
+		name = "GFX_bust_of_caesar_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\bust_of_caesar_small.dds"
+	}
+
+    spriteType = {
+		name = "GFX_bust_of_antedeluvian_emperor"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\emperor_head.dds"
+	}
+	spriteType = {
+		name = "GFX_bust_of_antedeluvian_emperor_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\emperor_head_small.dds"
+	}
+
+    spriteType = {
+		name = "GFX_the_last_day_of_pompeii"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\the_last_day_of_pompeii.tga"
+	}
+	spriteType = {
+		name = "GFX_the_last_day_of_pompeii_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\the_last_day_of_pompeii_small.tga"
+	}
+
+    spriteType = {
+		name = "GFX_caesars_sword"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crocea_mors.dds"
+	}
+	spriteType = {
+		name = "GFX_caesars_sword_small"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\crocea_mors_small.dds"
+	}	
+}

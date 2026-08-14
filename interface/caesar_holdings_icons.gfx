@@ -1,0 +1,86 @@
+spriteTypes = {    
+	spriteType = {
+		name = "GFX_settlement_castle_rimangfx"
+		texturefile = "gfx\\interface\\castle_roman.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_castle_rimangfx_looted"
+		texturefile = "gfx\\interface\\castle_roman_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_city_rimangfx"
+		texturefile = "gfx\\interface\\city_byzantine.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_city_rimangfx_looted"
+		texturefile = "gfx\\interface\\city_byzantine_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_castle_rhomaiongfx"
+		texturefile = "gfx\\interface\\castle_roman.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_castle_rhomaiongfx_looted"
+		texturefile = "gfx\\interface\\castle_roman_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_city_rhomaiongfx"
+		texturefile = "gfx\\interface\\city_byzantine.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_city_rhomaiongfx_looted"
+		texturefile = "gfx\\interface\\city_byzantine_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_rimangfx_reformedhellenicgfx"
+		texturefile = "gfx\\interface\\byzantine_temple_hellenic.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_rimangfx_reformedhellenicgfx_looted"
+		texturefile = "gfx\\interface\\byzantine_temple_hellenic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_rhomaiongfx_reformedhellenicgfx"
+		texturefile = "gfx\\interface\\byzantine_temple_hellenic.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_rhomaiongfx_reformedhellenicgfx_looted"
+		texturefile = "gfx\\interface\\byzantine_temple_hellenic_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+}

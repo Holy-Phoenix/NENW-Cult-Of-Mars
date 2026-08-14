@@ -1,0 +1,156 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_roman_holy_order_female_clothes"
+		texturefile = "gfx\\characters\\roman_female\\roman_holy_order_female_clothes.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_roman_holy_order_female_headgear"
+		texturefile = "gfx\\characters\\roman_female\\roman_holy_order_female_headgear.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_roman_holy_order_male_clothes"
+		texturefile = "gfx\\characters\\roman_male\\roman_holy_order_male_clothes.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_roman_holy_order_male_headgear"
+		texturefile = "gfx\\characters\\roman_male\\roman_holy_order_male_headgear.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_roman_holy_order_male_clothes"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = no
+				portrait_clothing = yes
+				OR = {
+					portrait_religion = cult_of_mars
+					portrait_religion = cult_of_pompeius
+				}
+				portrait_government = order_government
+			}
+		}
+		
+		layer = { 
+			"GFX_empty:c0"
+			"GFX_empty:c1"
+			"GFX_roman_holy_order_male_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4:p4"
+			"GFX_roman_holy_order_male_headgear:p5:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+		
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+		headgear_that_hides_hair = { 0 1 }
+	}
+	
+	portraitType = { #Portraits - Male
+		effectFile = "gfx/FX/portrait.lua"
+		name = "PORTRAIT_roman_holy_order_female_clothes"
+		
+		weight = {
+			additive_modifier = {
+				value = 10000
+				portrait_age > child
+				portrait_is_female = yes
+				portrait_clothing = yes
+				OR = {
+					portrait_religion = cult_of_mars
+					portrait_religion = cult_of_pompeius
+				}
+				portrait_government = order_government
+			}
+		}
+		
+		layer = { 
+			"GFX_empty:c0"
+			"GFX_empty:c1"
+			"GFX_roman_holy_order_female_clothes:p3:c2"
+			"GFX_empty:c3"
+			"GFX_empty:c4"
+			"GFX_roman_holy_order_female_headgear:p5:c5"
+			"GFX_empty:c6"
+			"GFX_empty:c7"
+		}
+		
+		# Correct rank
+		allow_property_values = {
+			3 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+			5 = {
+				0 = {
+					portrait_society_rank = 1
+				}
+				1 = {
+					portrait_society_rank = 2
+				}
+				2 = {
+					portrait_society_rank = 3
+				}
+				3 = {
+					portrait_society_rank = 4
+				}
+			}
+		}
+		headgear_that_hides_hair = { 0 1 }
+	}
+}

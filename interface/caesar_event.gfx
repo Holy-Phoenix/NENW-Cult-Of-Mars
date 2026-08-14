@@ -1,0 +1,82 @@
+spriteTypes = {
+	
+    spriteType = {
+		name = "GFX_evt_roman_triumph"
+        texturefile = "gfx\\event_pictures\\roman_triumph.tga"
+	}	
+
+    spriteType = {
+		name = "GFX_evt_legion2"
+        texturefile = "gfx\\event_pictures\\roman_legion2.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_wasteland"
+        texturefile = "gfx\\event_pictures\\roman_wasteland.tga"
+	}	
+
+    spriteType = {
+		name = "GFX_evt_roman_builders"
+        texturefile = "gfx\\event_pictures\\roman_builders.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_festival"
+        texturefile = "gfx\\event_pictures\\roman_festival.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_senate"
+        texturefile = "gfx\\event_pictures\\roman_senate.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_legate"
+        texturefile = "gfx\\event_pictures\\roman_legate.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_emperor"
+        texturefile = "gfx\\event_pictures\\roman_emperor.tga"
+	}
+
+    spriteType = {
+		name = "GFX_evt_roman_liberation"
+        texturefile = "gfx\\event_pictures\\roman_liberation.tga"
+	}	
+	
+	spriteType = {
+		name = "GFX_evt_roman_mother_russia"
+        texturefile = "gfx\\event_pictures\\roman_mother_russia.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_roman_cohors_praetoria"
+        texturefile = "gfx\\event_pictures\\roman_cohors_praetoria.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_roman_fall_of_constantinople"
+        texturefile = "gfx\\event_pictures\\fall_of_constantinople.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_roman_fall_of_moscow"
+        texturefile = "gfx\\event_pictures\\fall_of_moscow.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_roman_victory"
+        texturefile = "gfx\\event_pictures\\roman_victory.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_fall_of_american_invaders"
+        texturefile = "gfx\\event_pictures\\fall_of_american_invaders.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_evt_march_on_rome"
+        texturefile = "gfx\\event_pictures\\march_on_rome.tga"
+	}
+}	

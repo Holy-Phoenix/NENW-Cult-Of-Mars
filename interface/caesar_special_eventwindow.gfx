@@ -1,0 +1,253 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_evt_battle_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_battle.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_wise_woman_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_women.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lovers_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_lovers.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_a_crowning_ceremony_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_coronation.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_died_battle_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_death_in_battle.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_died_funeral_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_funeral.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_emissary_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_emissary.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_culture_change_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_festival.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_council_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_senate.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_upsetting_letter_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_letter.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_powerful_ruler_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_emperor.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_throne_room_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_throne_room.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_castle_construction_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_builders.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_construction_site_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_builders.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_bad_news_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_emissary.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_marriage_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_marriage.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_bishop_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_priests.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_spymaster_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_frumentarius.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_doctor_tending_to_sick_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_medicine.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_feast_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\hellenic_feast.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_illness_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\hellenic_illness.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_died_illness_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\hellenic_illness.tga"
+		allwaystransparent = yes
+	}
+      
+	spriteType = {
+		name = "GFX_evt_market_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_market.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_accused_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_accused.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_courier_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_courier.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_garden_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_garden.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_guardian_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_guardian.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_shady_meeting_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_shady_meeting.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_council_speaker_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_senate.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_large_army_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_legion2.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_magnificent_castle_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_castle.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_gathering_of_minds_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_gather_of_minds.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_court_physician_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_medicine.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_jugglers_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\\roman_theatre.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_catching_heretic_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_judge.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_war_planning_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_planning.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_riots_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\Blues_Greens_Riot.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_princess_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\Byzantine_Princess.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_cathedral_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\hellenic_temple.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_noble_haughty_talking_to_peasants_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_patrician_and_plebeii.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_icon_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\hellenic_temple.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_caesar_reborn"
+		texturefile = "gfx\\event_pictures\caesar_reborned.tga"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_prospering_province_cult_of_caesar"
+		texturefile = "gfx\\event_pictures\roman_prospering_province.tga"
+		allwaystransparent = yes
+	}
+}

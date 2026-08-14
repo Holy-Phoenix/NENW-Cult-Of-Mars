@@ -1,0 +1,14 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_society_main_background_the_childrens_of_hanubaal"
+		texturefile = "gfx\\interface\\societies\\society_bg_childrens_of_hanu_baal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_small_the_childrens_of_hanubaal"
+		texturefile = "gfx\\interface\\societies\\symbol_small_childrens_of_hanu_baal.dds"
+		noOfFrames = 2
+	}
+	
+}	
