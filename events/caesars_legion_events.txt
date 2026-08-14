@@ -1,0 +1,1725 @@
+
+# The Restoration of Rome
+namespace = CLE
+
+#Rise of Caesar's Legion
+
+narrative_event = {#Rumours of new power rising
+	id = CLE.16
+	title = "EVTTITLECLE16"
+	desc = "EVTDESCCLE16"
+	picture = GFX_evt_roman_wasteland
+	border = "GFX_event_narrative_frame_war"
+	major = yes
+	
+	only_playable = yes
+	religion = catholic
+	min_age = 16
+	show_root = no
+	hide_from = yes
+	
+	trigger = {
+		OR = {
+			year = 2605 #About 50 years after game start
+			AND = {
+				has_game_rule = {
+					name = rise_of_caesars_legion
+					value = random
+				}
+				total_years_played = 50
+			}
+			AND = {
+				has_game_rule = {
+					name = rise_of_caesars_legion
+					value = delayed_random
+				}
+				total_years_played = 100
+			}
+			AND = {
+				has_game_rule = {
+					name = rise_of_caesars_legion
+					value = immediatly
+				}
+			}
+		}
+		NOR = { 
+			year = 2723
+			has_game_rule = {
+				name = rise_of_caesars_legion
+				value = off
+			}
+		}
+		controls_religion = yes # Let it happen for the Pope. He's always around.
+		NOR = {
+			has_global_flag = vegas_romans
+		}
+		NOT = { has_global_flag = legion_created }
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		# Flagstaff is the complete, supported invasion route.
+		set_global_flag = vegas_romans
+		set_global_flag = cult_of_mars_started
+	}
+	
+	option = {
+		name = "EVTOPTA_CLE"
+	}
+}
+
+narrative_event = {#Notification that the vegas Caesar begin his campaign
+	id = CLE.17
+	title = "EVTNAMECLE17"
+	desc = "EVTDESCCLE17"
+	picture = GFX_evt_legion2
+	border = "GFX_event_narrative_frame_war"
+	major = yes
+	
+	only_playable = yes
+	religion = catholic
+	min_age = 16
+	portrait = event_target:invasion_leader
+	show_root = no
+	hide_from = yes
+	sound = legion_march
+	
+	trigger = {
+		controls_religion = yes
+		has_global_flag = vegas_romans
+		NOR = {
+			has_global_flag = vegas_caesar
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		if = {
+			limit = {#I'm aware this is technically redundant, but eh, if it works
+				NOT = { has_global_flag = vegas_caesar }
+			}
+			set_global_flag = vegas_caesar
+			activate_title = { title = k_caesar_legion status = yes }
+				
+				create_character = {
+					name = Caesar
+					dynasty = 9900001 # Caesar's Legion
+					dna = cihddqhdbct
+					properties = jk0dok00000000000000000000000000000000
+					religion = cult_of_mars
+					culture = roman
+					female = no
+					age = 34
+					health = 6.5
+					fertility = 0.6
+					random_traits = no
+					attributes = {
+						diplomacy = 10
+						martial = 16
+						stewardship = 10
+						intrigue = 9
+						learning = 9
+					}
+					trait = exalted_warlord
+					trait = strategist
+					trait = strong
+					trait = eccentric
+					trait = shrewd
+					trait = erudtie
+					trait = ambitious
+					trait = brave
+					trait = honest
+					trait = gregarious
+					trait = diligent
+					trait = patient
+					trait = greedy
+					trait = lustful
+				}
+				new_character = {
+					
+					wealth = 12000
+					prestige = 10000
+					set_character_flag = horde_invader
+					save_global_event_target_as = invasion_leader
+					
+			add_artifact = caesars_sword
+                    add_artifact = crown_face_of_mars
+                    add_artifact = commentaries_of_gallic_war					
+				k_caesar_legion = {
+					set_title_landless = { title = THIS status = yes }
+					set_title_flag = temporary_landless_title
+					grant_title = PREV
+					add_law_w_cooldown = succ_roman_military_elective
+					add_law_w_cooldown = revoke_title_law_2
+					add_law_w_cooldown = out_of_realm_inheritance_law_1
+				}
+				set_defacto_liege = THIS
+				set_government_type = legion_government
+				440 = { # 
+					kingdom = {
+						k_caesar_legion = {
+							holder_scope = {
+								unsafe_war = {
+									casus_belli = tribal_invasion
+									target = PREVPREVPREV # The top liege of the owner of the province
+									thirdparty_title = PREVPREV # The de jure kingdom
+								}
+							}
+						}
+					}
+				}					
+				k_caesar_legion = {
+					holder_scope = {
+						character_event = { id = CLE.18 } # Spawn courtiers
+						character_event = { id = CLE.19 } # Spawn troops	
+					    }
+				    }
+			    }
+
+		    }
+	    }
+	option = {
+		name = "EVTOPTA_CLE19"
+	}
+	option = {
+		name = "EVTOPTB_CLE19"
+		tooltip_info = yes
+		trigger = {
+			can_plays_as_invader_trigger = yes
+		}
+		play_as_invasion_leader_effect = yes
+	}
+}
+character_event = {#Invader gets their generals - why have two such events when one will do?
+	id = CLE.18
+	title = "EVTNAMEINVADERS3"
+	desc = "EVTDESCINVADERS3"
+	picture = GFX_evt_legion2
+
+	is_triggered_only = yes
+	trigger = {
+		primary_title = { title = k_caesar_legion }
+	}	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = vegas_caesar
+			}
+
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 20
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 25
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 26
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 28
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars 
+			culture = roman
+			female = yes
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = yes
+			age = 18
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = yes
+			age = 20
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 27
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 51
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 44
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = cult_of_mars
+			culture = roman
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		}
+  }
+	option = {
+		name = "EVTOPTA_INVADERS3"
+	}
+}
+	
+character_event = {#Invader gets their troops - why have two such events when one will do?
+	id = CLE.19
+	title = "EVTNAMEINVADERS4"
+	desc = "EVTDESCINVADERS4"
+	picture = GFX_evt_legion2
+
+	is_triggered_only = yes
+	trigger = {
+		primary_title = { title = k_caesar_legion }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = vegas_caesar
+			}
+			spawn_unit = {
+				province = 440 # Flagstaff
+				home = 440
+				troops =
+				{
+					light_cavalry = { 1500 1500 }
+					light_infantry = { 4000 4000 }
+					heavy_infantry = { 2000 2000 }
+					archers = { 1500 1500 }
+					knights = { 500 500 }
+				}
+			}
+			spawn_unit = {
+				province = 440 # Flagstaff
+				home = 440
+				troops =
+				{
+					light_cavalry = { 1500 1500 }
+					light_infantry = { 4000 4000 }
+					heavy_infantry = { 2000 2000 }
+					archers = { 1500 1500 }
+					knights = { 500 500 }
+				}
+			}			
+		}
+	}
+	option = {
+		name = "EVTOPTA_INVADERS4"
+	}	
+}
+
+
+
+
+narrative_event = {#Notification that mass settlement is taking place
+	id = CLE.22
+	title = "EVTNAMECLE22"
+	desc = "EVTDESCCLE22"
+	picture = GFX_evt_roman_builders
+	border = "GFX_event_narrative_frame_war"
+	major = yes
+	
+	trigger = {
+		primary_title = { title = k_caesar_legion }
+		demesne_size = 1#they need to have conquered at least one county for this to happen
+		NOT = {
+			has_global_flag = romanization_begun
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		set_global_flag = romanization_begun
+		set_variable = { which = global_numsettlements value = 1 }	
+	}
+	option = {#Cool bruh
+		name = "EVTOPTA_CLE22"
+		trigger = {
+			primary_title = { title = k_caesar_legion }
+		}
+		capital_scope = {
+			culture = roman
+			religion = cult_of_mars
+			set_province_flag = romanization_process
+			any_province_holding = {
+				limit = { holding_type = tribal }
+				convert_to = CASTLE
+			}
+			build_holding = {
+				type = city
+				holder = ROOT
+			}
+			build_holding = {
+				type = temple
+				holder = ROOT
+			}
+		}
+		if = {#helping the romans to settle down as they should
+			limit = {
+				is_tribal = yes
+			}
+			set_government_type = legion_government
+		}
+		
+	}
+	option = {#Everyone else
+		name = "EVTOPTB_CLE22"
+		trigger = {
+			NOT = { primary_title = { title = k_caesar_legion } }
+		}		
+	}
+}
+
+province_event = {#Private events for the invaders to settle some lands, establishing a decent base for themselves. This converts a few provinces to their culture and religion, and (if in a province with very few holdings) adds holdings. 
+				##This should only last for a short while, enough to give them a basic beginning
+	id = CLE.23
+	desc = "EVTDESCINVADERS7"
+	picture = GFX_evt_roman_builders
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOR = {
+			check_variable = { which = global_numsettlements value = 5}#This is a kinda clunky way of doing it but I think this should mean "as long as this variable is less than 5"
+			has_province_flag = romanization_process
+			num_of_settlements = 4#it's meant to buff up weak provinces, not overpower moderate provinces
+			}
+		has_global_flag = invader_settlement_begun
+		OR = {#only fires for the invaders or their vassals
+			primary_title = { title = k_caesar_legion }
+			top_liege = {
+				primary_title = {
+					title = k_caesar_legion
+				}
+			}			
+		}
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+	immediate = {
+		#WE MIGHT NEED TO ADD A 'ROOT' TO THIS ONE, I'M NOT EXPERIENCED WITH PROVINCE EVENTS
+		ROOT = {
+		any_province_holding = { 
+				limit = { holding_type = tribal } 
+				convert_to = CASTLE#since there can only ever be one tribe in an area this is fine
+		}
+		}
+		change_variable = { which = global_numsettlements value = 1 }
+		set_province_flag = romanization_process
+	}
+	option = {
+		name = "EVTOPTA_INVADER7"
+		ROOT = {
+			religion = cult_of_mars
+			culture = roman
+		}
+		if = {
+			limit = {
+				num_of_settlements = 0#should never be true but hey, why take the chance
+			}
+			build_holding = {
+				type = castle
+				holder = FROM
+			}
+			build_holding = {
+				type = city
+				holder = FROM
+			}
+			build_holding = {
+				type = temple
+				holder = FROM
+			}			
+		}
+		else_if = {
+			limit = {
+				num_of_settlements = 1
+			}
+			build_holding = {
+				type = city
+				holder = FROM
+			}
+			build_holding = {
+				type = temple
+				holder = FROM
+			}			
+		}
+		else_if = {
+			limit = {
+				num_of_settlements = 2
+			}
+			build_holding = {#Tribal provinces can have temples but not cities, so it's a safe bet that, if a province has 2 holdings already, they're a Tribe/Castle and a Temple
+				type = city
+				holder = FROM
+			}		
+		}		
+	}
+}
+
+character_event = {
+	id = CLE.24
+	desc = EVTDESCACLE24
+
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Interest in ancient history.
+		name = EVTOPTACLE24
+		set_character_flag = flag_studying_classics_religion
+		custom_tooltip = { text = tooltipt_CLE24_A }
+		ai_chance = { factor = 100 } #Already unlikely to happen for the AI, so pick the one meaningful choice.
+	}
+	option = { #Interest in war.
+		name = EVTOPTBCLE24
+		set_character_flag = flag_studying_military_war
+		custom_tooltip = { text = tooltipt_CLE24_B }
+		ai_chance = { factor = 0 }
+	}
+	option = { #Interest in government.
+		name = EVTOPTCCLE24
+		set_character_flag = flag_studying_classics_government
+		custom_tooltip = { text = tooltipt_CLE24_C }
+		ai_chance = { factor = 0 }
+	}
+	option = { #Interest in orations.
+		name = EVTOPTDCLE24
+		set_character_flag = flag_studying_classics_orations
+		custom_tooltip = { text = tooltipt_CLE24_D }
+		ai_chance = { factor = 0 }
+	}
+	after = { #Determine outcome based on choice and learning.
+		hidden_tooltip = { 
+			random_list = { 	
+				10 = { #Failure
+					trigger = { NOT = { has_character_flag = flag_studying_classics_religion } } #Conversion never fails.
+					modifier = {  
+						factor = 1.5
+						NOT = { learning = 2 }
+					}
+					modifier = {  
+						factor = 1.5
+						NOT = { learning = 4 }
+					}
+					modifier = {  
+						factor = 1.5
+						NOT = { learning = 6 }
+					}
+					modifier = {  
+						factor = 1.25
+						NOT = { learning = 8 }
+					}
+					modifier = {  
+						factor = 0.85
+						learning = 10
+					}
+					modifier = {  
+						factor = 0.85
+						learning = 12
+					}
+					modifier = {  
+						factor = 0.75
+						learning = 14
+					}
+					modifier = {  
+						factor = 0.75
+						learning = 16
+					}
+					modifier = {  
+						factor = 0.75
+						learning = 18
+					}
+					modifier = {  
+						factor = 0.5
+						learning = 20
+					}
+					modifier = {  
+						factor = 0.5
+						learning = 24
+					}
+					modifier = {  
+						factor = 0.25
+						learning = 26
+					}
+					modifier = {  
+						factor = 2
+						trait = slow
+					}
+					modifier = {  
+						factor = 3
+						trait = imbecile
+					}
+					modifier = {  
+						factor = 3
+						trait = inbred
+					}
+					modifier = {  
+						factor = 2
+						trait = dull
+					}
+					character_event = { id = CLE.25 days = 100 random = 100 }
+				} 
+				20 = { #Success studying religion.
+					trigger = { has_character_flag = flag_studying_classics_religion } 
+					narrative_event = { id = CLE.26 days = 100 random = 100 }
+				} 
+				20 = { #Success studying war.
+					trigger = { has_character_flag = flag_studying_military_war } 
+					character_event = { id = CLE.27 days = 100 random = 100 }
+				} 
+				20 = { #Success studying government.
+					trigger = { has_character_flag = flag_studying_classics_government } 
+					character_event = { id = CLE.28 days = 100 random = 100 }
+				} 
+				20 = { #Success studying orations.
+					trigger = { has_character_flag = flag_studying_classics_orations } 
+					character_event = { id = CLE.29 days = 100 random = 100 }
+				} 
+			}
+			clr_character_flag = flag_studying_classics_religion
+			clr_character_flag = flag_studying_military_war
+			clr_character_flag = flag_studying_classics_government
+			clr_character_flag = flag_studying_classics_orations
+		}	
+	}
+}
+#Study ended in failure.
+character_event = {
+	id = CLE.25
+	desc = EVTDESCACLE25
+
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTACLE25
+		ai_chance = { factor = 100 } 
+	}
+}
+
+#Chance to secretly become cultist of Caesar.
+narrative_event = {
+	id = CLE.26
+	title = EVTTITLECLE26
+	desc = EVTDESCACLE26
+
+	picture = GFX_evt_library
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTACLE26
+		trigger = { 
+			NOR = { 
+				religion = cult_of_mars
+				secret_religion = cult_of_mars
+			}  
+		} 
+		if = { 
+			limit = { trait = zealous } 
+			remove_trait = zealous
+		} 
+		if = {
+			limit = {
+				has_game_rule = {
+					name = secret_cults
+					value = default
+				}
+			}
+			set_secret_religion = cult_of_mars
+		}
+		if = {
+			limit = {
+				has_game_rule = {
+					name = secret_cults
+					value = none
+				}
+			}
+			religion = cult_of_mars
+		}
+		hidden_tooltip = {	
+			ROOT = { 
+				narrative_event = { id = CLE.30 days = 10 }
+			} 
+		}
+		ai_chance = { factor = 2 } 
+	}
+	option = { 
+		name = EVTOPTCCLE26
+		trigger = { 
+			OR = { 
+				religion = cult_of_mars
+				secret_religion = cult_of_mars
+			}  
+		} 
+		tiered_piety_reward_effect = yes
+		ai_chance = { factor = 0 } 
+	}
+	option = { 
+		name = EVTOPTBCLE26
+		ai_chance = { factor = 98 } 
+	}
+}
+#Studied military.
+character_event = {
+	id = CLE.27
+	desc = EVTDESCACLE27
+
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTACLE27
+		add_character_modifier = { 
+			name = military_insight 
+			duration = -1 
+		}
+		ai_chance = { factor = 100 } 
+	}
+}
+#Studied statecraft.
+character_event = {
+	id = CLE.28
+	desc = EVTDESCACLE28
+
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTACLE28
+		add_character_modifier = { 
+			name = rulership_insight 
+			duration = -1 
+		}
+		ai_chance = { factor = 100 } 
+	}
+}
+#Studied orations.
+character_event = {
+	id = CLE.29
+	desc = EVTDESCACLE29
+
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTACLE29
+		add_character_modifier = { 
+			name = diplomacy_insight 
+			duration = -1 
+		}
+		ai_chance = { factor = 100 } 
+	}
+}
+
+#Player decide - how he will establish the Cult of Mars
+narrative_event = {
+	id = CLE.30
+	title = EVTNAMECLE30
+	desc = EVTDESCAHCLE30
+
+	picture = GFX_evt_bishop_cult_of_caesar
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #No time to wait, we must act now.
+		name = EVTOPTAHCLE30
+		custom_tooltip = { text = tooltip_HCLE30_A }  
+		hidden_tooltip = { any_courtier_or_vassal = { letter_event = { id = CLE.32 days = 7 } } }
+		hidden_tooltip = {
+        	religion = cult_of_mars		
+			if = {
+			    limit = {
+				    NOT = { has_global_flag = cult_of_mars_created }
+				}
+				any_player = { 
+					limit = { 
+						is_within_diplo_range = ROOT 
+						NOT = { character = ROOT } #Root needs to receive the event even if not a player.
+					} 
+					narrative_event = { id = CLE.36 days = 27 }
+				} 
+				ROOT = { 
+					narrative_event = { id = CLE.36 days = 27 }
+				}
+			}
+			any_courtier_or_vassal = { 
+				limit = { lower_tier_than = COUNT }
+				religion = cult_of_mars
+			}
+    	   	any_demesne_province = {
+			    religion = cult_of_mars
+			}		
+		}
+		ROOT = { set_character_flag = founder_of_cult_of_mars }
+		ai_chance = { factor = 100 }
+		set_global_flag = cult_of_mars_started
+	}
+
+	option = { #I must build support first. - Chain will end
+		name = EVTOPTBHCLE30
+		trigger = { #If secret cults are off, only open option available.
+			has_game_rule = {
+				name = secret_cults
+				value = default
+			}
+		}
+		join_society = secret_religious_cult
+		set_society_grandmaster = yes # Set character as Grand Master
+		hidden_tooltip = { 
+			add_society_currency_massive_effect = yes # Give the cultust a start-up capital to induct members
+			add_society_currency_massive_effect = yes 
+		}
+		ai_chance = { factor = 0 } #Too stupid to be reasonably espected to ever pull it off.
+	}
+}
+
+#Vassals receive ultimatum.
+letter_event = {
+	id = CLE.32
+	desc = EVTDESCACLE32
+
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE32
+		if = { 
+			limit = { 
+				OR = { 
+					religion_group = christian  
+					religion_group = muslim
+					religion_group = jewish_group
+				} 
+			}
+			opinion = { 
+				who = FROM 
+				modifier = insane_heathen
+				years = 30
+			} 
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = CLE.33 } } 
+			}
+		}
+		ai_chance = { 
+			factor = 90 
+			modifier = { 
+				factor = 0.1
+				OR = {
+					secret_religion = FROM
+					religion = FROM
+					is_lover = FROM
+					is_friend = FROM
+				}
+			}
+			modifier = { 
+				factor = 0
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_adult = no 
+				is_close_relative = FROM
+				is_ruler = no
+			}
+			modifier = { 
+				factor = 0.1
+				is_ruler = no 
+				is_close_relative = FROM
+				opinion = { who = FROM value = 20 }
+			}
+		}
+	}
+
+	option = { #Convert.
+		name = {
+			text = EVTOPTBCLE32_A
+			trigger = {
+				OR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		name = {
+			text = EVTOPTBCLE32_B
+			trigger = {
+				NOR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		trigger = { 
+			OR = { 
+				ai = no 
+				is_lover = FROM
+				is_friend = FROM
+				is_theocracy = no
+			}
+			OR = { 
+				religion = FROM
+				secret_religion = FROM
+				NOT = { trait = zealous } 
+			} 
+		}
+		religion = FROM
+		any_demesne_province = {
+		    religion = FROM
+		}
+		if = { 
+			limit = { 
+				is_in_society = secret_religious_cult
+				secret_religion = FROM
+				secret_religion = cult_of_mars	 
+			} 
+			hidden_tooltip = {
+				any_demesne_province = {
+					religion = cult_of_mars					
+				}
+			}
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = CLE.34 } } 
+			}
+		}
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = CLE.35 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 5
+			modifier = { 
+				factor = 0
+				has_character_flag = ai_flag_refuse_conversion
+			}
+		}
+	}
+}
+
+#Vassal will not convert.
+letter_event = {
+	id = CLE.33
+	desc = EVTDESCACLE33
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE33
+	}
+}
+#Vassal will convert.
+letter_event = {
+	id = CLE.34
+	desc = EVTDESCACLE34
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE34
+	}
+}
+
+#Vassals of Vassals automatically convert alongside their immediate liege (unless player or theocracies).
+letter_event = {
+	id = CLE.35
+	desc = EVTDESCACLE35
+
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Convert
+		name = EVTOPTACLE32
+		religion = FROM
+		if = { 
+			limit = { 
+				is_in_society = secret_religious_cult
+				secret_religion = FROM
+				secret_religion = cult_of_mars	 
+			} 
+			hidden_tooltip = {
+				any_demesne_province = {
+					 
+					religion = cult_of_mars
+					
+				}
+			}
+		} 
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = CLE.35 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 100 
+			modifier = { 
+				factor = 0 
+				has_character_flag = ai_flag_refuse_conversion
+			}
+			modifier = { 
+				factor = 0 
+				is_theocracy = yes
+			}
+		}
+	}
+	option = { #Do not convert.
+		name = EVTOPTBCLE32_A
+		ai_chance = { 
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_theocracy = no
+			}
+		}
+	}
+}
+
+#The Rise of Cult of Caesar
+narrative_event = {
+	id = CLE.36
+	title = EVTTITLECLE36
+	desc = EVTDESCACLE36
+	sound = pagan_reformation
+
+	picture = GFX_evt_bishop_cult_of_caesar
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	    set_global_flag = cult_of_mars_created
+	}
+	
+	option = { #Restorer
+		name = EVTOPTACLE36
+		trigger = { character = FROM }
+		prestige = -500
+		if = { 
+			limit = { NOT = { piety = 500 } } 
+			piety = 750
+		}
+		hidden_tooltip = { #Culture Conversion
+			character_event = { id = CLE.37 days = 1 }
+			} 
+		}
+	option = { #Convert Vassals
+		name = EVTOPTBCLE36
+		trigger = { 
+			NOT = { character = FROM }  
+			religion = cult_of_mars
+		}
+	}
+	option = { #Abrahamics
+		name = EVTOPTCCLE36
+		trigger = { 
+			NOT = { character = FROM } 
+			NOR = { 
+				religion = cult_of_mars
+			} 
+			OR = { 
+				religion_group = christian  
+				religion_group = muslim
+				religion_group = jewish_group
+			} 
+		}
+	}
+	option = { #Everyone else
+		name = EVTOPTDCLE36
+		trigger = { 
+			NOT = { character = FROM } 
+			NOR = { 
+				religion = cult_of_mars
+				religion_group = christian  
+				religion_group = muslim
+				religion_group = jewish_group
+			}
+		}
+	}
+}
+
+#Player decide - how he will convert to roman culture
+character_event = {
+	id = CLE.37
+	desc = EVTDESCAHCLE37
+
+	picture = GFX_evt_culture_change_cult_of_caesar
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Player convert to roman culture now
+		name = EVTOPTAHCLE37
+		custom_tooltip = { text = tooltip_HCLE37_A }  
+		hidden_tooltip = { any_courtier_or_vassal = { letter_event = { id = CLE.38 days = 7 } } }
+		hidden_tooltip = { 
+            culture = roman
+        any_courtier_or_vassal = { 
+			limit = { lower_tier_than = COUNT }
+			culture_roman_province_conversion_effect = yes
+		}			
+		}
+        any_demesne_province = {
+		    culture_roman_province_conversion_effect = yes
+		}		
+		ai_chance = { factor = 100 }
+	}
+	option = { #Player ecide to convert later - Chain will end
+		name = EVTOPTBHCLE37
+		custom_tooltip = { text = tooltip_HCLE37_B } 
+		ai_chance = { factor = 0 } #Too stupid to be reasonably espected to ever pull it off.
+	}
+}
+
+#Vassals receive proposal.
+letter_event = {
+	id = CLE.38
+	desc = EVTDESCACLE38
+
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE38
+		if = { 
+			limit = { 
+				OR = { 
+					religion_group = christian  
+					religion_group = muslim
+					religion_group = jewish_group
+				} 
+			}
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = CLE.39 } } 
+			}
+		}
+		ai_chance = { 
+			factor = 90 
+			modifier = { 
+				factor = 0.1
+				OR = {
+					secret_religion = FROM
+					religion = FROM
+					is_lover = FROM
+					is_friend = FROM
+				}
+			}
+			modifier = { 
+				factor = 0
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_adult = no 
+				is_close_relative = FROM
+				is_ruler = no
+			}
+			modifier = { 
+				factor = 0.1
+				is_ruler = no 
+				is_close_relative = FROM
+				opinion = { who = FROM value = 20 }
+			}
+		}
+	}
+
+	option = { #Convert.
+		name = {
+			text = EVTOPTBCLE38_A
+			trigger = {
+				OR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		name = {
+			text = EVTOPTBCLE38_B
+			trigger = {
+				NOR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		trigger = { 
+			OR = { 
+				ai = no 
+				is_lover = FROM
+				is_friend = FROM
+				is_theocracy = no
+			}
+			OR = { 
+				religion = FROM
+				secret_religion = FROM
+				NOT = { trait = zealous } 
+			} 
+		}
+		culture_roman_conversion_effect = yes
+		any_demesne_province = {
+		    culture_roman_province_conversion_effect = yes
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = CLE.40 } } 
+			}
+		}
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = CLE.41 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 5
+			modifier = { 
+				factor = 0
+				has_character_flag = ai_flag_refuse_conversion
+			}
+		}
+	}
+}
+
+#Vassal will not convert.
+letter_event = {
+	id = CLE.39
+	desc = EVTDESCACLE39
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE33
+	}
+}
+#Vassal will convert.
+letter_event = {
+	id = CLE.40
+	desc = EVTDESCACLE40
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTACLE34
+	}
+}
+
+#Vassals of Vassals automatically convert alongside their immediate liege (unless player or theocracies).
+letter_event = {
+	id = CLE.41
+	desc = EVTDESCACLE41
+
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Convert
+		name = EVTOPTBCLE38_A
+		culture = roman
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = CLE.41 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 100 
+			modifier = { 
+				factor = 0 
+				has_character_flag = ai_flag_refuse_conversion
+			}
+			modifier = { 
+				factor = 0 
+				is_theocracy = yes
+			}
+		}
+	}
+	option = { #Do not convert.
+		name = EVTOPTACLE38
+		ai_chance = { 
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_theocracy = no
+			}
+		}
+	}
+}
+
+character_event = {
+	id = CLE.42
+	desc = EVTDESCAHCLE37
+
+	picture = GFX_evt_culture_change_cult_of_caesar
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = { #Player convert to roman culture now
+        	culture = roman
+	}	
+}
+
+#Debug event to make Caesar's Legion Landed
+character_event = {
+	id = CLE.43
+	desc = EVTDESC_CLE43
+	
+	hide_window = yes
+	
+	picture = GFX_evt_roman_legate
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_landed_title = k_caesar_legion
+        is_landed = yes
+	    NOT = { has_global_flag = caesar_succ_laws }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = caesar_succ_laws
+		if = {
+			limit = { 
+				has_landed_title = k_caesar_legion						
+			}
+			k_caesar_legion = {
+				set_title_landless = { title = THIS status = no }
+#        	    add_law_w_cooldown = succ_roman_military_elective			
+		    }
+		}
+	}
+}
+
+#Give chance to player to form Caesar's Legion
+narrative_event = {
+	id = CLE.44
+	title = "EVTNAMECLE17"
+	desc = EVTDESCAHCLE44
+
+	picture = GFX_evt_legion2
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { set_global_flag = caesar_legion_proposal }
+	
+	option = { #Create Legion
+		name = EVTOPTAHCLE44
+		custom_tooltip = { text = tooltip_HCLE44_A }  
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { 
+				culture_group = caesarian						
+			}
+			k_caesar_legion = {
+			show_scope_change = no
+			grant_title = ROOT
+			hidden_tooltip = { make_primary_title = yes }
+			copy_title_laws = k_caesar_legion
+			copy_title_history = k_caesar_legion
+            add_law_w_cooldown = succ_roman_military_elective	
+			add_law_w_cooldown = revoke_title_law_2
+			add_law_w_cooldown = out_of_realm_inheritance_law_1
+		    }
+			set_government_type = legion_government
+		}
+#		any_title_under = {
+#			is_titular = no
+#			higher_tier_than = DUCHY 
+#			destroy_landed_title = THIS
+#		}
+#		clr_character_flag = legion_decision
+		set_global_flag = legion_created
+		set_character_flag = horde_invader
+		wealth = -1000
+		prestige = 1000
+		add_artifact = crown_face_of_mars
+		capital_scope = { 
+		    ROOT = {
+		        spawn_unit = {
+		            owner = THIS
+		        	province = PREV
+	        		home = PREV
+		        	troops = {
+	        			light_cavalry = { 1500 1500 }
+	        			light_infantry = { 4000 4000 }
+	        			heavy_infantry = { 2000 2000 }
+	        			archers = { 1500 1500 }
+	        			knights = { 500 500 }
+			        }
+	            }
+		        spawn_unit = {
+		            owner = THIS
+		        	province = PREV
+		        	home = PREV
+		        	troops = {
+		        		light_cavalry = { 1500 1500 }
+		        		light_infantry = { 4000 4000 }
+		        		heavy_infantry = { 2000 2000 }
+		        		archers = { 1500 1500 }
+		        		knights = { 500 500 }
+		        	}
+		        }
+		    }
+		}
+	}	
+
+	option = { #Maybe later
+		name = EVTOPTBHCLE44
+		ai_chance = { factor = 0 } #Too stupid to be reasonably espected to ever pull it off.
+		clr_global_flag = caesar_legion_proposal
+		clr_character_flag = legion_decision
+		wealth = 1000
+	}
+}
+
+#dynamic holy place system for the founder of cult of Caesar
+#character_event = {
+#	id = CLE.45
+#	
+#	hide_window = yes
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		set_global_flag = holy_places_assigned
+#		c_edmonton = { remove_holy_site_with_heresies = cult_of_mars }
+#        c_toronto = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_hochelaga = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_vancouver = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_winnipeg = { remove_holy_site_with_heresies = cult_of_mars }
+#		c_washington = { remove_holy_site_with_heresies = cult_of_mars }
+#       c_philadelphia = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_boston = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_manhatten = { remove_holy_site_with_heresies = cult_of_mars }
+#	    	c_land_of_sky = { set_holy_site_with_heresies = cult_of_mars }
+#	   	c_flagstaff = { remove_holy_site_with_heresies = cult_of_mars }
+#		c_las_vegas = { remove_holy_site_with_heresies = cult_of_mars }
+#	    c_phoenix = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_boulder = { remove_holy_site_with_heresies = cult_of_mars }
+#	   	c_los_angeles = { remove_holy_site_with_heresies = cult_of_mars }
+#		if = {
+#			limit = { 
+#				capital_scope = { region = world_southwest } #SouthWest
+#                OR = { 
+#				    culture = roman 
+#				    NOR = { 
+#					    culture = rhomaion
+#						culture = riman
+#					}	
+#				}			
+#			}
+ #           c_flagstaff = { set_holy_site_with_heresies = cult_of_mars }
+ #           c_las_vegas = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_phoenix = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_boulder = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_los_angeles = { set_holy_site_with_heresies = cult_of_mars }			
+#		}
+#	    else_if = {
+#			limit = { 
+##				capital_scope = { world_europe_south_east } #Canada
+  #              culture = riman			
+#			}
+#			c_washington = { set_holy_site_with_heresies = cult_of_mars }
+ #           c_philadelphia = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_boston = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_manhatten = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_land_of_sky = { set_holy_site_with_heresies = cult_of_mars }
+#		}
+#		else_if = {
+#			limit = { 
+##				capital_scope = { region = world_europe_east } #apalachia
+  #              culture = rhomaion				
+#			}
+ #           c_edmonton = { set_holy_site_with_heresies = cult_of_mars }
+  #          c_toronto = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_hochelaga = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_vancouver = { set_holy_site_with_heresies = cult_of_mars }
+#	    	c_winnipeg = { set_holy_site_with_heresies = cult_of_mars }			
+#		}
+#	}
+#}
+#
+#Debug event for gods names
+#character_event = {
+#	id = CLE.46
+##
+#	hide_window = yes
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+ #  		if = {
+#			limit = { 		
+ #               NOT = { has_global_flag = new_goddes_added }				
+#			}
+ #           cult_of_mars = {
+#			    remove_evil_god_names = yes
+#		    	remove_god_names = yes
+#				set_high_god_name = GOD_MARS
+#				add_god_name = GOD_CAESAR
+#				add_god_name = GOD_SON_OF_MARS
+#				add_god_name = GOD_VENUS
+#				add_god_name = GOD_MINERVA
+#				add_god_name = GOD_JUPITER
+#				add_god_name = GOD_JUNO
+#				add_god_name = GOD_VULKAN
+#				add_god_name = GOD_ROMULUS
+#				add_god_name = GOD_REMUS
+#				add_god_name = GOD_OCTAVIAN
+#				add_evil_god_name = GOD_BRUTUS
+#				add_evil_god_name = GOD_POMPEIUS
+#				add_evil_god_name = GOD_VENCINGETORIX
+#				add_evil_god_name = ARMINIUS
+#				add_evil_god_name = GOD_ALARIC
+#			}
+ #           cult_of_pompeius = {
+#			    remove_evil_god_names = yes
+#		    	remove_god_names = yes
+#				set_high_god_name = GOD_POMPEIUS
+#				add_god_name = GOD_MARS
+#				add_god_name = GOD_VENUS
+#				add_god_name = GOD_MINERVA
+#				add_god_name = GOD_JUPITER
+#				add_god_name = GOD_JUNO
+#				add_god_name = GOD_ROMULUS
+#				add_god_name = GOD_REMUS
+#				add_god_name = GOD_BRUTUS
+#				add_god_name = GOD_VENCINGETORIX		
+#				add_evil_god_name = GOD_VULKAN
+#				add_evil_god_name = GOD_CAESAR
+#				add_evil_god_name = ARMINIUS
+##
+#			}			
+#		}
+#		else_if = {
+#			limit = {
+ #               has_global_flag = new_goddes_added				
+#			}
+ #           cult_of_mars = {
+#			    remove_evil_god_names = yes
+#		    	remove_god_names = yes
+#				set_high_god_name = GOD_MARS
+#				add_god_name = GOD_CAESAR
+#				add_god_name = GOD_SON_OF_MARS
+#				add_god_name = GOD_VENUS
+#				add_god_name = GOD_MINERVA
+#				add_god_name = GOD_JUPITER
+#				add_god_name = GOD_JUNO
+#				add_god_name = GOD_VULKAN
+#				add_god_name = GOD_ROMULUS
+#				add_god_name = GOD_REMUS
+#				add_god_name = GOD_OCTAVIAN
+#				add_god_name = GOD_MOTHER_RUSSIA
+#				add_evil_god_name = GOD_BRUTUS
+#				add_evil_god_name = GOD_POMPEIUS
+#				add_evil_god_name = GOD_VENCINGETORIX
+#				add_evil_god_name = ARMINIUS
+#				add_evil_god_name = GOD_ALARIC
+#			}
+ #           cult_of_pompeius = {
+#			    remove_evil_god_names = yes
+#		    	remove_god_names = yes
+#				set_high_god_name = GOD_POMPEIUS
+#				add_god_name = GOD_MARS
+#				add_god_name = GOD_VENUS
+#				add_god_name = GOD_MINERVA
+#				add_god_name = GOD_JUPITER
+#				add_god_name = GOD_JUNO
+#				add_god_name = GOD_ROMULUS
+#				add_god_name = GOD_REMUS
+#				add_god_name = GOD_BRUTUS
+#				add_god_name = GOD_VENCINGETORIX
+ #               add_god_name = GOD_MOTHER_RUSSIA				
+#				add_evil_god_name = GOD_VULKAN
+#				add_evil_god_name = GOD_CAESAR
+#				add_evil_god_name = ARMINIUS
+##
+#			}			
+##
+#	}
+#}

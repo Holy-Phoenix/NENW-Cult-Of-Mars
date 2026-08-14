@@ -1,0 +1,85 @@
+#######################################
+#
+# Roman Events
+
+namespace = CAELoR
+
+# Triumph Expected
+character_event = {
+	id = CAELoR.30
+	desc = EVTDESCLoR.30
+	picture = GFX_evt_roman_triumph
+	
+	hide_from = yes
+	
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+		}
+		have_romaboo_title_trigger = yes
+	}
+	
+	option = {
+		name = EVTOPTALoR.30
+		character_event = { id = LoR.31 days = 12 tooltip = EVTTOOLTIPLoR.31 }
+		scaled_wealth = -0.3
+		prestige = 75
+	}
+	option = {
+		name = EVTOPTBLoR.30
+		scaled_wealth = -0.1
+		prestige = 25
+	}
+	option = {
+		name = EVTOPTCLoR.30
+		prestige = -30
+	}
+}
+
+# Triumph Held
+character_event = {
+	id = CAELoR.31
+	desc = EVTDESCLoR.31
+	picture = GFX_evt_roman_triumph
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTALoR.31
+		custom_tooltip = {
+			text = triumph_held
+			hidden_tooltip = {
+				any_realm_lord = {
+					limit = {
+						primary_title = { higher_tier_than = BARON }
+						NOT = { character = ROOT }
+					}
+					opinion = {
+						modifier = opinion_triumph_held
+						who = ROOT
+					}
+					character_event = { id = LoR.32 }
+				}
+			}
+		}
+	}
+}
+
+# Triumph Held Vassals
+character_event = {
+	id = CAELoR.32
+	desc = EVTDESCLoR.32
+	picture = GFX_evt_roman_triumph
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTALoR.32
+	}
+}

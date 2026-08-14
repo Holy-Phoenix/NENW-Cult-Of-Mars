@@ -1,0 +1,305 @@
+namespace = CCRE
+
+character_event = { #Character selected as possible Caesar Reborn candidate
+    id = CCRE.1
+	hide_window = yes
+	capable_only = yes
+	is_triggered_only = yes
+	
+    trigger = {
+	    real_tier = EMPEROR
+		is_adult = yes
+		OR = { #Romaboo and Roman heritage claimer Empires
+			has_landed_title = e_nova_roma
+		}
+		religion = cult_of_mars #Only Caesarians
+		is_neo_roman_trigger = yes #Only romaboo larpers
+		OR = { 
+		    prestige >= 7500
+			piety >= 5000
+		}
+		NOT = { has_secret_religion = yes }
+		#Only one Caesar Reborn may exists at the same time
+		NOT = { has_global_flag = caesar_reborn_existing }
+        NOT = { has_character_flag = caesar_reborn_trait_holder }		
+	}
+	
+	weight_multiplier = { 
+		days = 1
+		
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 3
+			trait = genius
+		}
+		modifier = {
+			factor = 2
+			trait = strategist
+		}
+		modifier = {
+			factor = 2
+			trait = quick
+		}
+		modifier = {
+			factor = 2
+			trait = brave
+		}
+		modifier = {
+		    factor = 2
+			trait = shrewd
+		}
+		modifier = {
+		    factor = 2
+			trait = just
+		}
+		modifier = {
+		    factor = 2
+			trait = gamer
+		}
+		modifier = {
+		    factor = 2
+			trait = proud
+		}
+		modifier = {
+		    factor = 1.25
+			trait = kind
+		}
+		modifier = {
+		    factor = 1.25
+			trait = diligent
+		}
+		modifier = {
+			factor = 2
+			has_education_martial_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lifestyle_martial_trigger = yes
+		}
+		modifier = {
+		    factor = 2
+			any_owned_bloodline = {  
+				has_bloodline_flag = mars_bloodline
+			}
+		}
+		modifier = {
+			factor = 2
+			martial = 8
+		}
+		modifier = {
+			factor = 2
+			martial = 10
+		}
+		modifier = {
+			factor = 2
+			martial = 12
+		}
+		modifier = {
+			factor = 2
+			martial = 14
+		}
+		modifier = {
+			factor = 2
+			martial = 16
+		}
+		modifier = {
+			factor = 2
+			martial = 18
+		}
+		modifier = {
+			factor = 2
+			martial = 20
+		}
+		modifier = {
+			factor = 2
+			martial = 22
+		}
+		modifier = {
+			factor = 2
+			martial = 24
+		}
+		modifier = {
+			factor = 2
+			martial = 26
+		}
+		modifier = {
+			factor = 2
+			martial = 28
+		}
+		modifier = {
+			factor = 2
+			martial = 30
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 12000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 14000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 16000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 18000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 20000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 30000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 40000
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 5 }
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 10 }
+		}
+	}
+	
+	immediate = {
+	    ROOT = { 
+		    save_event_target_as = caesar_reborn_candidate
+			set_character_flag = caesar_reborn_trait_holder
+		}
+		set_global_flag = caesar_reborn_existing
+		character_event = { id = CCRE.2 }
+	}
+}
+
+character_event = { #Selection between ways of Caesar Reborn proclamation.
+    id = CCRE.2
+	hide_window = yes
+	capable_only = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	    if = { #Pontifex Maximus proclaim that Emperor is a Caesar Reborn
+			limit = {
+				ROOT = { NOT = { controls_religion = yes } }
+				d_cult_of_mars = { has_owner = yes }
+			}
+			d_cult_of_mars = {
+				owner = { 
+				    event_target:caesar_reborn_candidate = { letter_event = { id = CCRE.4 days = 5 } }
+				}
+			}
+		}
+		if = { #Pontifex Maximus IS the Emperor, so he proclaim that he is a Caesar Reborn himself
+			limit = {
+				ROOT = { controls_religion = yes }
+				d_cult_of_mars = { has_owner = yes }
+			}
+			ROOT = {
+				character_event = { id = CCRE.3 days = 5 }
+			}
+		}
+		if = { #Pontifex Maximus does not exist, so Emperor proclaim that he is a Caesar Reborn himself
+			limit = {
+				d_cult_of_mars = { NOT = { has_owner = yes } }
+			}
+			ROOT = {
+				character_event = { id = CCRE.3 days = 5 }
+			}
+		}
+	}
+	
+}
+
+character_event = {
+    id = CCRE.3
+	title = EVTTITLE_CCRE.3
+    desc = EVTDESC_CCRE.3
+    picture = GFX_evt_caesar_reborn
+    border = GFX_event_normal_frame_religion
+    is_triggered_only = yes
+	
+	immediate = {
+	    event_target:caesar_reborn_candidate = {
+		    add_trait = caesar_reborn
+		}
+	}
+	
+	option = {      
+        name = CCREOA.3
+		show_trait = caesar_reborn
+		ROOT = {
+			narrative_event = { id = CCRE.5 }
+		}
+    }
+}
+
+letter_event = {
+    id = CCRE.4
+    desc = EVTDESC_CCRE.4
+    border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {      
+        name = CCREOA.4
+		narrative_event = { id = CCRE.5 }
+    }
+}
+
+narrative_event = {
+    id = CCRE.5
+	title = EVTTITLE_CCRE.5
+    desc = EVTDESC_CCRE.5
+    picture = GFX_evt_caesar_reborn
+    border = GFX_event_narrative_frame_religion
+    is_triggered_only = yes
+    
+	
+	option = {      
+        name = CCREOA.5
+		trigger = {
+		    trait = caesar_reborn
+			religion = cult_of_mars
+		}
+    }
+	option = {      
+        name = CCREOB.5
+		trigger = {
+		    NOT = { trait = caesar_reborn }
+			religion = cult_of_mars
+		}
+    }
+	option = {      
+        name = CCREOC.5
+		trigger = {
+		    NOT = { religion = cult_of_mars }
+		}
+    }
+}
+
+character_event = {
+    id = CCRE.6
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+	    trait = caesar_reborn
+		is_alive = no
+		has_character_flag = caesar_reborn_trait_holder
+	}
+	
+	immediate = {
+	    clr_global_flag = caesar_reborn_existing
+		clr_character_flag = caesar_reborn_trait_holder
+	}
+}

@@ -1,0 +1,743 @@
+namespace = CLRE
+
+#Nova Roma
+narrative_event = {
+    id = CLRE.3
+    title = EVTTITLE_CLRE.3
+    desc = {
+	    trigger = {
+            is_roman_gods_cultist_trigger = yes
+        }
+	    text = EVTDESC_CLRE_A.3
+	}
+	desc = {
+	    trigger = {
+            religion_group = christian
+        }
+	    text = EVTDESC_CLRE_B.3
+	}
+	desc = {
+	    trigger = {
+            is_russian_communist_religion_trigger = yes
+        }
+	    text = EVTDESC_CLRE_C.3
+	}
+	desc = {
+	    trigger = {
+            religion_openly_novelist_or_reformed_trigger = yes
+        }
+	    text = EVTDESC_CLRE_D.3
+	}
+    picture = GFX_evt_roman_triumph
+    border = GFX_event_narrative_frame_diplomacy
+    is_triggered_only = yes
+
+    option = {      
+        name = CLREO.1
+		trigger = {
+			has_landed_title = e_nova_roma
+		}
+		if = {
+		    limit = {
+			    religion = cult_of_mars
+			}
+			add_trait = caesar_reborn
+			set_character_flag = caesar_reborn_trait_holder
+		    set_global_flag = caesar_reborn_existing
+		}
+		give_nickname = nick_the_glorious
+		if = {
+			limit = {
+				is_female = yes
+			}
+			create_bloodline = {
+				type = martian_emperor_female
+			}
+		}
+		if = {
+			limit = {
+				is_female = no
+			}
+			create_bloodline = {
+				type = martian_emperor
+			}
+		}
+		sound_effect = bloodline_added
+		set_government_type = roman_imperial_martian_government 
+		narrative_event = { id = CLRE.9 }
+    }
+	
+	option = {      
+        name = CLREO.2
+		trigger = {
+			NOT = { has_landed_title = e_nova_roma }
+		}
+    }
+}
+
+narrative_event = { #All-Roman Holyday
+	id = CLRE.4
+	title = CLRE.4.title
+	is_triggered_only = yes
+	picture = "GFX_evt_roman_festival"
+	border = GFX_event_narrative_frame_economy
+
+	hide_from = yes
+
+	desc = {
+		text = CLRE.4.d
+
+	}
+	
+	option = {
+		name = EVTOPTA_CLRE.4
+		wealth = -50	
+		piety = 50
+		prestige = 50
+		add_character_modifier = {
+				name = celebrated_caesar_ascension
+				duration = 365
+			}		
+		trigger_switch = {
+					on_trigger	= terrain
+					farmlands	= { change_variable = { which = prosperity_value value = 10 } } #gain depends on terrain type
+					plains		= { change_variable = { which = prosperity_value value = 8 } }
+					steppe 		= { change_variable = { which = prosperity_value value = 8 } }
+					forest 		= { change_variable = { which = prosperity_value value = 6 } }
+					hills			= { change_variable = { which = prosperity_value value = 6 } }
+					jungle		= { change_variable = { which = prosperity_value value = 4 } }
+					desert		= { change_variable = { which = prosperity_value value = 4 } }
+					mountain	= { change_variable = { which = prosperity_value value = 2 } }
+					arctic		= { change_variable = { which = prosperity_value value = 2 } }
+				}
+	}
+}
+
+narrative_event = { #Russian Roman holiday
+	id = CLRE.5
+	title = CLRE.5.title
+	is_triggered_only = yes
+	picture = "GFX_evt_roman_triumph"
+	border = GFX_event_narrative_frame_economy
+
+	hide_from = yes
+
+	desc = {
+		text = CLRE.5.d
+
+	}
+	
+	option = {
+		name = EVTOPTA_CLRE.5
+		wealth = -50	
+		piety = 50
+		prestige = 50
+		add_character_modifier = {
+				name = celebrated_victoria_day
+				duration = 365
+			}		
+		trigger_switch = {
+					on_trigger	= terrain
+					farmlands	= { change_variable = { which = prosperity_value value = 10 } } #gain depends on terrain type
+					plains		= { change_variable = { which = prosperity_value value = 8 } }
+					steppe 		= { change_variable = { which = prosperity_value value = 8 } }
+					forest 		= { change_variable = { which = prosperity_value value = 6 } }
+					hills			= { change_variable = { which = prosperity_value value = 6 } }
+					jungle		= { change_variable = { which = prosperity_value value = 4 } }
+					desert		= { change_variable = { which = prosperity_value value = 4 } }
+					mountain	= { change_variable = { which = prosperity_value value = 2 } }
+					arctic		= { change_variable = { which = prosperity_value value = 2 } }
+				}
+	}
+}
+
+character_event = {
+	id = CLRE.6
+	is_triggered_only = yes
+	picture = "GFX_evt_roman_liberation"
+	border = GFX_event_normal_frame_war
+
+	desc = DESCCLRE6
+	
+	option = {
+		name = EVTOPTA_CLRE.6
+		spawn_unit = {
+            province = event_target:target_forced_romanization
+			home = event_target:target_forced_romanization
+	        troops = {
+				light_infantry = { 1000 1000 }
+	        	archers = { 500 500 }
+	        }
+	    }
+	}
+}
+
+# Collegium Pontificum created
+narrative_event = {
+	id = CLRE.7
+	title = CLRE.7.title
+	desc = CLRE.7.desc
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTACLE36
+		trigger = {
+			religion = cult_of_mars
+		}
+	}
+
+	option = {
+		name = EVTOPTACLRE7
+		trigger = {
+			NOT = { religion = cult_of_mars }
+		}
+	}
+}
+
+# Praetorian Guard created
+narrative_event = {
+	id = CLRE.8
+	title = CLRE.8.title
+	desc = CLRE.8.desc
+	picture = GFX_evt_roman_cohors_praetoria
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+	is_triggered_only = yes
+	sound = legion_reporting
+
+	option = {
+		name = EVTOPTACLE36
+		trigger = {
+			religion = cult_of_mars
+		}
+	}
+
+	option = {
+		name = EVTOPTCCLE36
+		trigger = {
+			NOT = { religion = cult_of_mars }
+		}
+	}
+}
+
+# What would we do with Caesar's Legion after we proclaim Roman Empire?
+narrative_event = {
+	id = CLRE.9
+	title = CLRE.9.title
+	desc = CLRE.9.desc
+	picture = GFX_evt_legion2
+	border = GFX_event_narrative_frame_war
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			primary_title = { title = e_nova_roma }
+		}
+		OR = {
+		    k_caesar_legion = { has_holder = ROOT }
+		}
+	}
+
+	option = { #Reform it to Imperial Army
+		name = EVTOPTACLRE9
+		set_global_flag = imperial_army_founded
+		set_global_flag = legion_disbanded
+		if = {
+			limit = {
+				primary_title = { title = e_nova_roma }
+			}		    
+			activate_title = { title = d_imperial_army status = yes }
+			hidden_tooltip = {
+					create_character = {
+					random_traits = yes
+					religion = cult_of_mars
+					culture = roman
+					dynasty = NONE
+					female = no
+					age = 34
+					trait = brilliant_strategist
+				}
+				new_character = {
+					d_imperial_army = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+         hidden_tooltip = {
+			activate_title = { title = k_caesar_legion status = no }
+		}
+		k_caesar_legion = {
+			show_scope_change = no
+			destroy_landed_title = THIS
+		}
+        narrative_event = { id = CLRE.11 days = 5 }		
+	}
+
+	option = { #Disband it
+		name = EVTOPTBCLRE9
+		set_global_flag = legion_disbanded
+		hidden_tooltip = {
+			activate_title = { title = k_caesar_legion status = no }
+		}
+		k_caesar_legion = {
+			show_scope_change = no
+			destroy_landed_title = THIS
+		}
+	}
+}
+
+# Imperial Army Created
+narrative_event = {
+	id = CLRE.11
+	title = CLRE.11.title
+	desc = CLRE.11.desc
+	picture = GFX_evt_legion2
+	border = GFX_event_narrative_frame_war
+
+	major = yes
+	is_triggered_only = yes
+	sound = legion_reporting
+
+	option = {
+		name = EVTOPTACLE36
+		trigger = {
+			OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCCLE36
+		trigger = {
+			NOR = { religion = cult_of_mars
+            religion = cult_of_pompeius }
+		}
+	}
+}
+
+narrative_event = { #Latin-Greek Roman holiday
+	id = CLRE.12
+	title = CLRE.12.title
+	is_triggered_only = yes
+	picture = "GFX_evt_roman_triumph"
+	border = GFX_event_narrative_frame_economy
+
+	hide_from = yes
+
+	desc = {
+		text = CLRE.12.d
+
+	}
+	
+	option = {
+		name = EVTOPTA_CLRE.12
+		wealth = -50	
+		piety = 50
+		prestige = 50
+		add_character_modifier = {
+				name = celebrated_belisarius_day
+				duration = 365
+			}		
+		trigger_switch = {
+					on_trigger	= terrain
+					farmlands	= { change_variable = { which = prosperity_value value = 10 } } #gain depends on terrain type
+					plains		= { change_variable = { which = prosperity_value value = 8 } }
+					steppe 		= { change_variable = { which = prosperity_value value = 8 } }
+					forest 		= { change_variable = { which = prosperity_value value = 6 } }
+					hills			= { change_variable = { which = prosperity_value value = 6 } }
+					jungle		= { change_variable = { which = prosperity_value value = 4 } }
+					desert		= { change_variable = { which = prosperity_value value = 4 } }
+					mountain	= { change_variable = { which = prosperity_value value = 2 } }
+					arctic		= { change_variable = { which = prosperity_value value = 2 } }
+				}
+	}
+}
+
+# Collegium Pontificum created
+narrative_event = {
+	id = CLRE.19
+	title = CLRE.7.title
+	desc = CLRE.19.desc
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTACLRE19
+		trigger = {
+			religion = cult_of_pompeius
+		}
+	}
+
+	option = {
+		name = EVTOPTACLRE7
+		trigger = {
+			NOT = { religion = cult_of_pompeius }
+		}
+	}
+}
+
+#Debug event that turn on roman mercenaries
+character_event = {
+    id = CLRE.22
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started
+        NOT = { has_global_flag = roman_mercenaries_created }		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+		    set_global_flag = roman_mercenaries_created
+			character_event = { id = CLRE.23 }
+			#character_event = { id = CLRE.24 }
+			character_event = { id = CLRE.25 }
+			character_event = { id = CLRE.26 }
+			character_event = { id = CLRE.27 }
+			character_event = { id = CLRE.28 }
+		}
+	}
+}
+
+character_event = {
+    id = CLRE.23
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+			activate_title = { title = d_the_disfavored status = yes }		
+			create_character = {
+			    name = Graven
+				random_traits = yes
+				religion = cult_of_mars
+				culture = roman
+				dynasty = NONE
+				female = no
+				age = 40
+				trait = skilled_tactician
+			}
+			new_character = {
+				prestige = 300
+				wealth = 300
+				d_the_disfavored = {
+					grant_title = PREV
+				}
+			}
+		}
+	}
+}
+
+#character_event = {
+ #   id = CLRE.24
+#	
+#	hide_window = yes
+#
+#	is_triggered_only = yes
+#	
+#	major = yes
+#	
+#	trigger = { 
+#	    has_global_flag = cult_of_mars_started		
+#	}
+#	
+#	immediate = {
+#	    hidden_tooltip = {
+#			activate_title = { title = d_volki_rima status = yes }		
+#			create_character = {
+#			    name = Liman
+#				random_traits = yes
+#				religion = cult_of_mars
+#				culture = roman
+#				dynasty = NONE
+#				female = no
+#				age = 39
+#				trait = skilled_tactician
+#			}
+#			new_character = {
+#				prestige = 300
+#				wealth = 300
+#				d_volki_rima = {
+#					grant_title = PREV
+#				}
+#			}
+#		}
+#	}
+#}
+
+character_event = {
+    id = CLRE.25
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+			activate_title = { title = d_spire_guard status = yes }		
+			create_character = {
+			    name = Vendrienos
+				random_traits = yes
+				religion = cult_of_mars
+				culture = roman
+				dynasty = NONE
+				female = no
+				age = 38
+				trait = skilled_tactician
+			}
+			new_character = {
+				prestige = 300
+				wealth = 300
+				d_spire_guard = {
+					grant_title = PREV
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = CLRE.26
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+			activate_title = { title = d_the_unbroken status = yes }		
+			create_character = {
+			    name = Mattias
+				random_traits = yes
+				religion = cult_of_mars
+				culture = roman
+				dynasty = NONE
+				female = no
+				age = 37
+				trait = skilled_tactician
+			}
+			new_character = {
+				prestige = 300
+				wealth = 300
+				d_the_unbroken = {
+					grant_title = PREV
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = CLRE.27
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+			activate_title = { title = d_boatmen_of_styx status = yes }		
+			create_character = {
+			    name = Neleus
+				random_traits = yes
+				religion = cult_of_mars
+				culture = roman
+				dynasty = NONE
+				female = no
+				age = 37
+				trait = skilled_tactician
+			}
+			new_character = {
+				prestige = 300
+				wealth = 300
+				d_boatmen_of_styx = {
+					grant_title = PREV
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+    id = CLRE.28
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = { 
+	    has_global_flag = cult_of_mars_started		
+	}
+	
+	immediate = {
+	    hidden_tooltip = {
+			activate_title = { title = d_ardites status = yes }		
+			create_character = {
+			    name = Emannuhel
+				random_traits = yes
+				religion = cult_of_mars
+				culture = roman
+				dynasty = NONE
+				female = no
+				age = 37
+				trait = skilled_tactician
+			}
+			new_character = {
+				prestige = 300
+				wealth = 300
+				d_ardites = {
+					grant_title = PREV
+				}
+			}
+		}
+	}
+}
+
+# Caesar's Legion takes Vegas
+
+narrative_event = { # Vegas becomes the Legion's Rome
+	id = CLRE.31
+	title = EVTNAME_CLRE_031
+	desc = EVTDESC_CLRE_031
+	picture = GFX_evt_legion2
+	border = GFX_event_narrative_frame_war
+	major = yes
+	sound = legion_march
+	only_playable = yes
+
+	trigger = {
+		has_landed_title = k_caesar_legion
+		completely_controls = c_las_vegas
+		NOT = { has_global_flag = legion_las_vegas }
+	}
+	major_trigger = { ai = no }
+	mean_time_to_happen = { days = 1 }
+
+	immediate = { set_global_flag = legion_las_vegas }
+	option = { name = EVTOPTA_CLRE_031 }
+}
+
+# Caesar establishes Nova Roma in Vegas
+narrative_event = {
+	id = CLRE.39
+	title = EVTNAME_CLRE_039
+	desc = EVTDESC_CLRE_039
+	picture = GFX_evt_roman_builders
+	border = GFX_event_narrative_frame_diplomacy
+	sound = legion_march
+	is_triggered_only = yes
+
+	option = { name = EVTOPTA_CLRE_039 }
+}
+
+province_event = { #Forced romanization, but for AI
+    id = CLRE.37
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+    trigger = {
+		top_liege = { 
+		    OR = { 
+				has_landed_title = k_caesar_legion
+		    }
+			ai = yes #Will only fire for AI
+		}
+		has_tribal = yes
+		NOT = { is_roman_gods_cultist_trigger = yes }
+		NOT = { is_neo_roman_trigger = yes }
+	}
+	
+	immediate = {
+	    save_event_target_as = target_romanization
+		top_liege = { character_event = { id = CLRE.38 } }
+	}
+}
+
+character_event = {
+    id = CLRE.38
+	ai = yes #Will only fire for AI
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+    trigger = {
+		OR = { 
+			has_landed_title = k_caesar_legion
+		}
+		is_roman_gods_cultist_trigger = yes
+		ai = yes #Will only fire for AI
+	}
+	
+	immediate = {
+	    event_target:target_romanization = {
+			show_scope_change = no
+			location = {
+				culture = ROOT
+				religion = ROOT
+				add_province_modifier = {
+					name = depopulated_3
+					duration = -1
+				}
+			}
+		}    
+		spawn_unit = {
+            province = event_target:target_romanization
+			home = event_target:target_romanization
+	        troops = {
+				light_infantry = { 1000 1000 }
+	        	archers = { 500 500 }
+	        }
+	    }
+		wealth = 100
+	}
+}
