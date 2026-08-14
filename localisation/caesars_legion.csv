@@ -1,0 +1,421 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+RULE_CAESAR_LEGION;Rise of Caesar's Legion;;;;;;;;;;;;;x
+RULE_CAESAR_LEGION_HISTORICAL_DESC;The Rise of Caesar's Legion will occur shortly after 2605.;;;;;;;;;;;;;x
+RULE_CAESAR_LEGION_INVASION_RANDOM_DESC;The Rise of Caesar's Legion will occur at a random date, though at the earliest 50 years after the game is started.;;;;;;;;;;;;;x
+RULE_CAESAR_LEGION_DELAYED_RANDOM_DESC;The Rise of Caesar's Legion will occur at a random date, though at the earliest 100 years after the game is started.;;;;;;;;;;;;;x
+RULE_CAESAR_LEGION_OFF_DESC;The Rise of Caesar's Legion will not occur.;;;;;;;;;;;;;x
+RULE_OPTION_IMMEDIATLY;Immediately;;;;;;;;;;;;;x
+RULE_CAESAR_LEGION_IMMEDIATLY_DESC;The Rise of Caesar's Legion will occur right after the game start;;;;;;;;;;;;;x
+
+IS_ROMAN_CULTIST;Follower of one of the Roman Cults;;;;;;;;;;;;;x
+
+new_goddes_added;New Goddess Added;;;;;;;;;;;;;x
+
+crown_face_of_mars;The Face of War;;;;;;;;;;;;;x
+crown_face_of_mars_desc;This helmet depicts the face of Mars (or Ares), an ancient god of war. The infidels tremble at the sight of the stern face of this ancient deity.;;;;;;;;;;;;;x 
+
+commentaries_of_gallic_war;Commentaries of Gallic War;;;;;;;;;;;;;x 
+commentaries_of_gallic_war_desc;This ancient manuscript describes the conquest of the ancient country of Gaul by one of the antediluvian emperors of Rome - Caesar.;;;;;;;;;;;;;x
+
+caesars_sword;Crocea Mors;;;;;;;;;;;;;x
+caesars_sword_desc;This sword, whose name means "Yellow Death" according to legends, belonged to Gaius Julius Caesar himself. Many enemies of Rome has been slain by this sword.;;;;;;;;;;;;;x 
+
+bust_of_caesar;The Bust of Caesar;;;;;;;;;;;;;x
+bust_of_caesar_desc;Statue of the antediluvian emperor of Rome, Gaius Julius Caesar. A sacred relic of the Cultists of Caesar.;;;;;;;;;;;;;x
+
+bust_of_antedeluvian_emperor;The Bust of Antediluvian Emperor;;;;;;;;;;;;;x
+bust_of_antedeluvian_emperor_desc;A bust depicting one of the ancient antediluvian rulers. Some people consider it sacred.;;;;;;;;;;;;;x
+
+the_last_day_of_pompeii;The Last Day of Pompeii;;;;;;;;;;;;;x
+the_last_day_of_pompeii_desc;An antediluvian painting depicting the destruction of the ancient city of Pompeii. The symbol of Caesar's Triumph for the Cultists of Caesar, and the Symbol of Sorrow for the Cultists of Pompeius.;;;;;;;;;;;;;x    
+
+cult_of_mars;Cult of Mars;;;;;;;;;;;;;x
+cult_of_mars_DESC;The Cult of Mars holds that Julius Caesar was the son of Caesar and destined to unite the world. Upon doing so however, the traitorous Liberatores conspired to slay Caesar before his senate and people. Despite this, Mars' People avenged their fallen imperator and sacrificed the Liberatores in the name of Mars. But over time, the Liberatores returned and plagued the empire from the shadows until it eventually fell. Without Mars and his people the world brought about the Event. Now, the Prophet Caesar seeks to bring about a militant faith bound together by the common cause of Nova Pax Romanum, a New Roman Peace. Using the teachings of Mars and Rome of Old, the Cult builds new temples to Mars, legions worthy of the Mars, and speaks the tongue of their forebears. As they expand, they assimilate the faiths of those they conquer. All becoming the domain of Mars, building for the eventual return of Caesar. They prophecy that Caesar will return to them and establish the Nova Pax Romanum;;;;;;;;;;;;;x
+
+cult_of_mars_FEATURES; Y* ! Can forcefully romanize tribal settlements;;;;;;;;;;;;;x
+
+cult_of_pompeius;Cult of Pompeius;;;;;;;;;;;;;x
+cult_of_pompeius_DESC;Followers of the Cult of Pompey honor one of Caesar's enemies, Gnaeus Pompeius Magnus. According to the legends of the Pompeians, millennia before the Event, there was a great city of Pompeii, ruled by the God-Emperor Gnaeus Pompeius. Envious of the power of the God-Emperor, the despicable Caesar conspired with the evil god Vulcanus and burned the Divine City, after which he defeated the God-Emperor and imprisoned him in fiery dungeons for many millennia. Followers of the Cult of Pompeius believe that in the future the God-Emperor will return and, together with his followers, will restore his Divine City.;;;;;;;;;;;;;x 
+cult_of_pompeius_FEATURES; Y* ! Can forcefully romanize tribal settlements;;;;;;;;;;;;;x
+
+caesar_reborn;Caesar Reborn;;;;;;;;;;;;;x
+caesar_reborn_desc;People believe that this person is Gaius Julius Caesar himself, who was reborn in a body of mortal.;;;;;;;;;;;;;x 
+
+caesar_himself;Caesar;;;;;;;;;;;;;x
+caesar_himself_desc;This person is Gaius Julius Caesar himself.;;;;;;;;;;;;;x 
+
+COMPL_CAESAR_REBORN;Reborn Caesar;;;;;;;;;;;;;x
+
+martian_emperor;Blood of Caesar;;;;;;;;;;;;;x
+martian_emperor_desc;[This.Founder.GetTitledFirstName] managed to re-establish the Roman Empire under [This.Founder.GetHerHis] rule. Many caesarians belive that [This.Founder.GetTitledFirstName] is Gaius Julius Caesar himself, who was reborn in a body of mortal.;;;;;;;;;;;;;x
+
+martian_emperor_female;Blood of Caesar;;;;;;;;;;;;;x
+martian_emperor_female_desc;[This.Founder.GetTitledFirstName] managed to re-establish the Roman Empire under [This.Founder.GetHerHis] rule. Many caesarians belive that [This.Founder.GetTitledFirstName] is Gaius Julius Caesar himself, who was reborn in a body of mortal.;;;;;;;;;;;;;x
+
+#Opinion
+cult_of_mars_opinion;Martian Opinion;;;;;;;;;;;;;x
+cult_of_pompeius_opinion;Pompeian Opinion;;;;;;;;;;;;;x
+roman_opinion;Roman Opinion;;;;;;;;;;;;;x
+
+#Governments
+legion_government;Legion;;;;;;;;;;;;;x
+legion_government_desc;A heirarchical military dictatorship centered around its figurehead.;;;;;;;;;;;;;x
+
+roman_imperial_martian_government;Roman Imperialism;;;;;;;;;;;;;x 
+roman_imperial_martian_government_desc;Roman Imperialism is a highly militaristic Elective Empire lead by an Imperator and a Senate.;;;;;;;;;;;;x 
+
+succ_roman_military_elective;Roman Military Elective;;;;;;;;;;;;;x
+
+#Gods
+GOD_CAESAR;Julius Caesar;;;;;;;;;;;;;x
+GOD_MARS;Mars;;;;;;;;;;;;;x
+GOD_SON_OF_MARS;Son of Mars;;;;;;;;;;;;;x
+GOD_VENUS;Venus;;;;;;;;;;;;;x
+GOD_MINERVA;Minerva;;;;;;;;;;;;;x
+GOD_JUPITER;Jupiter;;;;;;;;;;;;;x
+GOD_PAX_ROMANA;Pax Romana;;;;;;;;;;;;;x
+GOD_ROMULUS;Romulus;;;;;;;;;;;;;x
+GOD_REMUS;Remus;;;;;;;;;;;;;x
+GOD_OCTAVIAN;Octavianus Augustus;;;;;;;;;;;;;x
+GOD_BRUTUS;Junius Brutus;;;;;;;;;;;;;x
+GOD_POMPEIUS;Pompeius Magnus;;;;;;;;;;;;;x
+GOD_VENCINGETORIX;Vencingetorix;;;;;;;;;;;;;x
+GOD_VULKAN;Vulcanus;;;;;;;;;;;;;x
+GOD_JUNO;Juno;;;;;;;;;;;;;x
+GOD_CAESAR_GREEK;Ioulios Kaisaros;;;;;;;;;;;;;x
+GOD_MARS_GREEK;Ares;;;;;;;;;;;;;x
+GOD_SON_OF_MARS_GREEK;Son of Ares;;;;;;;;;;;;;x
+GOD_VENUS_GREEK;Aphrodite;;;;;;;;;;;;;x
+GOD_MINERVA_GREEK;Athena;;;;;;;;;;;;;x
+GOD_JUPITER_GREEK;Zeus;;;;;;;;;;;;;x
+GOD_ROMULUS_GREEK;Romulos;;;;;;;;;;;;;x
+GOD_REMUS_GREEK;Remos;;;;;;;;;;;;;x
+GOD_OCTAVIAN_GREEK;Oktavianos Augoustos;;;;;;;;;;;;;x
+GOD_BRUTUS_GREEK;Iounios Brutos;;;;;;;;;;;;;x
+GOD_POMPEIUS_GREEK;Pompeios Magnos;;;;;;;;;;;;;x
+GOD_VENCINGETORIX_GREEK;Vencingetorikos;;;;;;;;;;;;;x
+GOD_VULKAN_GREEK;Hephaestus;;;;;;;;;;;;;x
+GOD_JUNO_GREEK;Hera;;;;;;;;;;;;;x
+GOD_ARMINIUS_GREEK;Arminios;;;;;;;;;;;;;x
+GOD_CAESAR_SLAVIC;Yuliy Cezar;;;;;;;;;;;;;x
+GOD_MARS_SLAVIC;Mars;;;;;;;;;;;;;x
+GOD_SON_OF_MARS_SLAVIC;Son of Mars;;;;;;;;;;;;;x
+GOD_VENUS_SLAVIC;Venera;;;;;;;;;;;;;x
+GOD_MINERVA_SLAVIC;Minerva;;;;;;;;;;;;;x
+GOD_JUPITER_SLAVIC;Yupiter;;;;;;;;;;;;;x
+GOD_PAX_ROMANA_SLAVIC;Pax Romana;;;;;;;;;;;;;x
+GOD_ROMULUS_SLAVIC;Romul;;;;;;;;;;;;;x
+GOD_REMUS_SLAVIC;Rem;;;;;;;;;;;;;x
+GOD_OCTAVIAN_SLAVIC;Oktavian Avgust;;;;;;;;;;;;;x
+GOD_BRUTUS_SLAVIC;Yuniy Brut;;;;;;;;;;;;;x
+GOD_POMPEIUS_SLAVIC;Pompeiy Magn;;;;;;;;;;;;;x
+GOD_VENCINGETORIX_SLAVIC;Vencingetoriks;;;;;;;;;;;;;x
+GOD_VULKAN_SLAVIC;Vulkan;;;;;;;;;;;;;x
+GOD_JUNO_SLAVIC;Yunona;;;;;;;;;;;;;x
+GOD_ARMINIUS_SLAVIC;Arminiy;;;;;;;;;;;;;x
+GOD_ALARIC_SLAVIC;Alarich;;;;;;;;;;;;;x
+CAESARIAN_CONQUEST;Caesarian Conquest;;;;;;;;;;;;;x
+COMENTARII_DE_BELLO_GALLICO_ET_BELLO_CIVILI;Comentarii de Bello Gallico et Bello Civili;;;;;;;;;;;;;x
+FALL_OF_POMPEII;The Fall of Pompeii;;;;;;;;;;;;;x
+
+#Landed Titles
+e_second_rome;Romaiki Avtokratoria;;;;;;;;;;;;;x
+e_second_rome_adj;Roman;;;;;;;;;;;;;x
+e_third_rome;Rimskaya Imperiya;;;;;;;;;;;;;x
+e_third_rome_adj;Roman;;;;;;;;;;;;;x
+e_nova_roma;Imperium Romanum;;;;;;;;;;;;;x
+e_nova_roma_adj;Roman;;;;;;;;;;;;;x
+e_second_rome_republic;Dimokratia ton Rhomaion;;;;;;;;;;;;;x
+e_second_rome_republic_adj;Roman;;;;;;;;;;;;;x
+e_third_rome_republic;Rimskaya Respublika;;;;;;;;;;;;;x
+e_third_rome_republic_adj;Roman;;;;;;;;;;;;;x
+e_first_rome_republic;Res Publica Romana;;;;;;;;;;;;;x
+e_first_rome_republic_adj;Roman;;;;;;;;;;;;;x
+e_germania_caesars;Germania;;;;;;;;;;;;;x
+e_germania_caesars_adj;Germanic;;;;;;;;;;;;;x
+e_britannia_caesars;Britannia;;;;;;;;;;;;;x
+e_britannia_caesars_adj;Britannic;;;;;;;;;;;;;x
+e_egypt_caesars;Ayguptos;;;;;;;;;;;;;x
+e_egypt_caesars_adj;Ayguptic;;;;;;;;;;;;;x
+e_palmyra_caesars;Palmyrene Empire;;;;;;;;;;;;;x
+e_palmyra_caesars_adj;Palmyrene;;;;;;;;;;;;;x
+e_gallia_caesars;Gallia;;;;;;;;;;;;;x
+e_gallia_caesars_adj;Gallic;;;;;;;;;;;;;x
+k_caesar_legion;Caesar's Legion;;;;;;;;;;;;;x
+k_caesar_legion_adj;Legion;;;;;;;;;;;;;x
+k_caesar_legion_landless;Caesar's Legion;;;;;;;;;;;;;x
+k_caesar_legion_landless_adj;Legion;;;;;;;;;;;;;x
+d_cult_of_mars;Collegium Pontificum;;;;;;;;;;;;;x
+d_cult_of_mars_adj;Caesarian;;;;;;;;;;;;;x
+d_cult_of_pompeius;Collegium Pontificum;;;;;;;;;;;;;x
+d_cult_of_pompeius_adj;Pompeian;;;;;;;;;;;;;x
+d_cohors_praetoria;Praetorian Guard;;;;;;;;;;;;;x
+d_cohors_praetoria_adj;Praetorian;;;;;;;;;;;;;x
+d_imperial_army;Imperial Legion;;;;;;;;;;;;;x
+d_imperial_army_desc;Roman;;;;;;;;;;;;;x
+d_imperial_army_greece;Imperial Legion;;;;;;;;;;;;;x
+d_imperial_army_greece_desc;Roman;;;;;;;;;;;;;x
+d_imperial_army_russia;Imperial Legion;;;;;;;;;;;;;x
+d_imperial_army_russia_desc;Roman;;;;;;;;;;;;;x
+d_the_disfavored;The Disfavored Legion;;;;;;;;;;;;;x
+d_spire_guard;The Column Guard;;;;;;;;;;;;;x
+d_the_unbroken;The Unbroken Legion;;;;;;;;;;;;;x
+d_boatmen_of_styx;The Boatmens of Styx;;;;;;;;;;;;;x
+d_ardites;The Ardites;;;;;;;;;;;;;x
+d_volki_rima;Volchiy Legion;;;;;;;;;;;;;x
+
+#Titles
+IRON_MARSHAL;Iron Marshal;;;;;;;;;;;;;x
+
+IMPERATOR_TITLE_RIM;Imperator;;;;;;;;;;;;;x
+IMPERATOR_TITLE_FEMALE_RIM;Imperatritsa;;;;;;;;;;;;;x
+
+IMPERATOR_TITLE_RHOMAION;Autokrator;;;;;;;;;;;;;x
+IMPERATOR_TITLE_FEMALE_RHOMAION;Autokrateira;;;;;;;;;;;;;x
+
+DICTATOR_TITLE;Dictator;;;;;;;;;;;;;x
+DICTATRIX_TITLE;Dictator;;;;;;;;;;;;;x
+
+PONTIFEX_MAXIMUS;Pontifex Maximus;;;;;;;;;;;;;x
+VESTALIS_MAXIMA;Vestalis Maxima;;;;;;;;;;;;;x
+
+AUGUR_CAESARIAN;Augur;;;;;;;;;;;;;x
+
+PRAEFECT_PRAETORII;Praefectus Praetorio;;;;;;;;;;;;;x
+PRAEFECTA_PRAETORII;Praefecta Praetorio;;;;;;;;;;;;;x
+
+IMPERATOR_TITLE;Imperator;;;;;;;;;;;;;x
+IMPERATRIX_TITLE_FEMALE;Imperatrix;;;;;;;;;;;;;x
+
+LEGATUS_CAESARIAN;Legatus;;;;;;;;;;;;;x
+LEGATUS_CAESARIAN_FEMALE;Legata;;;;;;;;;;;;;x
+
+PRINCEPS_CAESARIAN;Princeps;;;;;;;;;;;;;x
+PRINCEPS_FEMALE_CAESARIAN;Princeps;;;;;;;;;;;;;x
+
+emperor_roman;Imperator;;;;;;;;;;;;;x
+emperor_female_roman;Imperatrix;;;;;;;;;;;;;x
+empire_of_roman;Imperium;;;;;;;;;;;;;x
+
+title_prince_roman;Sucessor;;;;;;;;;;;;;x
+title_prince_female_roman;Sucessor;;;;;;;;;;;;;x
+
+king_roman;Rex;;;;;;;;;;;;;x
+king_female_roman;Regina;;;;;;;;;;;;;x
+kingdom_of_roman;Regnum of;;;;;;;;;;;;;x
+
+duke_roman;Doux;;;;;;;;;;;;;x
+duke_female_roman;Duchess;;;;;;;;;;;;;x
+duchy_of_roman;Duchy of;;;;;;;;;;;;;x
+
+count_roman;Comes;;;;;;;;;;;;;x
+count_female_roman;Countess;;;;;;;;;;;;;x
+county_of_roman;County of;;;;;;;;;;;;;;x
+
+baron_roman;Legatus;;;;;;;;;;;;;;x
+baron_female_roman;Legata;;;;;;;;;;;;;;x
+barony_of_roman;Outpost of;;;;;;;;;;;;;x
+
+vice_royalty_duke_roman;Procurator;;;;;;;;;;;;;;x
+vice_royalty_duke_female_roman;Procurator;;;;;;;;;;;;;x
+vice_royalty_duchy_of_roman;Province of;;;;;;;;;;;;;x
+
+vice_royalty_king_roman;Proconsul;;;;;;;;;;;;;x
+vice_royalty_king_female_roman;Proconsula;;;;;;;;;;;;;x
+vice_royalty_kingdom_of_roman;Proconsulate of;;;;;;;;;;;;;x
+
+vice_royalty_emperor_roman;Princeps;;;;;;;;;;;;;x
+vice_royalty_emperor_female_roman;Princess;;;;;;;;;;;;;x
+vice_royalty_empire_of_roman;Principate of;;;;;;;;;;;;;x
+
+city_baron_roman;Magister;;;;;;;;;;;;;x
+city_baron_female_roman;Magistra;;;;;;;;;;;;;;x
+
+city_count_roman;Praefect;;;;;;;;;;;;;x
+city_count_female_roman;Praefecta;;;;;;;;;;;;;x
+
+city_duke_roman;Tribune;;;;;;;;;;;;;x
+city_duke_female_roman;Tribune;;;;;;;;;;;;;x
+
+city_king_roman;Consul;;;;;;;;;;;;;x
+city_king_female_roman;Consul;;;;;;;;;;;;;x
+
+city_emperor_roman;Princeps;;;;;;;;;;;;;x
+city_emperor_female_roman;Princess;;;;;;;;;;;;;x
+
+city_barony_of_roman;City of;;;;;;;;;;;;;x
+
+city_county_of_roman;Grand City of;;;;;;;;;;;;;x
+
+city_duchy_of_roman;League of;;;;;;;;;;;;;x
+
+city_kingdom_of_roman;Republic of;;;;;;;;;;;;;x
+
+city_empire_of_roman;Grand Republic of;;;;;;;;;;;;;x
+
+city_barony_roman;City;;;;;;;;;;;;;x
+
+city_county_roman;Grand City;;;;;;;;;;;;;x
+
+city_duchy_roman;League;;;;;;;;;;;;;x
+
+city_kingdom_roman;Republic;;;;;;;;;;;;;x
+
+city_empire_roman;Grand Republic;;;;;;;;;;;;;x
+
+oligarchic_republic_baron_roman;Magister;;;;;;;;;;;;;x
+oligarchic_republic_baron_female_roman;Magistra;;;;;;;;;;;;;x
+
+oligarchic_republic_count_roman;Praefect;;;;;;;;;;;;;x
+oligarchic_republic_count_female_roman;Praefect;;;;;;;;;;;;;x
+
+oligarchic_republic_duke_roman;Tribune;;;;;;;;;;;;;x
+oligarchic_republic_duke_female_roman;Tribune;;;;;;;;;;;;;x
+
+oligarchic_republic_king_roman;Consul;;;;;;;;;;;;;x
+oligarchic_republic_king_female_roman;Consul;;;;;;;;;;;;;x
+
+oligarchic_republic_emperor_roman;Princeps;;;;;;;;;;x;;;
+oligarchic_republic_emperor_female_roman;Princess;;;;;;;;;;x;;;
+
+oligarchic_republic_barony_of_roman;City of;;;;;;;;;;;;;x
+
+oligarchic_republic_county_of_roman;Grand City of;;;;;;;;;;;;;x
+
+oligarchic_republic_duchy_of_roman;League of;;;;;;;;;;;;;x
+
+oligarchic_republic_kingdom_of_roman;Republic of;;;;;;;;;;;;;x
+
+oligarchic_republic_empire_of_roman;Grand Republic of;;;;;;;;;;;;;x
+
+oligarchic_republic_barony_roman;City;;;;;;;;;;;;;x
+
+oligarchic_republic_county_roman;Grand City;;;;;;;;;;;;;x
+
+oligarchic_republic_duchy_roman;League;;;;;;;;;;;;;x
+
+oligarchic_republic_kingdom_roman;Republic;;;;;;;;;;;;;x
+
+oligarchic_republic_empire_roman;Grand Republic;;;;;;;;;;;;;x
+
+job_spiritual_cult_of_mars;Augur;Augure;Augur;;Augur;;;;;;;;;x
+job_spiritual_female_cult_of_mars;Seeress;Voyante;Seherin;;Vidente;;;;;;;;;x
+
+temple_baron_cult_of_mars;Flamen;Flamen;Flamen;;Flamen;;;;;;;;;x
+temple_baron_female_cult_of_mars;Vestal;Vestale;Vestal;;Vestal;;;;;;;;;x
+
+temple_count_cult_of_mars;High Augur;Grand augure;Hoher Augur;;Alto augur;;;;;;;;;x
+temple_count_female_cult_of_mars;High Vestal;Grande vestale;Hohe Seherin;;Alta vestal;;;;;;;;;x
+
+temple_duke_cult_of_mars;Pontifex;Pontifex;Pontifex;;Pontifex;;;;;;;;;x
+temple_duke_female_cult_of_mars;Pontifex;Pontifex;Pontifex;;Pontifex;;;;;;;;;x
+
+temple_barony_of_cult_of_mars;Temple of;;;;;;;;;;;;;x
+
+temple_duchy_of_cult_of_mars;Collegium of;;;;;;;;;;;;;x
+
+job_chancellor_roman;Magister Officiorum;;;;;;;;;;;;;x
+job_marshal_roman;Magister Militum;;;;;;;;;;;;;x
+job_treasurer_roman;Quaestor;;;;;;;;;;;;;x
+job_spymaster_roman;Frumentarius;;;;;;;;;;;;;x
+job_first_magistrate_roman;First Counsul;;;;;;;;;;;;;x
+job_second_magistrate_roman;Second Counsul;;;;;;;;;;;;;x
+job_third_magistrate_roman;Third Counsul;;;;;;;;;;;;;x
+
+#Government Flavour
+gov_roman_martian_republic;Roman Oligarchic Republic;;;;;;;;;;;;;x
+gov_roman_caesar_legion;Roman Military Autocracy;;;;;;;;;;;;;x
+gov_roman_caesarian_empire;Roman Empire;;;;;;;;;;;;;x
+gov_roman_caesarian_monarchy;Roman Feudal Monarchy;;;;;;;;;;;;;x
+
+#Sucession
+succ_roman_military_elective_desc;Military commanders choose the most promising commander as the heir to the dictator.;;;;;;;;;;;;;x 
+
+#Casus Belli
+WAR_NAME_UNIFICATION_WAR;Roman Unification War;;;;;;;;;;;;;x
+CB_NAME_THIRD_ROME_BORDERS;Restore Third Rome Borders;;;;;;;;;;;;;x 
+restore_third_rome_borders_desc;We can declare war to unite former lands of Third Rome.;;;;;;;;;;;;;x 
+CB_NAME_SECOND_ROME_BORDERS;Restore Second Rome Borders;;;;;;;;;;;;;x 
+restore_second_rome_borders_desc;We can declare war to unite former lands of Second Rome.;;;;;;;;;;;;;x 
+CB_NAME_FIRST_ROME_BORDERS;Restore Roman Borders;;;;;;;;;;;;;x 
+restore_first_rome_borders_desc;We can declare war to unite former lands of Rome.;;;;;;;;;;;;;x 
+
+#Nicknames
+nick_caesar;Caesar;;;;;;;;;;;;;x
+nick_august;August;;;;;;;;;;;;;x
+nick_germanicus;Germanicus;;;;;;;;;;;;;x
+nick_traianus;Traianus;;;;;;;;;;;;;x
+nick_hadrianus;Hadrianus;;;;;;;;;;;;;x
+nick_antonius_pius;Pius;;;;;;;;;;;;;x
+nick_aurelius;Aurelius;;;;;;;;;;;;;x
+nick_constantinus;Constantinus;;;;;;;;;;;;;x
+nick_augustulus;Augustulus;;;;;;;;;;;;;x
+nick_magnus;Magnus;;;;;;;;;;;;;x
+nick_tempestus;Tempestus;;;;;;;;;;;;;x
+nick_beatus;Beatus;;;;;;;;;;;;;x
+nick_silentius;Silentius;;;;;;;;;;;;;x
+nick_benedictus;Benedictus;;;;;;;;;;;;;x
+nick_vitis;Vitis;;;;;;;;;;;;;x
+nick_liberator;Liberator;;;;;;;;;;;;;x
+nick_pacificator;Pacificator;;;;;;;;;;;;;x
+nick_pannus;Pannus;;;;;;;;;;;;;x
+nick_sulla;Sulla;;;;;;;;;;;;;x
+nick_frumentum;Frumentum;;;;;;;;;;;;;x
+nick_bibitor;Bibitor;;;;;;;;;;;;;x
+nick_argyros;Argyros;;;;;;;;;;;;;x
+nick_magna;Magna;;;;;;;;;;;;;x
+nick_brutus;Brutus;;;;;;;;;;;;;x
+nick_caesarion;Caesarion;;;;;;;;;;;;;x
+
+#Minor Titles
+title_senator_caesarian;Senator;;;;;;;;;x,,,,,,,,;;;;
+title_senator_caesarian_desc;This title represents a member of the Roman Senate.;;;;;;;;;x,,,,,,,,;;;;
+title_senator_caesarian_1;Senator;;;;;;;;;x,,,,,,,,;;;;
+title_senator_caesarian_1_desc;This title represents a member of the Roman Senate.;;;;;;;;;x,,,,,,,,;;;;
+title_senator_caesarian_2;Senator;;;;;;;;;x,,,,,,,,;;;;
+title_senator_caesarian_2_desc;This title represents a member of the Roman Senate.;;;;;;;;;x,,,,,,,,;;;;
+title_magister_navis;Magister Navis
+title_magister_navis_desc;High Commander of Roman Fleet.;;;;;;;;;;;;;x
+title_consul_caesarian;Consul;;;;;;;;;;;;;x
+title_consul_caesarian_desc;Although the consular authority belongs to the Emperor, this title still have some political weight.;;;;;;;;;;;;;x
+title_censor_caesarian;Censor;;;;;;;;;;;;;x
+title_censor_caesarian_desc;Censor is supervisor of public morality.;;;;;;;;;;;;;x
+title_rex_sacrorum;Rex Sacrorum;;;;;;;;;;;;;x
+title_rex_sacrorum_desc;King of the Sacred is the priest, who performing various religious rituals;;;;;;;;;;;;;x
+title_pretor_caesarian;Praetor;;;;;;;;;;;;;x
+title_pretor_caesarian_desc;Praetors are responsible for the city's judiciary.;;;;;;;;;;;;;x 
+
+#Laws
+parliament_laws_roman_caesarian;Senate Size;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_desc;These laws decide the size of this nation's senate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_0;Non-Existent Senate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_1;Small Senate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_2;Moderate Senate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_3;Large Senate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_0_option;None;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_1_option;Small;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_2_option;Moderate;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_3_option;Large;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_0_desc;I am the Senate!;;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_1_desc;A small Senate(12 Senators);;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_2_desc;A Moderate Senate(24 Senators);;;;;;;;;;;;;x
+parliament_laws_roman_caesarian_3_desc;A Large Senate(36 Senators);;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian;Government Status Laws;;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian_desc;This status descibe the current government of the Empire;;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian_0;Principate;;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian_0_desc;Emperor considered as "Primus inter Pares", The First among the Equals, and have to listen to the voice of the Senate.;;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian_1;Dominate;;;;;;;;;;;;;x
+principatus_dominatus_laws_roman_caesarian_1_desc;Emperor considered as "Dominus et Deus", Our Lord and Master, and can hold all possible political power. The penalties of disbanded Senate are ignored.;;;;;;;;;;;;;x
+
+#Tooltips
+tooltip_imperial_vote_strength_elector_consul;[Root.GetFirstName] is  YConsul !;;;;;;;;;;;;;x
+tooltip_imperial_vote_strength_elector_censor;[Root.GetFirstName] is  YCensor !;;;;;;;;;;;;;x
+tooltip_imperial_vote_strength_elector_magister_navis;[Root.GetFirstName] is  YMagister Navis !;;;;;;;;;;;;;x
+tooltip_imperial_vote_strength_elector_rex_sacrorum;[Root.GetFirstName] is  YRex Sacrorum !;;;;;;;;;;;;;x
+tooltip_imperial_vote_strength_elector_pretor;[Root.GetFirstName] is  YPraetor !;;;;;;;;;;;;;x
+tooltip_delve_into_classics;Delve into Classics;;;;;;;;;;;;;x
+
+#Cultures & Religions
+caesarian;Caesarian;;;;;;;;;;;;;x
+caesarian_faiths_group;Caesarian;;;;;;;;;;;;;x

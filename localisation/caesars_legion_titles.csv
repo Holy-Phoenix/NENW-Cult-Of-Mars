@@ -1,0 +1,345 @@
+###ITALIA###
+e_roman_italia;Italia;;;;;;;;;;;;x
+e_roman_italia_adj;Italian;;;;;;;;;;;;x
+k_roman_two_siciles;Graecia Magna;;;;;;;;;;;;x
+k_roman_two_siciles_adj;Greek;;;;;;;;;;;;x
+k_roman_latium;Latium;;;;;;;;;;;;x
+k_roman_latium_adj;Latian;;;;;;;;;;;;x
+k_roman_italy;Gallia Cispadana;;;;;;;;;;;;x
+k_roman_italy_adj;Cispadanian;;;;;;;;;;;;x
+k_roman_tuscany;Etruria;;;;;;;;;;;;x
+k_roman_tuscany_adj;Etrurian;;;;;;;;;;;;x
+k_roman_lombardo_veneto;Gallia Transpadana;;;;;;;;;;;;x
+k_roman_lombardo_veneto_adj;Transpadanian;;;;;;;;;;;;x
+k_roman_san_marino;Ravenna;;;;;;;;;;;;x
+k_roman_san_marino_adj;Ravennian;;;;;;;;;;;;x
+k_roman_sardinia;Sardinia et Corsica;;;;;;;;;;;;x
+k_roman_sardinia_adj;Sardinian;;;;;;;;;;;;x
+###GALLIA###
+e_roman_gaul;Galliarum;;;;;;;;;;;;x
+e_roman_gaul_adj;Gallic;;;;;;;;;;;;x
+k_roman_normandy;Armorica;;;;;;;;;;;;x
+k_roman_normandy_adj;Armorican;;;;;;;;;;;;x
+k_roman_burgundy;Helvetia;;;;;;;;;;;;x
+k_roman_burgundy_adj;Helvetian;;;;;;;;;;;;x
+k_roman_provance;Massilia;;;;;;;;;;;;x
+k_roman_provance_adj;Massilian;;;;;;;;;;;;x
+k_roman_france;Gallia Lugdunensis;;;;;;;;;;;;x
+k_roman_aquitaine;Gallia Aquitania;;;;;;;;;;;;x
+###BRITANNIA###
+e_roman_britannia;Imperium Britannicum;;;;;;;;;;;;x
+e_roman_britannia_adj;Britannic;;;;;;;;;;;;x
+k_roman_britannia;Britannia;;;;;;;;;;;;x
+k_roman_britannia_adj;Britannic;;;;;;;;;;;;x
+k_roman_cornwall;Cornubia;;;;;;;;;;;;x
+k_roman_cornwall_adj;Cornubian;;;;;;;;;;;;x
+k_roman_england;Britannia;;;;;;;;;;;;x
+k_roman_england_adj;Britannic;;;;;;;;;;;;x
+k_roman_wales;Cambria;;;;;;;;;;;;x
+k_roman_wales_adj;Cambrian;;;;;;;;;;;;x
+k_roman_brittany;Armorica;;;;;;;;;;;;x
+k_roman_brittany_adj;Armorican;;;;;;;;;;;;x
+k_roman_scotland;Caledonia;;;;;;;;;;;;x
+k_roman_scotland_adj;Caledonian;;;;;;;;;;;;x
+k_roman_ireland;Ebdania;;;;;;;;;;;;x
+k_roman_ireland_adj;Ebdanian;;;;;;;;;;;;x
+###RUSSIA###
+e_roman_russia;Roma Tertia;;;;;;;;;;;;x
+e_roman_russia_adj;Roman;;;;;;;;;;;;x
+e_roman_idel_ural;Imperium Hyperboreum;;;;;;;;;;;;x
+e_roman_idel_ural_adj;Hyperborean;;;;;;;;;;;;x
+k_roman_chernigov;Antea;;;;;;;;;;;;x
+k_roman_chernigov_adj;Antean;;;;;;;;;;;;x
+k_roman_smalensk;Venedia;;;;;;;;;;;;x
+k_roman_smalensk_adj;Venedian;;;;;;;;;;;;x
+k_roman_pietropolis;Petrupolis;;;;;;;;;;;;x
+k_roman_pietropolis_adj;Petrupolis;;;;;;;;;;;;x
+k_roman_vladimir;Roma Sclavia;;;;;;;;;;;;x
+k_roman_vladimir_adj;Roman;;;;;;;;;;;;x
+k_roman_volgaria;Tartaria;;;;;;;;;;;;x
+k_roman_volgaria_adj;Tartarian;;;;;;;;;;;;x
+k_roman_perm;Perm;;;;;;;;;;;;x
+k_roman_perm_adj;Permian;;;;;;;;;;;;x
+k_roman_archangelsk;Arctida;;;;;;;;;;;;x
+k_roman_archangelsk_adj;Arctidan;;;;;;;;;;;;x
+###STEPPES###
+e_roman_steppes;Scythia Magna;;;;;;;;;;;;x
+e_roman_steppes_adj;Scythian;;;;;;;;;;;;x
+k_roman_wolgadeutschland;Germania Scythica;;;;;;;;;;;;x
+k_roman_wolgadeutschland_adj;Scytho-Germanian;;;;;;;;;;;;x
+k_roman_daylam;Margiana;;;;;;;;;;;;x
+k_roman_daylam_adj;Marganian;;;;;;;;;;;;x
+k_roman_khiva;Bactria;;;;;;;;;;;;x
+k_roman_khiva_adj;Bactrian;;;;;;;;;;;;x
+k_roman_tajikistan;Sogdiana;;;;;;;;;;;;x
+k_roman_tajikistan_adj;Sogdianian;;;;;;;;;;;;x
+k_roman_tian_shan;Fergana;;;;;;;;;;;;x
+k_roman_tian_shan_adj;Ferganian;;;;;;;;;;;;x
+k_roman_kazakhstan;Scythia;;;;;;;;;;;;x
+k_roman_kazakhstan_adj;Scythian;;;;;;;;;;;;x
+k_roman_caspia;Caspiana;;;;;;;;;;;;x
+k_roman_caspia_adj;Caspianian;;;;;;;;;;;;x
+###TRANSNISTRIA###
+k_roman_alania;Alania;;;;;;;;;;;;x
+k_roman_alania_adj;Alanian;;;;;;;;;;;;x
+k_roman_crimea;Tauria;;;;;;;;;;;;x
+k_roman_crimea_adj;Taurian;;;;;;;;;;;;x
+k_roman_hellas_minor;Cimmeria;;;;;;;;;;;;x
+k_roman_hellas_minor_adj;Cimmerian;;;;;;;;;;;;x
+k_roman_donkuban;Ferrupolis;;;;;;;;;;;;x
+k_roman_donkuban_adj;Ferrupolis;;;;;;;;;;;;x
+k_roman_ukraine;Sarmatia;;;;;;;;;;;;x
+k_roman_ukraine_adj;Sarmatian;;;;;;;;;;;;x
+k_roman_romania;Dacia Superior;;;;;;;;;;;;x
+k_roman_romania_adj;Dacian;;;;;;;;;;;;x
+k_roman_moldova;Dacia Inferior;;;;;;;;;;;;x
+k_roman_moldova_adj;Dacian;;;;;;;;;;;;x
+k_roman_galichia;Sarmatia Transcarpathia;;;;;;;;;;;;x
+k_roman_galichia_adj;Transcarpathian;;;;;;;;;;;;x
+###HISPANIA###
+e_roman_spain;Hispania;;;;;;;;;;;;x
+e_roman_spain_adj;Hispanian;;;;;;;;;;;;x
+k_roman_portugal;Lusitania;;;;;;;;;;;;x
+k_roman_portugal_adj;Lusitanian;;;;;;;;;;;;x
+k_roman_castille;Hispania Cathaginensis;;;;;;;;;;;;x
+k_roman_castille_adj;Hispanian;;;;;;;;;;;;x
+k_roman_catalunia;Hispania Tarraconensis;;;;;;;;;;;;x
+k_roman_catalunia_adj;Hispanian;;;;;;;;;;;;x
+k_roman_basque;Aquitania Novempopulana;;;;;;;;;;;;x
+k_roman_basque_adj;Aquitanian;;;;;;;;;;;;x
+k_roman_galicia_y_asturias;Gallaecia;;;;;;;;;;;;x
+k_roman_galicia_y_asturias_adj;Gallaecian;;;;;;;;;;;;x
+k_roman_andalusia;Baetica;;;;;;;;;;;;x
+k_roman_andalusia_adj;Baetica;;;;;;;;;;;;x
+###ERE###
+k_roman_cyprus;Cyprus;;;;;;;;;;;;x
+k_roman_cyprus_adj;Cypriot;;;;;;;;;;;;x
+k_roman_cilicia;Cilicia;;;;;;;;;;;;x
+k_roman_cilicia_adj;Cilician;;;;;;;;;;;;x
+k_roman_trebizond;Bitynia et Pontus;;;;;;;;;;;;x
+k_roman_trebizond_adj;Bitynian;;;;;;;;;;;;x
+k_roman_byzantium;Achaia;;;;;;;;;;;;x
+k_roman_byzantium_adj;Achaian;;;;;;;;;;;;x
+k_roman_epirus;Epirus;;;;;;;;;;;;x
+k_roman_epirus_adj;Epirotan;;;;;;;;;;;;x
+k_roman_karaman;Cappadocia;;;;;;;;;;;;x
+k_roman_karaman_adj;Cappadocian;;;;;;;;;;;;x
+k_roman_karadeniz;Bitynia et Pontus;;;;;;;;;;;;x
+k_roman_karadeniz_adj;Bitynian;;;;;;;;;;;;x
+k_roman_turkey;Asia;;;;;;;;;;;;x
+k_roman_turkey_adj;Asian;;;;;;;;;;;;x
+k_roman_georgia;Hiberia;;;;;;;;;;;;x
+k_roman_georgia_adj;Hiberian;;;;;;;;;;;;x
+###BHUTAN###
+e_roman_bhutan;Fulmen Imperium;;;;;;;;;;;;x
+e_roman_bhutan_adj;Butanian;;;;;;;;;;;;x
+k_roman_bhutan;Butania;;;;;;;;;;;;x
+k_roman_bhutan_adj;Butanian;;;;;;;;;;;;x
+###BENELUX###
+e_roman_benelux;Imperium Belgicum;;;;;;;;;;;;x
+e_roman_benelux_adj;Belgican;;;;;;;;;;;;x
+k_roman_holland;Germania Inferior;;;;;;;;;;;;x
+k_roman_holland_adj;Germanian;;;;;;;;;;;;x
+k_roman_belgium;Belgica;;;;;;;;;;;;x
+k_roman_belgium_adj;Belgican;;;;;;;;;;;;x
+k_roman_luxemburg;Germania Superior;;;;;;;;;;;;x
+k_roman_luxemburg_adj;Germanian;;;;;;;;;;;;x
+###MAGHREB###
+e_roman_maghreb;Africa;;;;;;;;;;;x
+e_roman_maghreb_adj;African;;;;;;;;;;;x
+k_roman_morocco;Mauretania Tingitana;;;;;;;;;;;x
+k_roman_morocco_adj;Mauretan;;;;;;;;;;;x
+k_roman_libya;Tripolitania;;;;;;;;;;;x
+k_roman_libya_adj;Tripolitanian;;;;;;;;;;;x
+k_roman_algeria;Mauretania Caesariensis;;;;;;;;;;;x
+k_roman_algeria_adj;Mauretan;;;;;;;;;;;x
+k_roman_africa;Africa;;;;;;;;;;;x
+k_roman_africa_adj;African;;;;;;;;;;;x
+###EGYPT###
+e_roman_egypt;Aegyptus;;;;;;;;;;;;x
+e_roman_egypt_adj;Aegyptus;;;;;;;;;;;;x
+k_roman_jerusalem;Philistia;;;;;;;;;;;;x
+k_roman_jerusalem_adj;Philistian;;;;;;;;;;;;x
+k_roman_palestine;Philistia;;;;;;;;;;;;x
+k_roman_palestine_adj;Philistian;;;;;;;;;;;;x
+k_roman_israel;Philistia;;;;;;;;;;;;x
+k_roman_israel_adj;Philistian;;;;;;;;;;;;x
+k_roman_egypt;Aegyptus;;;;;;;;;;;;x
+k_roman_egypt_adj;Aegyptus;;;;;;;;;;;x
+k_lebanon;Phoenices;;;;;;;;;;;;x
+k_lebanon_adj;Phoenician;;;;;;;;;;;;x
+###ARABIA###
+e_roman_arabia;Palmyra;;;;;;;;;;;;x
+e_roman_arabia_adj;Palmyran;;;;;;;;;;;;x
+k_roman_jorden;Arabia Petraea;;;;;;;;;;;;x
+k_roman_jorden_adj;Arabian;;;;;;;;;;;;x
+k_roman_hijaz;Arabia Magna;;;;;;;;;;;;x
+k_roman_hijaz_adj;Arabian;;;;;;;;;;;;x
+k_roman_ramal;Coelesyria;;;;;;;;;;;;x
+k_roman_ramal_adj;Coelesyrian;;;;;;;;;;;;x
+k_roman_najd;Arabia Deserta;;;;;;;;;;;;x
+k_roman_najd_adj;Arabian;;;;;;;;;;;;x
+k_roman_yemen;Arabia Felix;;;;;;;;;;;;x
+k_roman_yemen_adj;Arabian;;;;;;;;;;;;x
+k_roman_oman;Sabae;;;;;;;;;;;;x
+k_roman_oman_adj;Sabaean;;;;;;;;;;;;x
+k_roman_syria;Syria;;;;;;;;;;;;x
+k_roman_syria_adj;Syrian;;;;;;;;;;;;x
+k_roman_iraq;Babylonia;;;;;;;;;;;;x
+k_roman_iraq_adj;Babylonian;;;;;;;;;;;;x
+k_roman_babylon;Babylonia;;;;;;;;;;;;x
+k_roman_babylon_adj;Babylonian;;;;;;;;;;;;x
+k_roman_assyria;Assyria;;;;;;;;;;;;x
+k_roman_assyria_adj;Assyrian;;;;;;;;;;;;x
+###GERMANIA###
+e_roman_germany;Germania Magna;;;;;;;;;;;;x
+e_roman_germany_adj;Germanian;;;;;;;;;;;;x
+k_roman_saxon;Frisia;;;;;;;;;;;;x
+k_roman_saxon_adj;Frisian;;;;;;;;;;;;x
+k_roman_rhineland;Limes Germanicus;;;;;;;;;;;;x
+k_roman_rhineland_adj;Germanian;;;;;;;;;;;;x
+k_roman_bavarja;Boia;;;;;;;;;;;;x
+k_roman_bavarja_adj;Boian;;;;;;;;;;;;x
+k_roman_austria;Noricum;;;;;;;;;;;;x
+k_roman_austria_adj;Norican;;;;;;;;;;;;x
+k_roman_saxony;Marcomannia;;;;;;;;;;;;x
+k_roman_saxony_adj;Marcomannian;;;;;;;;;;;;x
+k_roman_prussia;Getica;;;;;;;;;;;;x
+k_roman_prussia_adj;Getican;;;;;;;;;;;;x
+k_roman_hessia;Heruscia;;;;;;;;;;;;x
+k_roman_hessia_adj;Heruscian;;;;;;;;;;;;x
+e_roman_kuhjungs;Germania Magna;;;;;;;;;;;;x
+e_roman_kuhjungs_adj;Germanian;;;;;;;;;;;;x
+k_roman_franconia;Francia;;;;;;;;;;;;x
+k_roman_franconia_adj;Francian;;;;;;;;;;;;x
+k_roman_t_prussia;Getica;;;;;;;;;;;;x
+k_roman_t_prussia_adj;Getican;;;;;;;;;;;;x
+###YUGOSLAVIA###
+e_roman_yugoslavia;Imperium Illiricum;;;;;;;;;;;;x
+e_roman_yugoslavia_adj;Illirican;;;;;;;;;;;;x
+k_roman_serbja;Moesia Superior;;;;;;;;;;;;x
+k_roman_serbja_adj;Moesian;;;;;;;;;;;;x
+k_roman_montenegro;Praevalitana;;;;;;;;;;;;x
+k_roman_montenegro_adj;Praevalitanian;;;;;;;;;;;;x
+k_roman_bulgaria;Moesia Inferior;;;;;;;;;;;;x
+k_roman_bulgaria_adj;Moesian;;;;;;;;;;;;x
+k_roman_slovenia;Pannonia Superior;;;;;;;;;;;;x
+k_roman_slovenia_adj;Pannonian;;;;;;;;;;;;x
+k_roman_chorwatia;Dalmatia Superior;;;;;;;;;;;;x
+k_roman_chorwatia_adj;Dalmatian;;;;;;;;;;;;x
+k_roman_bosnai;Dalmatia Inferior;;;;;;;;;;;;x
+k_roman_bosnai_adj;Dalmatian;;;;;;;;;;;;x
+###CARPATHIA###
+e_roman_carpathia;Pannonia Magna;;;;;;;;;;;;x
+e_roman_carpathia_adj;Pannonian;;;;;;;;;;;;x
+k_roman_czechoslovakia;Rugia-Lugia;;;;;;;;;;;;x
+k_roman_czechoslovakia_adj;Rugian-Lugian;;;;;;;;;;;;x
+k_roman_bohemia;Lugia;;;;;;;;;;;;x
+k_roman_bohemia_adj;Lugian;;;;;;;;;;;;x
+k_roman_slovakia;Rugia;;;;;;;;;;;;x
+k_roman_slovakia_adj;Rugian;;;;;;;;;;;;x
+k_roman_romaraj;Tsingania;;;;;;;;;;;;x
+k_roman_romaraj_adj;Tsinganian;;;;;;;;;;;;x
+k_roman_hungary;Pannonia Inferior;;;;;;;;;;;;x
+k_roman_hungary_adj;Pannonian;;;;;;;;;;;;x
+###ALPS###
+e_roman_alps;Maxima Sequanorum;;;;;;;;;;;;x
+e_roman_alps_adj;Sequanian;;;;;;;;;;;;x
+k_roman_switzerland;Maxima Sequanorum;;;;;;;;;;;;x
+k_roman_switzerland_adj;Sequanian;;;;;;;;;;;;x
+k_roman_lichtenstein;Raetia;;;;;;;;;;;;x
+k_roman_lichtenstein_adj;Raetian;;;;;;;;;;;;x
+###COMMONWEALTH###
+e_roman_commonwealth;Germania Sclavica;;;;;;;;;;;;x
+e_roman_commonwealth_adj;Sclavican;;;;;;;;;;;;x
+k_roman_belarus;Venedia Alba;;;;;;;;;;;;x
+k_roman_belarus_adj;Venedian;;;;;;;;;;;;x
+k_roman_estonia;Estia;;;;;;;;;;;;x
+k_roman_estonia_adj;Estian;;;;;;;;;;;;x
+k_roman_poland;Sarmatia Germanica;;;;;;;;;;;;x
+k_roman_poland_adj;Sarmatian;;;;;;;;;;;;x
+k_roman_lithuania;Venedia Superior;;;;;;;;;;;;x
+k_roman_lithuania_adj;Venedian;;;;;;;;;;;;x
+k_roman_lativia;Venedia Inferior;;;;;;;;;;;;x
+k_roman_lativia_adj;Venedian;;;;;;;;;;;;x
+###SCANDINAVIA###
+e_roman_scandinavia;Scadinauia;;;;;;;;;;;;x
+e_roman_scandinavia_adj;Scadinauian;;;;;;;;;;;;x
+k_roman_doggerland;Atlantis;;;;;;;;;;;;x
+k_roman_doggerland_adj;Atlantean;;;;;;;;;;;;x
+k_roman_sweden;Suionia;;;;;;;;;;;;x
+k_roman_sweden_adj;Suionian;;;;;;;;;;;;x
+k_roman_denmark;Cimbria;;;;;;;;;;;;x
+k_roman_denmark_adj;Cimbrian;;;;;;;;;;;;x
+k_roman_iceland;Thule;;;;;;;;;;;;x
+k_roman_iceland_adj;Thulean;;;;;;;;;;;;x
+k_roman_norway;Aetelrugia;;;;;;;;;;;;x
+k_roman_norway_adj;Aetelrugian;;;;;;;;;;;;x
+###FINLAND###
+e_roman_finland;Finnia;;;;;;;;;;;;x
+e_roman_finland_adj;Finnian;;;;;;;;;;;;x
+k_roman_finland;Finnia;;;;;;;;;;;;x
+k_roman_finland_adj;Finnian;;;;;;;;;;;;x
+k_roman_karelia;Carelia;;;;;;;;;;;;x
+k_roman_karelia_adj;Carelian;;;;;;;;;;;;x
+###SIBERIA###
+e_roman_siberia;Scythia Transripaea;;;;;;;;;;;;x
+e_roman_siberia_adj;Scythian;;;;;;;;;;;;x
+k_roman_uralia;Ripaea;;;;;;;;;;;;x
+k_roman_uralia_adj;Ripaean;;;;;;;;;;;;x
+k_roman_krasnotomsk;Yenisea;;;;;;;;;;;;x
+k_roman_krasnotomsk_adj;Yenisean;;;;;;;;;;;;x
+k_roman_sibir;Neonicolaopolis;;;;;;;;;;;;x
+k_roman_sibir_adj;Neonicolaopolis;;;;;;;;;;;;x
+###MONGOLIA###
+e_roman_greater_mongolia;Imperium Hunnorum;;;;;;;;;;;;x
+e_roman_greater_mongolia_adj;Hunn;;;;;;;;;;;;x
+k_roman_mongolia;Hunnia;;;;;;;;;;;;x
+k_roman_mongolia_adj;Hunn;;;;;;;;;;;;x
+k_roman_north_mongolia;Ircutia;;;;;;;;;;;;x
+k_roman_north_mongolia_adj;Ircutian;;;;;;;;;;;;x
+k_roman_tannu;Hierocaesarea;;;;;;;;;;;;x
+k_roman_tannu_adj;Hierocaesarean;;;;;;;;;;;;x
+###PERSIA###
+e_roman_persia;Imperium Parthicum;;;;;;;;;;;;x
+e_roman_persia_adj;Parthian;;;;;;;;;;;;x
+k_roman_persia;Parthicum;;;;;;;;;;;;x
+k_roman_persia_adj;Parthian;;;;;;;;;;;;x
+k_roman_azerbaijan;Hyrcania;;;;;;;;;;;;x
+k_roman_azerbaijan_adj;Hyrcanian;;;;;;;;;;;;x
+k_roman_khorasan;Chorasmia;;;;;;;;;;;;x
+k_roman_khorasan_adj;Chorasmian;;;;;;;;;;;;x
+roman_title_adjective;[roman_title.GetAdjective];;;;;;;;;x,,,,,,,,
+###VARIOUS TITLES###
+e_first_rome_christian;Imperium Romanum;;;;;;;;;;;;;x
+e_first_rome_christian_adj;Roman;;;;;;;;;;;;;x
+e_second_rome_christian;Romaiki Avtokratoria;;;;;;;;;;;;;x
+e_second_rome_christian_adj;Roman;;;;;;;;;;;;;x
+e_third_rome_christian;Rimskaya Imperiya;;;;;;;;;;;;;x
+e_third_rome_christian_adj;Roman;;;;;;;;;;;;;;x
+e_first_rome_stalinist;Imperium Romanum;;;;;;;;;;;;;x
+e_first_rome_stalinist_adj;Roman;;;;;;;;;;;;;x
+e_second_rome_stalinist;Romaiki Avtokratoria;;;;;;;;;;;;;x
+e_second_rome_stalinist_adj;Roman;;;;;;;;;;;;;x
+e_third_rome_stalinist;Rimskaya Imperiya;;;;;;;;;;;;;x
+e_third_rome_stalinist_adj;Roman;;;;;;;;;;;;;x
+e_first_rome_novelist;Nilfgaard;;;;;;;;;;;;;x
+e_first_rome_novelist_adj;Nilfgaardian;;;;;;;;;;;;;x
+e_second_rome_novelist;Coruscant Empire;;;;;;;;;;;;;x
+e_second_rome_novelist_adj;Coruscanti;;;;;;;;;;;;;x
+e_third_rome_novelist;Eurasia;;;;;;;;;;;;;x
+e_third_rome_novelist_adj;Eurasian;;;;;;;;;;;;;x
+e_first_rome_caesarian;Imperium Romanum;;;;;;;;;;;;;x
+e_first_rome_caesarian_adj;Roman;;;;;;;;;;;;;x
+e_second_rome_caesarian;Romaiki Avtokratoria;;;;;;;;;;;;;x
+e_second_rome_caesarian_adj;Roman;;;;;;;;;;;;;x
+e_third_rome_caesarian;Rimskaya Imperiya;;;;;;;;;;;;;x
+e_third_rome_caesarian_adj;Roman;;;;;;;;;;;;;x
+k_caesar_legion_caesarian;Caesar's Legion;;;;;;;;;;;;;x
+k_caesar_legion_caesarian_adj;Legion;;;;;;;;;;;;;x
+k_caesar_legion_roman_christian;Legion of Christ;;;;;;;;;;;;;x
+k_caesar_legion_roman_christian_adj;Legion;;;;;;;;;;;;;x
+k_caesar_legion_roman_stalinist;Red Legion;;;;;;;;;;;;;x
+k_caesar_legion_roman_stalinist_adj;Legion;;;;;;;;;;;;;x
+k_caesar_legion_roman_novelist;Storm Legion;;;;;;;;;;;;;x
+k_caesar_legion_roman_novelist_adj;Legion;;;;;;;;;;;;;x

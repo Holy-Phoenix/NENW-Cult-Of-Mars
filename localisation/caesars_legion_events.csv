@@ -1,0 +1,313 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+pontifex_created;Collegium Pontificum Created;;;;;;;;;;;;;x
+
+#Decisions
+
+pillage_settlement_legion;Pillage Settlement;;;;;;;;;;;;;x
+stop_pillage_settlement_legion;Stop Pillaging Settlement;;;;;;;;;;;;;x
+
+delve_into_classics_caesar_decision;Delve Into Classic;;;;;;;;;;;;;x
+delve_into_classics_caesar_decision_desc;Start studing ancient scriptures for knowledge;;;;;;;;;;;;;x
+
+form_third_rome;Restore the Third Rome;;;;;;;;;;;;;x
+form_third_rome_tt;§Y[Root.GetBestName]§! creates §YRimskaya Imperiya§!.;;;;;;;;;x,,,
+form_third_rome_desc;Once upon a time, the lands of Russia were known as the Third Rome. It's time to restore this ancient empire.;;;;;;;;;;;;;x
+
+form_second_rome;Restore the Basileia ton Rhomaion;;;;;;;;;;;;;x
+form_second_rome_tt;§Y[Root.GetBestName]§! creates §YBasileia ton Rhomaion§!.;;;;;;;;;;;;;x
+form_second_rome_desc;I will gather the crown lands of Byzantium, and raise the old banners of Rome once more.;;;;;;;;;;;;;x
+
+form_nova_roma;Restore the Roman Empire;;;;;;;;;;;;;x
+form_nova_roma_tt;§Y[Root.GetBestName]§! creates §YImperium Romanum§!.;;;;;;;;;x,,,
+form_nova_roma_desc;After a long series of campaigns, the Legion can truly call itself an Empire. It's time to proclaim Pax Nova Romana!;;;;;;;;;;;;;x
+
+form_third_roman_republic;Create the Third Roman Republic;;;;;;;;;;;;;x
+form_third_roman_republic_desc;Once upon a time, the lands of Russia were known as the Third Rome. It's time to restore this ancient empire.;;;;;;;;;;;;;x
+
+form_second_rome_republic;Create Byzantine Republic;;;;;;;;;;;;;x
+form_second_rome_republic_desc;I will gather the crown lands of Byzantium, and raise the old banners of Rome once more.;;;;;;;;;;;;;x
+
+form_first_rome_republic;Restore the Roman Republic;;;;;;;;;;;;;x
+form_first_rome_republic_desc;;A long time ago, the lands of Mediterranean was under the rule of mighty Rome. The time has come to restore this ancient republic!;;;;;;;;;;;;;x
+
+celebrate_caesars_ascension;Celebrate Caesar's Ascension;;;;;;;;;;;;;x
+celebrate_caesars_ascension_desc;Hold great festival in honor of Caesar;;;;;;;;;;;;;x
+
+celebrate_victoria_day;Celebrate Great Triumph;;;;;;;;;;;;;x
+celebrate_victoria_day_desc;Celebrate ancient victories of Third Rome;;;;;;;;;;;;;x
+
+celebrate_belizarius_day;Celebrate Belizarius Day;;;;;;;;;;;;;x
+celebrate_belizarius_day_desc;Hold great festival in honor of Belizarius;;;;;;;;;;;;;x
+
+caesar_forceful_romanization;Romanize Province;;;;;;;;;;;;;x
+caesar_forceful_romanization_desc;After clearing way for new settlement, the province is ready for Priests of Mars and Roman Citizens to begin rebuilding and teaching the ways of Mars to the remaining populace.;;;;;;;;;;;;;x  
+
+convert_to_roman_culture;Embrace Roman Culture;;;;;;;;;;;;;x
+convert_to_roman_culture_desc;Reject the old barbarian culture and embrace enlightened Roman culture.;;;;;;;;;;;;;x
+
+form_caesars_legion;Form Caesar's Legion;;;;;;;;;;;;;;x
+form_caesars_legion_desc;If I want to restore Roman Empire, I need power. Perhaps, I should create an army that allow me to reclaim former imperial lands?;;;;;;;;;;;;;x
+
+organize_praetorian_guard;Organize Praetorian Guard;;;;;;;;;;;;;;x
+organize_praetorian_guard_desc;Long ago, even pefore the Event and fall of Rome, there was an elite legion that defend roman emperors. It is time to restore this legion.;;;;;;;;;;;;;x
+
+create_collegium_pontificum_caesarian;Create Collegium Pontificum;;;;;;;;;;;;;;x
+create_collegium_pontificum_caesarian_desc;Establish the Collegium Pontificum at the Temple of Goodsprings Invictus in Vegas. A new Pontifex Maximus will receive the temple and lead the Cult of Mars from there.;;;;;;;;;;;;;;x
+COLLEGIUM_GOODSPRINGS_REQUIREMENT;The Temple of Goodsprings in Vegas must be within your realm.;;;;;;;;;;;;;x
+
+create_imperial_army_rome;Organize Imperial Legion;;;;;;;;;;;;;;x
+create_imperial_army_rome_desc;Create new Imperial Army to protect the borders of Rome;;;;;;;;;;;;;;x
+
+make_vegas_capital_caesarian;Establish Nova Roma;;;;;;;;;;;;;;x
+make_vegas_capital_caesarian_desc;With Las Vegas secured, Caesar begins the process of transforming the city into Nova Roma, the new home of the Roman people.;;;;;;;;;;;;;;x
+NOVA_ROMA_CAPITAL_EFFECT;Caesar takes direct control of Las Vegas and its castle at McCarran, renames both Nova Roma, moves the realm capital there, and converts the province to Roman culture and the Cult of Mars.;;;;;;;;;;;;;x
+EVTNAME_CLRE_039;Nova Roma, Capital of the Legion;;;;;;;;;;;;;x
+EVTDESC_CLRE_039;With Las Vegas secure, Caesar has entered the city with his praetorians. Orders to claim the city are given to all legionaries within its border, remove resistance, errect banners, and establishing a foothold within the city. If the city is to become the next Rome, it will need to be Roman. Mars shall bless this city and from it shall his armies march to the corners of the world.;;;;;;;;;;;;;x
+EVTOPTA_CLRE_039;Glory to Caesar!;;;;;;;;;;;;;x
+
+make_constantinole_capital_caesarian;Make Constantinople Capital;;;;;;;;;;;;;;x
+make_constantinole_capital_caesarian_desc;;;;;;;;;;;;;;;x
+make_moscow_capital_caesarian;Make Moskow Capital;;;;;;;;;;;;;;x
+make_moscow_capital_caesarian_desc;;;;;;;;;;;;;;;x
+moskva_capital;It's time to move center of imperial power to the Third Rome;;;;;;;;;;;;;;x
+constantinople_capital;It's time to move center of imperial power to the City of Constantine;;;;;;;;;;;;;;x
+caesarian_conversion_book;Embrace the faith in Mars;;;;;;;;;;;;;;x
+caesarian_conversion_book_desc;The Book that I carry with me tells such a epic story about the mightiest ruler of the antediluvian age - Gaius Julius Caesar. A mere mortal cannot do what Caesar have do. Perhaps he is a God..?;;;;;;;;;;;;;;x
+
+#Events
+EVTTITLECLE16;A New Power;;;;;;;;;;;;x
+EVTDESCCLE16;Rumors spread across the desert of a prophet of Mars has gathered soldiers, adventurers, and tribals beneath a laurel standard. From camps around Flagstaff they drill as one people and speak of a returning Caesar who will impose Roman order on Arizona. The host calls itself Caesar's Legion, and each day more recruits join its march.;;;;;;;;;;;;;x
+EVTOPTA_CLE;Worrysome...;;;;;;;;;;;;x
+
+EVTNAMECLE17;The March of Caesar's Legion;;;;;;;;;;;;x
+EVTDESCCLE17;War drums echo across the burning sands as Caesar's Legion advances on Flagstaff. Cohorts have secured the  roads, scouts roam toward the great Colorado, and Caesar has proclaimed that the city will become the first stronghold of a new Roman order. The rulers of Arizona must now meet the Legion in battle.;;;;;;;;;;;;x 
+EVTOPTA_CLE19;Horrible!;;;;;;;;;;;;x
+EVTOPTB_CLE19;True to Caesar!;;;;;;;;;;;;x
+
+EVTDESCACLE24;Ancient manuscripts from the time before the Event keep many secrets and knowledge. What knowledge do I wish to learn from the past?;;;;;;;;;;;;x
+EVTOPTACLE24;I wish to study history.;;;;;;;;;;;;x 
+tooltipt_CLE24_A;Ancient history hides many truths...;;;;;;;;;;;;x
+EVTOPTBCLE24;I wish to study the art of war.;;;;;;;;;;;;x
+tooltipt_CLE24_B;Learn about ancient tactics and strategy.;;;;;;;;;;;;x
+EVTOPTCCLE24;I wish to study statecraft.;;;;;;;;;;;;x
+tooltipt_CLE24_C;Learn about ancient governments.;;;;;;;;;;;;x
+EVTOPTDCLE24;I wish to study politics.;;;;;;;;;;;;x
+tooltipt_CLE24_D;Learn about the art of diplomacy.;;;;;;;;;;;;x
+EVTDESCACLE25;Despite my best efforts, I failed in learn about ancient wisdoms.;;;;;;;;;;;;x
+EVTOPTACLE25;Curses!;;;;;;;;;;;;x
+
+EVTTITLECLE26;A New God?;;;;;;;;;;;;x
+EVTDESCACLE26;You are reading the history of one of the oldest empires in the world - the Roman Empire. The names of the ancient rulers mean almost nothing to you, but the story of one of the ancient emperors, Caesar, amazed you to the depths of your soul. The more you learn about him, about his accomplishments, conquests and politics, the more you admire him. It is certanly, that ordinary mortal could not do what Caesar did in his time.;;;;;;;;;;;;x 
+EVTOPTACLE26;There is no doubt that Caesar is a God!;;;;;;;;;;;;x
+EVTOPTCCLE26;True to Caesar!;;;;;;;;;;;;x
+EVTOPTBCLE26;A truly amazing person he was.;;;;;;;;;;;;x
+
+EVTDESCACLE27;I have finished my study of ancient warfare. This will definitely come in handy for my future military campaigns.;;;;;;;;;;;;x 
+EVTOPTACLE27;If fighting is sure to result in victory, then you must fight!;;;;;;;;;;;;x
+
+EVTDESCACLE28;I have finished my study of statecraft. This will definitely come in handy in managing of my realm.;;;;;;;;;;;;x
+EVTOPTACLE28;The wise man does at once what the fool does finally.;;;;;;;;;;;;x
+
+EVTDESCACLE29;I have finished my study of diplomacy. This will definitely come in handy in my future foreign negotiations.;;;;;;;;;;;;x
+EVTOPTACLE29;A prince never lacks legitimate reasons to break his promise.;;;;;;;;;;;;x
+
+EVTNAMECLE30;Creating a New Religion;;;;;;;;;;;;x
+EVTDESCAHCLE30;There is no doubt that Caesar is a God, and I must spread new faith in Divine Caesar. But establishing a new religion is not an easy task. How should I proceed? Should I use my authority as a ruler to establish new Cult of Caesar quickly, or gain support in the shadows before revealing a new teaching to the world?;;;;;;;;;;;;x  
+EVTOPTAHCLE30;I am the ruler. They are obliged to obey.;;;;;;;;;;;;x
+tooltip_HCLE30_A;Your more fanatical vassals will not be happy about that.;;;;;;;;;;;;x
+EVTOPTBHCLE30;I must gather support first.;;;;;;;;;;;;x
+EVTDESCACLE32;[Root.GetTitledName],\nWe have come to the conclusion that our current beliefs will not lead us anywhere except to barbarism and devastation. Therefore, I invite you to turn to my new faith, the faith in the Divine Caesar, which will restore order in the world and in our domain.\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTACLE32;I will not betray the religion of my ancestors!;;;;;;;;;;;;x
+EVTOPTBCLE32_A;True to Mars!;;;;;;;;;;;;x
+EVTDESCACLE33;I shall not be part of this farce. I am a §Y[From.Religion.GetName]§!, and I will not abandon my faith in [From.Religion.GetHighGodName].\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTACLE33;Unfortunate.;;;;;;;;;;;;x
+EVTDESCACLE34;I am happy to stand right beside you for the creation of Cult of Mars, my [Root.GetTitle].\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTACLE34;Excellent.;;;;;;;;;;;;x
+EVTDESCACLE35;[Root.GetTitledName],\nI have come to the conclusion to abide by the new state decree and convert to the Cult of Mars. I expect all my subordinates to follow me in this decision.\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;;x
+
+EVTTITLECLE36;A New Faith;;;;;;;;;;;;x
+EVTDESCACLE36;There is news that a new faith has emerged in the lands of [Root.GetFullBaseName]. [Root.GetTitledName] announced the creation of the Cult of Mars, a new religion that worships Mars the God of War of pre-Event times, as well as long-forgotten gods similar to the gods of the Hellenic pagans. Time will tell whether this new faith survives or whether it will be swept away by the sands of time.;;;;;;;;;;;;;x
+EVTOPTACLE36;True to Mars!;;;;;;;;;;;;x
+EVTOPTBCLE36;True to Mars!;;;;;;;;;;;;x
+EVTOPTCCLE36;Cursed pagans!;;;;;;;;;;;;x
+EVTOPTDCLE36;Worrysome...;;;;;;;;;;;;x
+
+EVTDESCAHCLE37;Creation of the Cult of Mars is only the first step towards restoring Pax Romana in the world. As a faithful follower of Mars, I must make sure that ancient Roman culture and customs are restored so that order and prosperity can be established in my lands. Should I introduce new world culture immediately?;;;;;;;;;;;;;x
+EVTOPTAHCLE37;Yes, it is time to introduce our new Roman culture.;;;;;;;;;;;;x
+tooltip_HCLE37_A;You and some of the vassals will convert to a new culture.;;;;;;;;;;;;x
+EVTOPTBHCLE37;Perhaps later.;;;;;;;;;;;;x
+tooltip_HCLE37_B;You are still able to convert through special decision.;;;;;;;;;;;;x
+EVTDESCACLE38;[Root.GetTitledName],\nWe have come to the conclusion that our current culture will not lead us anywhere except to barbarism and devastation. Therefore, I invite you to turn to our new Roman culture, that will lead us to a more brighter future.\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTACLE38;I will not betray the language and customs of my ancestors!;;;;;;;;;;;;x
+EVTOPTBCLE38_A;If it is the [GetTitledName] will - so be it.;;;;;;;;;;;;x
+EVTOPTBCLE38_B;If it is the [GetTitledName] will - so be it.;;;;;;;;;;;;x
+EVTDESCACLE39;I shall not be part of this farce. I am a §Y[From.Culture.GetName]§!, and I will not abandon the customs of my ancestors!\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTDESCACLE40;I am happy to stand right beside you for the creation of our new Roman culture, my [Root.GetTitle].\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTDESCACLE41;[Root.GetTitledName],\nI have come to the conclusion to abide by the new state decree and convert to the Roman culture. I expect all my subordinates to follow me in this decision.\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;;x
+
+EVTTITLE_CLRE.1;The Third Rome;;;;;;;;;;;;x
+EVTDESC_CLRE_A.1;Long ago, the lands of Russia were united under the rule of Caesar, whose name was eventually distorted to "Tsar". These were blessed times, blessed by the spirit of Pax Romana, but the coming of the Crucified God and the Event brought grief and suffering to this land. But finally, the scattered lands of Russia are united again under a single flag - the flag of the revived Roman Empire. [Root.GetDynName] was crowned in Moscow, otherwise referred to as the Tertia Roma, as the [Root.GetTitle] of Rome. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+EVTDESC_CLRE_B.1;Long ago, in antediluvian times, Russia assumed the title of the Third Rome, becoming a bastion of Christianity instead of the Second Rome - Byzantium, destroyed by the Turkish barbarians. For centuries, the Third Rome has kept Christian traditions, but the Event have destroyed the Third Rome and brought grief and suffering to this land. But finally, after many years, the scattered lands of Russia are united once again under a single flag - the flag of the revived Roman Empire. [Root.GetDynName] was crowned in Moscow, otherwise referred to as the Tertia Roma, as the [Root.GetTitle] of Rome. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+EVTDESC_CLRE_C.1;Long ago, in antediluvian times, the Third Rome was founded in the lands of Russia - a great empire, whose Red Legions conquered most of Eurasia, and who held back the onslaught of the German barbarians from the West. But the Event have destroyed the Third Rome and brought grief and suffering to this land. But finally, after many years, the scattered lands of Russia are united once again under a single flag - the flag of the revived Roman Empire. [Root.GetDynName] was crowned in Moscow, otherwise referred to as the Tertia Roma, as the [Root.GetTitle] of Rome. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+EVTDESC_CLRE_D.1;The antediluvian novels told about glorious times, when the land, now called Russia, was ruled by another power. This power was Eurasia, a powerful empire that rivaled in its greatness only with such giants as Numenor, Nilfgaard and the Empire of Coruscant. And finally, after many centuries, Eurasia was restored. [Root.GetDynName] was crowned in Moscow, otherwise referred to as the Tertia Roma, as the [Root.GetTitle] of Eurasia. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+EVTDESC_CLRE_E.1;Long ago, the lands of Russia were known as the lands of Third Rome. These were blessed times, blessed by the spirit of Pax Romana, but the coming of the Event brought grief and suffering to this land. But finally, the scattered lands of Russia are united again under a single flag - the flag of the revived Roman Empire. [Root.GetDynName] was crowned in Moscow, otherwise referred to as the Tertia Roma, as the [Root.GetTitle] of Rome. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+CLREO.1;Roma Invicta!;;;;;;;;;;;;x
+CLREO_B.1;For save and secure society!;;;;;;;;;;;;x
+CLREO.4;I have a bad feeling about this...;;;;;;;;;;;;x
+CLREO.3;It can't be true!;;;;;;;;;;;;x
+CLREO.5;It can't be true!;;;;;;;;;;;;x
+
+EVTTITLE_CLRE.2;Rise of the Purple Phoenix;;;;;;;;;;;;x
+EVTTITLE_CLRE_B.2;The New Imperial Order;;;;;;;;;;;;x
+EVTDESC_CLRE_A.2;Long ago, before the Event, the lands of the Romans flourished thanks to Pax Romana. But when the old gods were cast aside in favor of the Crucified God, the blessing of the Pax Romana was lost. Death, desolation and hordes of barbarian Turks from the east came to these lands. But finally, after millennia of suffering, the Roman Order was re-established in these lands. [Root.GetDynName] was crowned at Constantinople as [Root.GetTitle] of Rome. This marks the beginning of a Great New Era for the peoples of Mars!;;;;;;;;;;;;x
+EVTDESC_CLRE_B.2;Long ago, before the Event, the great Roman Empire stands in land of Greece and Anatolia, been the Christianity bastion againts the barbarians of the East. This bastion have fallen, and grief an suffering under the yoke of Muslim conquerors have become a cruel reality for centuries. But finally, after millenia, the grand Roman banners of Constantinople have been raised once again. [Root.GetDynName] was crowned at Constantinople as [Root.GetTitle], and the Second Rome rises from the ashes of history, to conquer its old enemies in both the east and the west.;;;;;;;;;;;;x
+EVTDESC_CLRE_C.2;Long ago, before the Event, the great Roman Empire stands in land of Greece and Anatolia, been the West bastion againts the barbarians of the East. This bastion have fallen, and grief an suffering under the yoke of Muslim conquerors have become a cruel reality for centuries. But finally, after millenia, the grand Roman banners of Constantinople have been raised once again. [Root.GetDynName] was crowned at Constantinople as [Root.GetTitle], and the Second Rome rises from the ashes of history, to conquer its old enemies in both the east and the west.;;;;;;;;;;;;x
+EVTDESC_CLRE_D.2;Remnants of antediluvian novells tell of the existence of a once mighty empire with its capital in the gigantic city of Coruscant, also known as Constantinople or Istanbul. Finally, centuries later, the black banner of the Empire flies over the ancient walls of the city of Constantine, and [Root.GetDynName] was crowned at Constantinople as [Root.GetTitle] of Coruscant Empire.;;;;;;;;;;;;x
+EVTDESC_CLRE_E.2;Long ago, before the Event, the great Roman Empire stands in land of Greece and Anatolia, been the West bastion againts the barbarians of the East. This bastion have fallen, and grief an suffering under the yoke of Muslim conquerors have become a cruel reality for centuries. But finally, after millenia, the grand Roman banners of Constantinople have been raised once again. [Root.GetDynName] was crowned at Constantinople as [Root.GetTitle], and the Second Rome rises from the ashes of history, to conquer its old enemies in both the east and the west.;;;;;;;;;;;;x
+EVTTITLE_CLRE.3;The Return of the Emperor;;;;;;;;;;;;x
+EVTDESC_CLRE_A.3;Before the rise of The Legion and its mighty Caesar, the lands of the South West laid scattered and squabaling between petty tribes and nomads. Now, by the Glory of Mars the Red Banners of the Legion flutter triumphantly in the desert sun. The city formerly known as Las Vegas, now the Shining Jewel of the Wastes, Nova Roma, stands as the heart of the Legion. With their victory comes a new proclomation from Caesar, the wastes will all come under Pax Nova Romana!;;;;;;;;;;;;x
+EVTDESC_CLRE_B.3;For centuries, the lands of Italy were divided between warring principalities, city-states and small kingdoms, while the true past of this land remained forgotten among the ruins of the Eternal City. But finally, by the will of the Lord, the greatest of the states of antiquity was finally restored, and [Root.GetDynName] was crowned as [Root.GetTitle] of the restored Roman Empire in the city of Rome. Pax Romana has finally returned to the lands of Italy!;;;;;;;;;;;;x
+EVTDESC_CLRE_C.3;For centuries, the lands of Italy were divided between warring principalities, city-states and small kingdoms, while the true past of this land remained forgotten among the ruins of the Eternal City. But finally, the greatest of the states of antiquity was finally restored, and [Root.GetDynName] was crowned as [Root.GetTitle] of the restored Roman Empire in the city of Rome. Pax Romana has finally returned to the lands of Italy!;;;;;;;;;;;;x
+EVTDESC_CLRE_D.3;The antediluvian novels told about glorious times, when the land, now called Italy, was ruled by another power. This power was the empire of Nilfgaar, a powerful empire that rivaled in its greatness only with such giants as Numenor, Eurasia and the Empire of Coruscant. And finally, after many centuries, this empire was finally restored. [Root.GetDynName] was crowned in Rome as the [Root.GetTitle] of Nilfgaard. This marks the beginning for the lands of Italy!;;;;;;;;;;;;x
+CLRE.4.title;The Caesar's Ascension;;;;;;;;;;;;x
+CLRE.4.d;The Festival of the Ascension of Caesar is a festival held in March. According to legend, after the thrice-cursed traitor Brutus killed Caesar, on the tenth day after Octavianus, together with the Triumvirs, defeated the traitor, Caesar rose from the dead and blessed Octavianus to rule, after which Caesar ascended to Olympus to join the gods. During this holiday, the faithful Caesarians offer prayers to the gods, arrange magnificent feasts, and in the evening they burn the effigy symbolizing Brutus.;;;;;;;;;;;;x 
+EVTOPTA_CLRE.4;Happy Ascension!;;;;;;;;;;;;x
+CLRE.5.title;The Great Triumph;;;;;;;;;;;;x
+CLRE.5.d;The Great Triumph is a celebration held in May. According to legend, in May, the troops of the Third Rome, led by the reborn Caesar Josefus Julius Ferrat, known among the Stalinists as Lord Stalin, managed to defeat the horde of germanic barbarians who came from the west. On this day, legionnaires hold military parades and lay flowers at the sanctuaries of the spirits of their fallen brothers.;;;;;;;;;;;;x 
+EVTOPTA_CLRE.5;Glory to Third Rome!;;;;;;;;;;;;x
+CLRE.12.title;Belisarius Day;;;;;;;;;;;;x
+CLRE.12.d;Belisarius Day is a holiday dedicated to one of the incarnations of the Divine Caesar - Flavius Belisarius. According to legend, Belisarius managed to conquer vast territories of Rome from the godless barbarians, conquering Africa, Italy and Persia. On this day, spectacular theatrical performances are held dedicated to the numerous victories of Belisarius over the Germans, Turks, Berbers, Persians and other barbarian peoples.;;;;;;;;;;;;x 
+EVTOPTA_CLRE.12;Glory to Rome!;;;;;;;;;;;;x
+EVTNAMECLE22;The Romanization;;;;;;;;;;;;x 
+EVTDESCCLE22;After a few months of occupation, the Legion have setup their new stronghold. Having conquered the first city in their way, they immediately began the process of romanizing the local population. As the locals have come to accept Caesar as their ruler and Mars as their god, the process comes to fruition. The first steps in building a new Rome have begun.;;;;;;;;;;;;x 
+EVTOPTA_CLE22;We bring them civilization.;;;;;;;;;;;;x 
+EVTOPTB_CLE22;I'm sure that they will fail.;;;;;;;;;;;;x 
+celebrated_caesar_ascension;Celebrated Caesar's Ascension;;;;;;;;;;;;x 
+celebrated_belisarius_day;Celebrated Belisarius Day;;;;;;;;;;;;x
+celebrated_victoria_day;Celebrated Great Triumph;;;;;;;;;;;;x 
+rulership_insight;Knowledge of Statecraft;;;;;;;;;;;;x 
+diplomacy_insight;Knowledge of Diplomacy;;;;;;;;;;;;x 
+military_insight;Knowledge of War;;;;;;;;;;;;x 
+EVTDESC_CLE43;During the creation of our Caesar's Legion the line of succession of power has not yet been developed. But now we can finally reform our inheritance system.;;;;;;;;;;;;x 
+EVTOPTA_CLE43;Good.;;;;;;;;;;;;x 
+EVTDESCAHCLE44;If I want to rebuild the Roman Empire, I need a huge army to conquer the former imperial lands. Should I use my funds and titles to create a Legion worthy of the legions of Ancient Rome, or should I use less radical methods?;;;;;;;;;;;;x 
+EVTOPTAHCLE44;The Caesar in Heavens demands it!;;;;;;;;;;;;x 
+EVTOPTBHCLE44;Perhaps later...;;;;;;;;;;;;x 
+DESCCLRE6;Our legionnaires successfully "romanized" one of the tribal settlement of local barbarians. Most of the local population was taken into slavery, some were killed while trying to resist, some, mostly young men, were forcibly recruited into the army and sent to distant garrisons, where they would be taught roman culture and discipline.;;;;;;;;;;;;x 
+EVTOPTA_CLRE.6;Good.;;;;;;;;;;;;x 
+CLRE.7.title;Collegium Pontificum Created;;;;;;;;;;;;x
+CLRE.7.desc;Until now, the cultists of Mars had no supreme religious leader, and the rites created at the dawn of the faith had begun to drift apart. To preserve the true teachings, the College of Pontiffs has been established at the Temple of Goodsprings outside Las Vegas. The temple and the office of Pontifex Maximus have been entrusted to a high priest charged with guarding the unity and purity of the Cult of Mars.;;;;;;;;;;;;x
+CLRE.19.desc;Until now, the cultists of Pompeius did not have a supreme leader of the church, and as a result, the religious practices and rituals created at the dawn of the Cult of Pompeius were distorted, just like the views regarding the nature of Pompeius divinity and his place among the gods. Therefore, the College of Pontiffs was created, a council of high priests headed by the Great Pontiff, who will monitor the purity of the Cult and protect it from internal and external dangers.;;;;;;;;;;;;x
+EVTOPTACLRE19;In the Pompeius name!;;;;;;;;;;;;x 
+EVTOPTACLRE7;This is not concern of ours...;;;;;;;;;;;;x 
+CLREO.2;Interesting...;;;;;;;;;;;;x 
+CLRE.8.title;The Praetorian Guard;;;;;;;;;;;;x 
+CLRE.8.desc;From time immemorial, the Praetorian Guard, an elite cohort of Rome's finest warriors, guarded the incarnations of the Reborn Caesar until it was disbanded after the desctruction of the Empire. But millennia later, the Praetorian Guard was created again in order to guard the Cult of Mars and the future incarnations of the Reborn Caesar against heretics and infidels.;;;;;;;;;;;;x 
+CLRE.9.desc;Now that the Roman Empire has been restored, it is necessary to decide what to do with Caesar's Legion. The Legion has fulfilled its task of conquering the lost lands of Rome and is no longer needed by the restored empire, but it still remains a significant force, which can definitely come in handy in the future. There are two options: the first - we can disband the Legion, and the second option - we can reform it into a new Imperial Army, which will guard the borders and the emperor. What should be done?;;;;;;;;;;;;x 
+CLRE.9.title;Fate of the Legion;;;;;;;;;;;;x 
+EVTOPTACLRE9;Reform this, the Legion may still be useful to us;;;;;;;;;;;;x  
+EVTOPTBCLRE9;Disband it, the Legion is no longer needed;;;;;;;;;;;;x   
+CLRE.11.title;A New Army;;;;;;;;;;;;x   
+CLRE.11.desc;After the restoration of the Roman Empire, a new Imperial Legion was created - a professional army that will henceforth protect the Pax Romana and the Roman emperors from all possible external enemies. A solemn parade was held in the capital, and the Roman augurs made abundant sacrifices to the gods and the Divine Caesar. The Roman Empire have became even more dangerous.;;;;;;;;;;;;x    
+CLRE.13.title;The Goddes of Russia;;;;;;;;;;;;x
+CLRE.13.desc;Ever since Roman rule was established over Stalingrad, there have been controversies among the priests regarding the goddess of Mother Russia, whose gigantic statue stands in this province. Some priests claim that Mother Russia is a barbarian goddess who is not part of the Pax Romana, other priests claim that Mother Russia is the patroness and protector of the Third Rome. Should Mother Russia be recognized as part of the Roman pantheon?;;;;;;;;;;;;x 
+EVTOPTACLRE13;Mother Russia will become part of the Roman pantheon!;;;;;;;;;;;;x
+EVTOPTBCLRE13;Mother Russia is a barbarian goddess!;;;;;;;;;;;;x
+EVTTITLE_CLRE.14;The Third Rome;;;;;;;;;;;;x
+EVTDESC_CLRE.14;Long ago, the lands of Russia were united under the rule of Caesar, whose name was eventually distorted to "Tsar". These were blessed times, blessed by the spirit of Pax Romana, but the coming of the Crucified God and the Event brought grief and suffering to this land. But finally, the scattered lands of Russia are united once again under a single flag - the flag of the revived Roman Republic. This marks the beginning of a Great New Era for Russia!;;;;;;;;;;;;x
+EVTTITLE_CLRE.15;The Rise of Purple Phoenix;;;;;;;;;;;;x
+EVTDESC_CLRE.15;Long ago, before the Event, the lands of the Romans flourished thanks to Pax Romana. But when the old gods were cast aside in favor of the Crucified God, the blessing of the Pax Romana was lost. Death, desolation and hordes of barbarian Turks from the east came to these lands. But finally, after millennia of suffering, the Roman Order was re-established in these lands and the city of Constantine become the capital of a new Roman Republic. This marks the beginning of a Great New Era for the peoples of Mars!;;;;;;;;;;;;x
+EVTTITLE_CLRE.16;The Republic Reborn;;;;;;;;;;;;x
+EVTDESC_CLRE.16;Once upon a time, even before the Event, Rome, the Eternal City, ruled the entire known world. But when the hordes of barbarians conquered the Eternal City and the priest of the Crucified God reigned in the Rome, the Empire was destroyed. Deprived of Pax Romana, the world fell into disarray, which soon led to the Event. But finally, after millennia, the high priest of the Crucified God was finally expelled from the Eternal City, and a new Roman Republic was proclaimed in the Rome. Pax Romana has finally returned to the lands of Italy!;;;;;;;;;;;;x
+EVTNAME_CLRE_030;Salt Lake City, the Third Rome;;;;;;;;;;;;x
+EVTDESC_CLRE_030;After a long campaign north from the Mojave, Caesar's cohorts have won Salt Lake City. Legionaries forced the approaches, broke the defending line around the old temple district, and secured the roads and waterways beside the Great Salt Lake. Caesar has named the city the Third Rome of the Legion: a northern bastion commanding the routes between the desert, the Rockies, and the interior.;;;;;;;;;;;;x
+EVTOPTA_CLRE_030;The Third Rome secures the northern road.;;;;;;;;;;;;;x
+EVTNAME_CLRE_031;Las Vegas, the First Rome;;;;;;;;;;;;x
+EVTDESC_CLRE_031;Caesar's Legion has prevailed in the battle for Las Vegas. After a hard march across the Mojave, the cohorts captured the wells, road junctions, and old pleasure palaces that dominate the city. Standards now line the Strip while engineers fortify its approaches. Caesar proclaims Las Vegas the First Rome of the Legion, its political heart and western seat of command.;;;;;;;;;;;;x
+EVTOPTA_CLRE_031;The First Rome belongs to the Legion.;;;;;;;;;;;;;x
+EVTNAME_CLRE_032;Los Angeles, the Second Rome;;;;;;;;;;;;x
+EVTDESC_CLRE_032;After weeks of fighting through the basin, Caesar's Legion has won Los Angeles. The cohorts secured the mountain passes, civic center, and roads leading to the Pacific, compelling the remaining garrisons to surrender. From this great western metropolis the Legion can command the coast, and Caesar names it the Second Rome: a rival seat of power facing the ocean.;;;;;;;;;;;;x
+EVTOPTA_CLRE_032;The Second Rome rises on the Pacific.;;;;;;;;;;;;;x
+
+#Customizable Localization
+GetLaurelWreath;Laureal Wreath;;;;;;;;;;;;;x
+GetAquila;Aquila;;;;;;;;;;;;;x
+GetSPQR;SPQR;;;;;;;;;;;;;x
+GetLegion;Caesar's Legion;;;;;;;;;;;;;x
+GetEmpire;Roman Empire;;;;;;;;;;;;;x
+GetRepublic;Roman Republic;;;;;;;;;;;;;x
+
+#Realm fall events
+
+#Britain
+EVTTITLE_CLRFE.2;The Fall of Britannia;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.2;In antediluvian times, Divine Caesar, having conquered Gaul, crossed the Strait of Dover in order to conquer Britain. In a great battle, Divine Caesar defeated Queen Boudicca and since then Britain has been under the rule of Rome. But when Rome fell, the British, rejecting Pax Romana, became proud and proclaimed their own empire, worshiping their Queen as a deity. The arrogant islanders conquered and enslaved entire continents, and at one time proclaimed themselves "The Empire over which the sun does not set", but now London is on fire, for, after many centuries, Rome have finally returned to the British Isles. Divine Caesar has once again defeated the Queen, and Aquila banners now flutter over the ancient tower of Big Ben.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.2;In antediluvian times, Divine Caesar, having conquered Gaul, crossed the Strait of Dover in order to conquer Britain. In a great battle, Divine Caesar defeated Queen Boudicca and since then Britain has been under the rule of Rome. But when Rome fell, the British, rejecting Pax Romana, became proud and proclaimed their own empire, worshiping their Queen as a deity. The arrogant islanders conquered and enslaved entire continents, and at one time proclaimed themselves "The Empire over which the sun does not set", but now London is on fire, for, after many centuries, Rome have finally returned to the British Isles. Divine Caesar has once again defeated the Queen, and banners with symbols of Senate end the Peoples of Rome now flutter over the ancient tower of Big Ben.;;;;;;;;;;;;x   
+EVTOPTA_CLRFE.2;Worrysome.;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.2;Their "Queen" can't save them now.;;;;;;;;;;;;;x
+
+#Bhutan
+EVTTITLE_CLRFE.3;The Fall of Thunder Dragon Empire;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.3;For centuries, Bhutan, the Thunder Dragon Empire, stood firm in the Himalayan mountains. A sleeping giant awaiting awakening, a great empire possessing the wonders of a long forgotten era... But now Bhutan is in ruins, as its supposedly indestructible armies were destroyed by the countless legions of Rome. Roman officials are already sorting, packing and sending caravans laden with trophies, found in the undeground cities, to the capital, and the administrators appointed here are already finalizing the official annexation of the new province of Butania to the Empire.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.3;For centuries, Bhutan, the Thunder Dragon Empire, stood firm in the Himalayan mountains. A sleeping giant awaiting awakening, a great empire possessing the wonders of a long forgotten era... But now Bhutan is in ruins, as its supposedly indestructible armies were destroyed by the countless legions of Rome. Roman officials are already sorting, packing and sending caravans laden with trophies, found in the undeground cities, to the capital, and the administrators appointed here are already finalizing the official annexation of the new province of Butania to the Republic.;;;;;;;;;;;;x   
+EVTOPTA_CLRFE.3;Good riddance to those arrogant Bhutanese.;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.3;The Aquila is stronger than the Dragon.;;;;;;;;;;;;;x
+
+#Numenor
+EVTTITLE_CLRFE.4;The Fall of Numenor;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.4;The Kingdom of Numenor, founded by novelists, has a rich and long history according to them. Founded by King Isildur, it lasted for several centuries before falling to the onslaught of the British and Catholics. But Numenor soon recovered, like the phoenix bird from the novels' books... only to fall again before the unstoppable force of the revived Roman Empire. Torn from the remains of the Eiffel Tower, banners with a White Tree now burn on the ground, while banners with Aquila now flutter over the city of Paris below - or Lutetia, as the Romans call it now.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.4;The Kingdom of Numenor, founded by novelists, has a rich and long history according to them. Founded by King Isildur, it lasted for several centuries before falling to the onslaught of the British and Catholics. But Numenor soon recovered, like the phoenix bird from the novels' books... only to fall again before the unstoppable force of the revived Roman Republic. Torn from the remains of the Eiffel Tower, banners with a white tree now burn on the ground, while banners with symbols of Senate end the Peoples of Rome now flutter over the city of Paris below - or Lutetia, as the Romans call it now.;;;;;;;;;;;;x  
+EVTOPTA_CLRFE.4;I doubt that Numenor will be restored any time soon.;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.4;This kingdom simply shouldn't exist.;;;;;;;;;;;;;x
+
+#Macedonia
+EVTTITLE_CLRFE.5;The Fall of Makedon;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.5;In time immemorial, Great Alexander Anaxorgos conquered most of the world and founded the great Macedonian Empire. But soon Macedonia collapsed, and its fragments were conquered by Rome and the Divine Caesar. But the scholars wondered many times - who would have won if Macedonia and Rome had fought at peak of their powers? Many years after these antediluvian times, the answer was finally received, for the Macedonian phalanx fell under the onslaught of the Roman legionaries. The lands of ancient Hellas once again belong to the Roman Empire, and the superiority of the Divine Caesar over Alexander Anaxorgos is now undeniable.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.5;In time immemorial, Great Alexander Anaxorgos conquered most of the world and founded the great Macedonian Empire. But soon Macedonia collapsed, and its fragments were conquered by Rome and the Divine Caesar. But the scholars wondered many times - who would have won if Macedonia and Rome had fought at peak of their powers? Many years after these antediluvian times, the answer was finally received, for the Macedonian phalanx fell under the onslaught of the Roman legionaries. The lands of ancient Hellas once again belong to the Roman Republic, and the superiority of the Divine Caesar over Alexander Anaxorgos is now undeniable.;;;;;;;;;;;;x  
+EVTOPTA_CLRFE.5;The history repeat itself, but in unusual ways.;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.5;The history repeat itself, but in unusual ways.;;;;;;;;;;;;;x
+
+#Transnistria
+EVTTITLE_CLRFE.6;The Fall of Pretender;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.6;Red banners with Aquila now flutter over the Imperial Palace of Peresechen, for the Transnistrian Empire have finally fell under the onslaught of Roman Empire. Many scholars had the courage to assert that Transnistria is the heir to the fallen Third Roman Empire, and therefore has the right to be called the Fourth Rome, but the legioners of the revived Roman Empire believe otherwise. Those defenders of Palace who had survived the assault were crucified on the banks of Danube, for the True Heir of Rome will not tolerate the pretenders.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.6;Red banners with symbols of Senate and Peoples of Rome now flutter over the Imperial Palace of Peresechen, for the Transnistrian Empire have finally fell under the onslaught of Roman Republic. Many scholars had the courage to assert that Transnistria is the heir to the fallen Third Roman Empire, and therefore has the right to be called the Fourth Rome, but the legioners of the revived Roman Republic believe otherwise. Those defenders of Palace who had survived the assault were crucified on the banks of Danube, for the True Heir of Rome will not tolerate the pretenders.;;;;;;;;;;;;x  
+EVTOPTA_CLRFE.6;Horrible!;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.6;The right to be called Rome must be earned.;;;;;;;;;;;;;x
+
+#Yugoslavia
+EVTTITLE_CLRFE.7;The Fall of Yugoslavia;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.7;Red banners with Aquila now flutter over the Fortress of Belgrade, for the Empire of Yugoslavia have finally fell under the onslaught of Roman Empire. All hopes of the south slavs for the united and independent Balkans were dashed when the last warriors of Yugoslavia, who had survived the assault, were crucified in Kalemegdan Park. There will be no more Yugoslavia. Only the Roman provinces of Dacia and Dalmatia.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.7;Red banners with Aquila now flutter over the Fortress of Belgrade, for the Empire of Yugoslavia have finally fell under the onslaught of Roman Republic. All hopes of the south slavs for the united and independent Balkans were dashed when the last warriors of Yugoslavia, who had survived the assault, were crucified in Kalemegdan Park. There will be no more Yugoslavia. Only the Roman provinces of Dacia and Dalmatia.;;;;;;;;;;;;x  
+EVTOPTA_CLRFE.7;Horrible!;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.7;Sit transit gloria mundi.;;;;;;;;;;;;;x
+#German Confederation
+EVTTITLE_CLRFE.8;The Revenge for Teutoburg;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.8;Long ago, in antediluvian times, a confederation of ancient Germanic tribes led by God Arminius defeated the Legions of Roman Empire. Thousands of years later, the German Confederation might well have defeated the legions of a reborn Roman Empire - but it failed. The few who survived the defeat of the armies of the German Confederation were taken into slavery or crucified in the Teutoburg Forest, as a symbolic revenge for the ancient defeat.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.8;Long ago, in antediluvian times, a confederation of ancient Germanic tribes led by God Arminius defeated the Legions of Roman Empire. Thousands of years later, the German Confederation might well have defeated the legions of a reborn Roman Republic - but it failed. The few who survived the defeat of the armies of the German Confederation were taken into slavery or crucified in the Teutoburg Forest, as a symbolic revenge for the ancient defeat.;;;;;;;;;;;;x 
+EVTOPTA_CLRFE.8;Horrible!;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.8;We have avenged the legions of Varus!;;;;;;;;;;;;;x
+
+#American Colonies
+EVTTITLE_CLRFE.9;The Fall of the Bald Eagle;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.9;The few surviving soldiers of the American colonial government embarked on the remaining ships in a stampede to their homeland, for the American colonies in Europe were crushed by the unstoppable juggernaut of the Roman Empire. The few surviving colonists who were not massacred by the Roman advance were enslaved or crucified on crosses on the Atlantic coast as a grim warning to all those who dare to challenge Rome. Roman magistres militum and legates are already studying trophy maps and ships, planning the possible expedition to the overseas west.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.9;The few surviving soldiers of the American colonial government embarked on the remaining ships in a stampede to their homeland, for the American colonies in Europe were crushed by the unstoppable juggernaut of the Roman Republic. The few surviving colonists who were not massacred by the Roman advance were enslaved or crucified on crosses on the Atlantic coast as a grim warning to all those who dare to challenge Rome. Roman magistres militum and legates are already studying trophy maps and ships, planning the possible expedition to the overseas west.;;;;;;;;;;;;x 
+EVTOPTA_CLRFE.9;Good Riddance!;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.9;One day, we will come to them, and Roman Aquila will fly over America.;;;;;;;;;;;;;x
+
+#Petropolis
+EVTTITLE_CLRFE.10;The Fall of Pietrograd;;;;;;;;;;;;;x
+EVTDESCA_CLRFE.10;Red banners with Aquila flutter over the Winter Palace, for the Pietrograd Republic have finally fell under the onslaught of Roman Empire. All hopes of the Pietrograd people for the restoration of Great Russia were dashed when the last defenders of the city, who had survived the assault, were crucified on Senate Square. There will be no more democracy in these lands, only the iron dictatorship of the Roman Empire.;;;;;;;;;;;;x 
+EVTDESCB_CLRFE.10;Red banners with Aquila flutter over the Winter Palace, for the Pietrograd Republic have finally fell under the onslaught of Roman Republic. All hopes of the Pietrograd people for the restoration of Great Russia were dashed when the last defenders of the city, who had survived the assault, were crucified on Senate Square. There will be no more democracy in these lands, only the iron dictatorship of the Roman Republic.;;;;;;;;;;;;x 
+EVTOPTA_CLRFE.10;Horrible!;;;;;;;;;;;;;x
+EVTOPTB_CLRFE.10;It's a Hegelian dialectic, not personal animosity.;;;;;;;;;;;;;x
+
+#Caesar Reborn trait
+EVTTITLE_CCRE.3;The Incarnation of Caesar;;;;;;;;;;;;;x
+EVTDESC_CCRE.3;My reign has been going on for many years, and during this time my subjects began to express the idea that I was not an ordinary person. Under my careful leadership, the Empire flourishes, the fame of me and my deeds spreads far beyond the borders of the state. Increasingly, the citizens of the Empire begin to say that I am the Caesar Reborn.;;;;;;;;;;;;;x  
+CCREOA.3;The blood of God is coursing through my veins!;;;;;;;;;;;;;x
+EVTDESC_CCRE.4;Hail, Caesar! \n\nThe omens received by the Collegium Pontificum are clear. You are the reincarnation of Divine Caesar. May your reign last long and bring prosperity to your Empire.;;;;;;;;;;;;;x 
+EVTTITLE_CCRE.5;The Return of the Caesar;;;;;;;;;;;;;x
+EVTDESC_CCRE.5;A great celebrations are taking place in [Root.GetFullBaseName] as [Root.GetTitledName] was proclaimed as the new reincarnation of the Divine Caesar. The devout Caesarians are exalted by the fact that their lord have returned to them once again to lead his Empire into a new, better future.;;;;;;;;;;;;;x 
+CCREOA.5;Ave me!;;;;;;;;;;;;;x
+CCREOB.5;Ave Caesar!;;;;;;;;;;;;;x
+CCREOC.5;Preposterous.;;;;;;;;;;;;;x

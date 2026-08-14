@@ -1,0 +1,82 @@
+defined_text = {
+	name = GetRomanSymbol
+
+	text = {
+		localisation_key = GetLaurelWreath
+		trigger = {
+			OR = {
+			    has_landed_title = k_caesar_legion
+			}
+		}
+	}
+	text = {
+		localisation_key = GetAquila
+		trigger = {
+			OR = {
+			    has_landed_title = e_first_rome
+				has_landed_title = e_second_rome
+				has_landed_title = e_third_rome
+			}
+		}
+	}
+	text = {
+		localisation_key = GetSPQR
+		trigger = {
+			OR = {
+			    has_landed_title = e_third_rome_republic
+				has_landed_title = e_second_rome_republic
+				has_landed_title = e_first_rome_republic
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = GetRomanTitle
+
+	text = {
+		localisation_key = GetLegion
+		trigger = {
+			OR = {
+			    has_landed_title = k_caesar_legion
+			}
+		}
+	}
+	text = {
+		localisation_key = GetEmpire
+		trigger = {
+			OR = {
+			    has_landed_title = e_first_rome
+				has_landed_title = e_second_rome
+				has_landed_title = e_third_rome
+			}
+		}
+	}
+	text = {
+		localisation_key = GetRepublic
+		trigger = {
+			OR = {
+			    has_landed_title = e_third_rome_republic
+				has_landed_title = e_second_rome_republic
+				has_landed_title = e_first_rome_republic
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = GetRomanHighGod
+
+	text = {
+		localisation_key = GetCaesar
+		trigger = {
+			religion = cult_of_mars
+		}
+	}
+	text = {
+		localisation_key = GetPompius
+		trigger = {
+			religion = cult_of_pompeius
+		}
+	}
+}
