@@ -1,0 +1,26 @@
+execution_method = {
+	death = death_execution_crucifixion
+	weight_multiplier = {
+		factor = 200
+		modifier = {
+			factor = 200 #Degenerates like you belongs on the cross
+			FROM = {
+				religion = cult_of_mars
+				religion = cult_of_pompeius
+			}
+		}
+	}
+	trigger = {
+		FROM = {
+			AND = {
+				OR = {
+					culture = roman
+					religion_group = muslim
+					religion = cult_of_mars
+					religion = cult_of_pompeius
+				}
+				NOT = { religion_group = christian }
+			}
+		}
+	}
+}

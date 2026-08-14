@@ -1,0 +1,289 @@
+d_the_disfavored = {
+	color={ 31 0 73 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = east_slavic
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+
+	mercenary = yes
+
+	title = "IRON_MARSHAL"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}
+
+d_volki_rima = {
+	color={ 221 215 62 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = east_slavic
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+	
+	mercenary = yes
+
+	title = "PRIMARCH"
+	foa = "PRIMARCH_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}
+
+d_spire_guard = {
+	color={ 8 31 61 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = byzantine
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}
+
+d_the_unbroken = {
+	color={ 88 79 64 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = byzantine
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+	
+	mercenary = yes
+
+	title = "LEGATUS_CAESARIAN"
+	foa = "CAPTAIN_FOA"
+	title_female = "LEGATUS_CAESARIAN_FEMALE"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}
+
+d_boatmen_of_styx = {
+	color={ 36 28 31 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = apeninian
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}
+
+d_ardites = {
+	color={ 76 76 76 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Hire Trigger
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					is_alternate_start = yes
+				}
+			}
+			OR = {
+			    is_roman_gods_cultist_trigger = yes
+				is_neo_roman_trigger = yes
+				religion_openly_hellenic_or_reformed_trigger = yes
+				culture_group = apeninian
+			}
+		}
+	}
+	
+	# Parent Religion 
+	religion = cult_of_caesar
+	
+	culture = roman
+
+	government = legion_government
+	
+	mercenary = yes
+
+	title = "LEGATUS_CAESARIAN"
+	foa = "CAPTAIN_FOA"
+	title_female = "LEGATUS_CAESARIAN_FEMALE"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = roman_mercenaries_composition
+}

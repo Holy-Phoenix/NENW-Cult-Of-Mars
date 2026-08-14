@@ -1,0 +1,59 @@
+government_flavor = {
+	name = gov_roman_martian_republic
+	graphics = GFX_evt_roman_senate
+	priority = 1
+	trigger = {
+		government = oligarchic_republic
+		OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_roman_caesar_legion
+	graphics = GFX_evt_roman_legate
+	priority = 4
+	trigger = {
+		government = legion_government
+		OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+		}
+		OR = {
+			has_landed_title = k_caesar_legion_landless
+			has_landed_title = k_caesar_legion
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_roman_caesarian_empire
+	graphics = GFX_evt_roman_emperor
+	priority = 1
+	trigger = {
+		OR = { 
+		    government = roman_imperial_government 
+		    government = roman_imperial_martian_government
+		}
+		OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+		}
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_roman_caesarian_monarchy
+	graphics = GFX_evt_roman_senate
+	priority = 1
+	trigger = {
+		government = feudal_government
+		OR = {
+			religion = cult_of_mars
+			religion = cult_of_pompeius
+		}
+	}
+}

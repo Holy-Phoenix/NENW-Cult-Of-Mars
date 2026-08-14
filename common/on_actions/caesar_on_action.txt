@@ -1,0 +1,97 @@
+on_startup = {
+	events = {
+		CAESARTS.100
+	}
+}
+
+on_yearly_pulse = {
+    events = { 
+	    CLRE.22
+		CAESARTS.101
+	}
+}	
+
+on_decade_pulse = {
+    random_events = {
+	    caesar_reborned_event = {
+			25 = CCRE.1 # Proclamation of Caesar Reborn
+			75 = 0
+		}
+	}
+}
+
+on_death = {
+	events = {
+	    CCRE.6
+	}
+}
+
+on_character_switch_society_interest = {
+	events = {
+		EADKOS.10010
+	}
+}
+
+on_war_started = {
+	events = {
+	    CLREF.40 #Set event target after Legion or Roman Empire declare war on it
+	}
+}
+
+on_war_ended_victory = {
+	events = {
+	    CLREF.41
+		CLREF.42
+		CLREF.43
+		CLREF.44
+		CLREF.45
+		CLREF.46
+		CLREF.47
+		CLREF.48
+		CLREF.49
+	}
+	random_events = {
+	    caesars_clean_up = {
+		delay = 10
+	        100 = CLREF.100 #Clean up event if realm does not destroyed
+		}
+	}
+}
+
+on_war_ended_whitepeace = {
+    random_events = {
+	    caesars_clean_up = {
+		delay = 10
+	        100 = CLREF.100 #Clean up event if realm does not destroyed
+		}
+	}
+}
+
+on_war_ended_defeat = {
+    events = {
+	    CLREF.41
+		CLREF.42
+		CLREF.43
+		CLREF.44
+		CLREF.45
+		CLREF.46
+		CLREF.47
+		CLREF.48
+		CLREF.49
+	}
+	random_events = {
+	    caesars_clean_up = {
+		delay = 24
+	        100 = CLREF.100 #Clean up event if realm does not destroyed
+		}
+	}
+}
+
+on_war_ended_invalid = {
+	random_events = {
+	    caesars_clean_up = {
+		delay = 24
+	        100 = CLREF.100 #Clean up event if realm does not destroyed
+		}
+	}
+}

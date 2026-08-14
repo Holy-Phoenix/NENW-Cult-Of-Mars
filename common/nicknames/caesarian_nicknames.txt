@@ -1,0 +1,27 @@
+#Roman title history nicknames
+nick_caesar = {}
+nick_august = {}
+nick_germanicus = {}
+nick_traianus = {}
+nick_hadrianus = {}
+nick_pius = {}
+nick_aurelius = {}
+nick_aurelianus = {}
+nick_constantinus = {}
+nick_augustulus = {}
+nick_magnus = {}
+nick_tempestus = {}
+nick_beatus = {}
+nick_silentius = {}
+nick_benedictus = {}
+nick_vitis = {}
+nick_liberator = {}
+nick_pacificator = {}
+nick_pannus = {}
+nick_sulla = {}
+nick_frumentum = {}
+nick_bibitor = {}
+nick_argyros = {}
+nick_magna = {}
+nick_brutus = {}
+nick_caesarion = {}

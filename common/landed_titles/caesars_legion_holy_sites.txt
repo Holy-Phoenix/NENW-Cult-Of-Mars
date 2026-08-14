@@ -1,0 +1,15 @@
+c_flagstaff = {
+	holy_site = cult_of_mars
+}
+c_las_vegas = {
+	holy_site = cult_of_mars
+}
+c_denver = {
+	holy_site = cult_of_mars
+}
+c_san_francisco = {
+	holy_site = cult_of_mars
+}
+c_los_angeles = {
+	holy_site = cult_of_mars
+}

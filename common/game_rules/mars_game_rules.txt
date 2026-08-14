@@ -1,0 +1,30 @@
+rise_of_caesars_legion = {
+	name = "RULE_CAESAR_LEGION"
+	group = "RULE_GROUP_RAILROADING"
+	alt_start_default = off
+	option = {
+		name = historical
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_CAESAR_LEGION_HISTORICAL_DESC"
+	}
+	option = {
+		name = random
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_CAESAR_LEGION_INVASION_RANDOM_DESC"
+	}
+	option = {
+		name = delayed_random
+		text = "RULE_OPTION_DELAYED_RANDOM"
+		desc = "RULE_CAESAR_LEGION_DELAYED_RANDOM_DESC"
+	}
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_CAESAR_LEGION_OFF_DESC"
+	}
+	option = {
+		name = immediatly
+		text = "RULE_OPTION_IMMEDIATLY"
+		desc = "RULE_CAESAR_LEGION_IMMEDIATLY_DESC"
+	}
+}

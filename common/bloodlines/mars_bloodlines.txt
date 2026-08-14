@@ -1,0 +1,39 @@
+martian_emperor = {
+	monthly_character_prestige = 0.25
+	bloodline_effect_one_invasion = 1
+	cult_of_mars_opinion = 5
+	roman_opinion = 5
+	riman_opinion = 5
+	rhomaion_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline mars_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		OR = {
+			is_roman_gods_cultist_trigger = yes
+			is_neo_roman_trigger = yes
+			religion_openly_hellenic_or_reformed_trigger = yes
+		}
+	}
+}
+
+martian_emperor_female = {
+	monthly_character_prestige = 0.25
+	bloodline_effect_one_invasion = 1
+	cult_of_mars_opinion = 5
+	roman_opinion = 5
+	riman_opinion = 5
+	rhomaion_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline mars_bloodline }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		OR = {
+			is_roman_gods_cultist_trigger = yes
+			is_neo_roman_trigger = yes
+			religion_openly_hellenic_or_reformed_trigger = yes
+		}
+	}
+}

@@ -1,0 +1,61 @@
+bust_of_caesar = {
+	max_amount = 2
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 50
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+			culture_group = neo-latin
+		    }
+			is_landed = yes
+		}
+	}
+	
+	artifacts = {
+		bust_of_caesar = {
+			value = 1
+		}
+	}
+}
+
+caesarian_artifacts = {
+	max_amount = 4
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 75 # 3 on average
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			OR = {
+			culture_group = neo-latin
+			}
+			is_landed = yes
+		}
+	}
+
+	artifacts = {
+		bust_of_antedeluvian_emperor = {
+			value = 1
+		}
+		the_last_day_of_pompeii = {
+			value = 1
+		}
+		commentaries_of_gallic_war = {
+			value = 1
+		}
+	}
+}

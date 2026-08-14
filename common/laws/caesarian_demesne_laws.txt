@@ -1,0 +1,634 @@
+law_groups = {
+	parliament_laws_roman_caesarian = {
+		law_type = realm
+	}
+}
+
+law_groups = {
+	principatus_dominatus_laws_roman_caesarian = {
+		law_type = realm
+	}
+}
+
+
+laws = {
+	parliament_laws_roman_caesarian_0 = {
+		group = parliament_laws_roman_caesarian
+		feudal_opinion = -10
+		city_opinion = -10
+		temple_opinion = -10
+		allow = {
+			has_law = parliament_laws_roman_caesarian_1
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+					has_landed_title = e_first_rome_republic
+					has_landed_title = e_second_rome_republic
+					has_landed_title = e_third_rome_republic
+                }				
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = 2
+			trait=cynical
+			}
+			modifier = {
+			factor = 2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = 2
+			trait=paranoid
+			}
+			modifier = {
+			factor = 2
+			trait=cruel
+			}
+			modifier = {
+			factor = -2
+			trait=just
+			}
+			modifier = {
+			factor = -2
+			trait=trusting
+			}
+			modifier = {
+			factor = -2
+			trait=content
+			}
+			modifier = {
+			factor = -2
+			trait=ambitious
+			}
+			modifier = {
+			factor = 2
+			trait=proud
+			}
+			modifier = {
+			factor = -2
+			trait=kind
+			}
+			modifier = {
+			factor = 2
+			trait=greedy
+			}
+			modifier = {
+			factor = -2
+			trait=slothful
+			}
+			modifier = {
+			factor = -2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = -2
+			trait=drunkard
+			}
+			modifier = {
+			factor = -2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = parliament_laws_roman_caesarian_1
+				revoke_law = parliament_laws_roman_caesarian_2
+				revoke_law = parliament_laws_roman_caesarian_3
+			}
+		}
+		vassal_limit = -5
+	}
+	parliament_laws_roman_caesarian_1 = {
+		group = parliament_laws_roman_caesarian
+		feudal_opinion = -5
+		city_opinion = -5
+		temple_opinion = -5
+		allow = {
+			OR = {
+				has_law = parliament_laws_roman_caesarian_0
+				has_law = parliament_laws_roman_caesarian_2
+			}
+			NOT = {
+				has_law = principatus_dominatus_laws_roman_caesarian_1
+			}
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+					has_landed_title = e_first_rome_republic
+					has_landed_title = e_second_rome_republic
+					has_landed_title = e_third_rome_republic
+                }
+                NOT = {
+				    has_law = principatus_dominatus_laws_roman_caesarian_1
+				}				
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = 2
+			trait=cynical
+			}
+			modifier = {
+			factor = 2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = 2
+			trait=paranoid
+			}
+			modifier = {
+			factor = 2
+			trait=cruel
+			}
+			modifier = {
+			factor = -2
+			trait=just
+			}
+			modifier = {
+			factor = -2
+			trait=trusting
+			}
+			modifier = {
+			factor = -2
+			trait=content
+			}
+			modifier = {
+			factor = -2
+			trait=ambitious
+			}
+			modifier = {
+			factor = 2
+			trait=proud
+			}
+			modifier = {
+			factor = -2
+			trait=kind
+			}
+			modifier = {
+			factor = 2
+			trait=greedy
+			}
+			modifier = {
+			factor = -2
+			trait=slothful
+			}
+			modifier = {
+			factor = -2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = -2
+			trait=drunkard
+			}
+			modifier = {
+			factor = -2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = parliament_laws_roman_caesarian_0
+				revoke_law = parliament_laws_roman_caesarian_2
+				revoke_law = parliament_laws_roman_caesarian_3
+			}
+		}
+	}
+	parliament_laws_roman_caesarian_2 = {
+		group = parliament_laws_roman_caesarian
+		default = yes
+		allow = {
+			OR = {
+				has_law = parliament_laws_roman_caesarian_1
+				has_law = parliament_laws_roman_caesarian_3
+			}
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+					has_landed_title = e_first_rome_republic
+					has_landed_title = e_second_rome_republic
+					has_landed_title = e_third_rome_republic
+                }					
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = -2
+			trait=cynical
+			}
+			modifier = {
+			factor = -2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = -2
+			trait=paranoid
+			}
+			modifier = {
+			factor = -2
+			trait=cruel
+			}
+			modifier = {
+			factor = 2
+			trait=just
+			}
+			modifier = {
+			factor = 2
+			trait=trusting
+			}
+			modifier = {
+			factor = 2
+			trait=content
+			}
+			modifier = {
+			factor = 2
+			trait=ambitious
+			}
+			modifier = {
+			factor = -2
+			trait=proud
+			}
+			modifier = {
+			factor = 2
+			trait=kind
+			}
+			modifier = {
+			factor = -2
+			trait=greedy
+			}
+			modifier = {
+			factor = 2
+			trait=slothful
+			}
+			modifier = {
+			factor = 2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = 2
+			trait=drunkard
+			}
+			modifier = {
+			factor = 2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = parliament_laws_roman_caesarian_0
+				revoke_law = parliament_laws_roman_caesarian_1
+				revoke_law = parliament_laws_roman_caesarian_3
+			}
+		}
+	}
+	parliament_laws_roman_caesarian_3 = {
+		group = parliament_laws_roman_caesarian
+		feudal_opinion = 5
+		city_opinion = 5
+		temple_opinion = 5
+		allow = {
+			has_law = parliament_laws_roman_caesarian_2
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+					has_landed_title = e_first_rome_republic
+					has_landed_title = e_second_rome_republic
+					has_landed_title = e_third_rome_republic
+                }					
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = -2
+			trait=cynical
+			}
+			modifier = {
+			factor = -2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = -2
+			trait=paranoid
+			}
+			modifier = {
+			factor = -2
+			trait=cruel
+			}
+			modifier = {
+			factor = 2
+			trait=just
+			}
+			modifier = {
+			factor = 2
+			trait=trusting
+			}
+			modifier = {
+			factor = 2
+			trait=content
+			}
+			modifier = {
+			factor = 2
+			trait=ambitious
+			}
+			modifier = {
+			factor = -2
+			trait=proud
+			}
+			modifier = {
+			factor = 2
+			trait=kind
+			}
+			modifier = {
+			factor = -2
+			trait=greedy
+			}
+			modifier = {
+			factor = 2
+			trait=slothful
+			}
+			modifier = {
+			factor = 2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = 2
+			trait=drunkard
+			}
+			modifier = {
+			factor = 2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = parliament_laws_roman_caesarian_0
+				revoke_law = parliament_laws_roman_caesarian_1
+				revoke_law = parliament_laws_roman_caesarian_2
+			}
+		}
+		vassal_limit = 5
+	}
+	
+	
+	principatus_dominatus_laws_roman_caesarian_0 = {
+		group = principatus_dominatus_laws_roman_caesarian
+		allow = {
+			has_law = principatus_dominatus_laws_roman_caesarian_1
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+#					has_landed_title = e_first_rome_republic
+#					has_landed_title = e_second_rome_republic
+#					has_landed_title = e_third_rome_republic
+                    has_landed_title = e_roman_empire
+                }					
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = -2
+			trait=cynical
+			}
+			modifier = {
+			factor = -2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = -2
+			trait=paranoid
+			}
+			modifier = {
+			factor = -2
+			trait=cruel
+			}
+			modifier = {
+			factor = 2
+			trait=just
+			}
+			modifier = {
+			factor = 2
+			trait=trusting
+			}
+			modifier = {
+			factor = 2
+			trait=content
+			}
+			modifier = {
+			factor = 2
+			trait=ambitious
+			}
+			modifier = {
+			factor = -2
+			trait=proud
+			}
+			modifier = {
+			factor = 2
+			trait=kind
+			}
+			modifier = {
+			factor = -2
+			trait=greedy
+			}
+			modifier = {
+			factor = 2
+			trait=slothful
+			}
+			modifier = {
+			factor = 2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = 2
+			trait=drunkard
+			}
+			modifier = {
+			factor = 2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = principatus_dominatus_laws_roman_caesarian_1
+			}
+		}
+	}
+	principatus_dominatus_laws_roman_caesarian_1 = {
+		group = principatus_dominatus_laws_roman_caesarian
+		feudal_opinion = 10
+		city_opinion = 10
+		temple_opinion = 10
+		allow = {
+			has_law = principatus_dominatus_laws_roman_caesarian_0
+			has_law = parliament_laws_roman_caesarian_0
+			has_law = law_voting_power_0
+			NOT = { has_law = parliament_laws_roman_caesarian_1 }
+		}
+		potential = {
+			holder_scope = { 
+			    OR = {
+				    has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+#					has_landed_title = e_first_rome_republic
+#					has_landed_title = e_second_rome_republic
+#					has_landed_title = e_third_rome_republic
+					has_landed_title = e_roman_empire
+                }					
+			}
+			has_dlc = "Zeus"
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+			factor = 2
+			trait=cynical
+			}
+			modifier = {
+			factor = 2
+			trait=arbitrary
+			}
+			modifier = {
+			factor = 2
+			trait=paranoid
+			}
+			modifier = {
+			factor = 2
+			trait=cruel
+			}
+			modifier = {
+			factor = -2
+			trait=just
+			}
+			modifier = {
+			factor = -2
+			trait=trusting
+			}
+			modifier = {
+			factor = -2
+			trait=content
+			}
+			modifier = {
+			factor = -2
+			trait=ambitious
+			}
+			modifier = {
+			factor = 2
+			trait=proud
+			}
+			modifier = {
+			factor = -2
+			trait=kind
+			}
+			modifier = {
+			factor = 2
+			trait=greedy
+			}
+			modifier = {
+			factor = -2
+			trait=slothful
+			}
+			modifier = {
+			factor = -2
+			trait=gluttonous
+			}
+			modifier = {
+			factor = -2
+			trait=drunkard
+			}
+			modifier = {
+			factor = -2
+			trait=depressed
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = principatus_dominatus_laws_roman_caesarian_0
+			}
+		}
+		vassal_limit = 5
+	}
+}	

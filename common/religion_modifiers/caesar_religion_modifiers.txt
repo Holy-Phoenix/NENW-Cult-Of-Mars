@@ -1,0 +1,4 @@
+pontifex_created = {
+	authority = 10
+	years = 15
+}

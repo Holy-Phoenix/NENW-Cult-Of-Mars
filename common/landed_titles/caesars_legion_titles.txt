@@ -1,0 +1,200 @@
+e_nova_roma = {
+	color={ 210 0 0 }
+	color2={ 255 255 0 }
+	
+	title = "IMPERATOR_TITLE"
+	title_female = "IMPERATRIX_TITLE_FEMALE"
+	
+	capital = 2073 # Vegas
+	
+	short_name = yes
+	
+	dignity = 100
+	
+	culture = roman
+	
+	government = roman_imperial_martian_government
+
+	purple_born_heirs = yes
+	
+	has_top_de_jure_capital = yes
+	
+	#religion = orthodox
+	
+	allow = {
+		always = no # Only created through special event
+	}
+}
+
+
+k_caesar_legion = {
+ 	color={ 210 0 0 }
+	color2={ 255 255 0 }
+	
+	capital = 2073 # Vegas
+	
+	short_name = yes
+	
+	title = "DICTATOR_TITLE"
+	title_female = "DICTATRIX_TITLE"
+	
+	culture = roman
+	religion = cult_of_mars
+
+	government = legion_government
+
+	allow = {
+		always = no # Only created through special event
+	}
+	
+	assimilate = no
+}
+
+d_cult_of_mars = {
+	color={ 124 0 175 }
+	
+	capital = 2073 # Vegas
+	
+	title = "PONTIFEX_MAXIMUS"
+	title_female = "VESTALIS_MAXIMA"
+	foa = "POPE_FOA"
+	short_name = yes
+	
+	landless = yes
+	
+	creation_requires_capital = yes
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	
+	# Controls a religion
+	controls_religion = cult_of_mars
+	
+	religion = cult_of_mars
+	culture = roman
+	
+	allow = {
+		always = no # Only created through special event
+	}
+	
+#	gain_effect = {
+#			any_playable_ruler = {
+#				narrative_event = { id = CLRE.7 }
+#			}
+#
+#			ROOT = {
+#				narrative_event = { id = CLRE.7 }
+#			}
+#	}
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_cult_of_pompeius = {
+	color={ 52 60 139 }
+	
+	capital = 2073 # Vegas
+	
+	title = "PONTIFEX_MAXIMUS"
+	title_female = "VESTALIS_MAXIMA"
+	foa = "POPE_FOA"
+	short_name = yes
+	
+	landless = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	
+	# Controls a religion
+	controls_religion = cult_of_pompeius
+	
+	religion = cult_of_pompeius
+	
+	allow = {
+		always = no # Only created through special event
+	}
+	
+#	gain_effect = {
+#			any_playable_ruler = {
+#				narrative_event = { id = CLRE.7 }
+#			}
+#
+#			ROOT = {
+#				narrative_event = { id = CLRE.7 }
+#			}
+#	}
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_cohors_praetoria = {
+
+	color = { 35 28 161 }
+	
+	graphical_culture = slavicholygfx
+	
+	capital = 2073 # Vegas
+
+	title = "PRAEFECT_PRAETORII"
+	title_female = "PRAEFECTA_PRAETORII"
+	foa = "GRANDMASTER_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	allow = {
+		always = no # Only created through special event
+	}
+	
+	holy_order = yes
+	
+	culture = roman
+
+	# Parent Religion 
+	religion = cult_of_mars
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+
+	mercenary_type = myrmidons_composition
+}
+
+d_imperial_army = {
+	color={ 255 0 0 }
+	color2={ 255 215 0 }
+	
+	graphical_culture = slavicholygfx
+
+	capital = 2073 # Vegas
+	
+	# Parent Religion 
+	religion = cult_of_mars
+	
+	culture = roman
+	
+	mercenary = yes
+
+	title = "LEGATUS_CAESARIAN"
+	foa = "CAPTAIN_FOA"
+	title_female = "LEGATUS_CAESARIAN_FEMALE"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+#	strength_growth_per_century = 1.00
+	
+	mercenary_type = imperial_army_composition
+}
+

@@ -1,0 +1,45 @@
+succession_laws = {    
+	succ_roman_military_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		potential = {
+			holder_scope = {
+				OR = {
+			        has_landed_title = k_caesar_legion
+					has_landed_title = e_first_rome
+					has_landed_title = e_second_rome
+					has_landed_title = e_third_rome
+				}			
+				NOT = { religion_group = muslim }
+				is_merchant_republic = no
+				is_patrician = no
+				OR = {
+					independent = yes
+					NOT = {
+						any_demesne_title = {
+							is_vice_royalty = yes
+						}
+					}
+				}
+			}
+			is_primary_type_title = no
+			NOT = { holder_scope = { government = oligarchic_republic } }
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+			NOT = { holder_scope = { government = confederation_government } }
+			NOT = { holder_scope = { government = calvinist_government } }
+			NOT = { holder_scope = { government = order_government } }
+		}
+		allow = {
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = byzantine_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+}	

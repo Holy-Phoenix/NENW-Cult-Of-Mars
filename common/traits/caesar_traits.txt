@@ -1,0 +1,20 @@
+caesar_reborn = {
+	cult_of_mars_opinion = 10
+	cult_of_pompeius_opinion = -5
+	
+	customizer = no
+	
+	combat_rating = 20 #old value: 5
+	
+	male_compliment = COMPL_CAESAR_REBORN
+	female_compliment = COMPL_CAESAR_REBORN
+}
+
+caesar_himself = {
+	cult_of_mar_opinion = 50
+	cult_of_pompeius_opinion = -50
+	
+	customizer = no
+	
+	combat_rating = 50 #old value: 5
+}

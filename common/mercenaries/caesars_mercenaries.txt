@@ -1,0 +1,12 @@
+imperial_army_composition = {
+	levy_size = 12
+	light_cavalry = 50
+	heavy_infantry = 700
+	archers = 100
+}
+
+roman_mercenaries_composition = {
+    levy_size = 4
+	pikemen = 500
+	archers = 300
+}

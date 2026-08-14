@@ -1,0 +1,123 @@
+caesarian_faiths_group = {
+    cult_of_mars = {
+		graphical_culture = reformedhellenicgfx
+		secondary_event_pictures = cult_of_caesar
+		interface_skin = { hellenic_interface }
+		
+		ai_convert_other_group = 2
+		ai_convert_same_group = 2
+
+		icon = 254
+		heresy_icon = 255
+		
+		color = { 0.6 0.15 0.15 }
+		
+		high_god_name = GOD_MARS
+		
+		god_names = {
+			GOD_CAESAR GOD_SON_OF_MARS GOD_VENUS GOD_MINERVA GOD_JUPITER GOD_JUNO GOD_VULKAN GOD_PAX_ROMANA GOD_ROMULUS GOD_REMUS GOD_OCTAVIAN
+		}
+		evil_god_names = {
+			GOD_BRUTUS GOD_POMPEIUS GOD_VENCINGETORIX ARMINIUS GOD_ALARIC
+		}
+
+		crusade_name = CAESARIAN_CONQUEST
+		scripture_name = COMENTARII_DE_BELLO_GALLICO_ET_BELLO_CIVILI
+		priest_title = AUGUR_CAESARIAN
+		
+		aggression = 2
+		defensive_attrition = yes
+		peace_prestige_loss = yes
+		peace_piety_gain = 1.0
+		attacking_same_religion_piety_loss = yes
+		can_demand_religious_conversion = yes
+		hard_to_convert = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = yes
+		can_grant_claim = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		rel_head_defense = yes
+		allow_rivermovement = yes
+		priests_can_marry = no
+		priests_can_inherit = no
+		female_temple_holders = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		ignores_defensive_attrition = yes
+		has_heir_designation = yes
+		dislike_tribal_organization = yes
+		uses_decadence = yes
+		uses_jizya_tax = yes
+		castes = yes
+		caste_opinion = yes
+		bs_marriage = no
+		pc_marriage = no
+		psc_marriage = no
+		cousin_marriage = no
+		matrilineal_marriages = no
+		max_wives = 1
+		
+		
+		intermarry = pagan_group
+		intermarry = esoteric
+		intermarry = old_world_cultist_group
+		
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		religious_clothing_head = 12
+		religious_clothing_priest = 11
+		
+		allow_in_ruler_designer = yes
+	}
+	
+	cult_of_pompeius = {
+		graphical_culture = reformedhellenicgfx
+		secondary_event_pictures = cult_of_caesar
+		interface_skin = { hellenic_interface }
+
+		icon = 254
+		heresy_icon = 255
+		
+		parent = cult_of_mars
+		
+		color = { 0.6 0.2 0.1 }
+		
+		high_god_name = GOD_POMPEIUS
+		
+		god_names = {
+			GOD_MARS GOD_VENUS GOD_MINERVA GOD_JUPITER GOD_PAX_ROMANA GOD_ROMULUS GOD_REMUS GOD_BRUTUS GOD_VENCINGETORIX
+		}
+		evil_god_names = {
+			GOD_VULKAN GOD_CAESAR ARMINIUS GOD_ALARIC
+		}
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = FALL_OF_POMPEII
+		priest_title = AUGUR_CAESARIAN
+		
+		aggression = 1.0
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		female_temple_holders = yes
+		allow_looting = yes
+		ignores_defensive_attrition = yes
+		dislike_tribal_organization = yes
+		
+		intermarry = pagan_group
+		intermarry = esoteric
+		intermarry = old_world_cultist_group
+		
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		
+		religious_clothing_head = 12
+		religious_clothing_priest = 11
+		
+		allow_in_ruler_designer = yes
+	}
+	
+}	

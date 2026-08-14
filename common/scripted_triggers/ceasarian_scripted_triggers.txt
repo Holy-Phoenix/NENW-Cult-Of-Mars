@@ -1,0 +1,114 @@
+is_neo_roman_trigger = {
+    culture = roman
+}
+
+is_roman_gods_cultist_trigger = {
+    custom_tooltip = {
+		text = IS_ROMAN_CULTIST
+	OR = {
+	    religion = cult_of_mars
+		religion = cult_of_pompeius
+	}
+	}
+}
+
+is_romaboo_trigger = {
+	OR = { 
+		is_roman_gods_cultist_trigger = yes
+		is_neo_roman_trigger = yes
+	} 
+}
+
+have_romaboo_title_trigger = {
+    OR = {
+	    has_landed_title = e_nova_roma
+	}
+}
+
+has_hanubaal_prerequisites = {
+	has_common_devilworship_prerequisites = yes
+	has_hanubaal_prerequisites_special = yes
+}
+has_hanubaal_prerequisites_special = {
+	OR = { 
+		is_roman_gods_cultist_trigger = yes
+		is_neo_roman_trigger = yes
+	} 
+}
+
+romaboo_switch_trigger = {
+	OR = {
+		should_switch_to_romaboo_trigger = yes
+		should_switch_to_non_romaboo_trigger = yes
+		should_switch_to_romaboo_christian_trigger = yes
+		should_switch_to_romaboo_non_christian_trigger = yes
+		should_switch_to_romaboo_stalinist_trigger = yes
+		should_switch_to_romaboo_non_stalinist_trigger = yes
+		should_switch_to_romaboo_novelist_trigger = yes
+		should_switch_to_romaboo_non_novelist_trigger = yes
+		should_switch_to_romaboo_default_trigger = yes
+		should_switch_to_non_romaboo_non_default_trigger = yes
+	}
+}
+should_switch_to_romaboo_trigger = {
+	persistent_event_target:roman_title = { always = yes }
+	NOT = { has_title_flag = roman_title }
+	PREV = {
+		is_neo_roman_trigger = yes
+	}
+}
+should_switch_to_non_romaboo_trigger = {
+	persistent_event_target:non_roman_title = { always = yes }
+	has_title_flag = roman_title
+	PREV = {
+		is_neo_roman_trigger = no
+	}
+}
+
+should_switch_to_romaboo_christian_trigger = {
+    persistent_event_target:christian_roman_title = { always = yes }
+	NOT = { has_title_flag = christian_roman_title }
+	PREV = {
+		religion_group = christian
+		NOT = { is_russian_communist_religion_trigger = yes }
+		NOT = { religion_openly_novelist_or_reformed_trigger = yes }
+	}
+}
+
+should_switch_to_romaboo_stalinist_trigger = {
+    persistent_event_target:stalinist_roman_title = { always = yes }
+	NOT = { has_title_flag = stalinist_roman_title }
+	PREV = {
+		is_russian_communist_religion_trigger = yes
+		NOT = { religion_group = christian }
+		NOT = { religion_openly_novelist_or_reformed_trigger = yes }
+	}
+}
+
+should_switch_to_romaboo_novelist_trigger = {
+    persistent_event_target:novelist_roman_title = { always = yes }
+	NOT = { has_title_flag = novelist_roman_title }
+	PREV = {
+		religion_openly_novelist_or_reformed_trigger = yes
+		NOT = { religion_group = christian }
+		NOT = { is_russian_communist_religion_trigger = yes }
+	}
+}
+
+should_switch_to_romaboo_default_trigger = {
+    persistent_event_target:novelist_roman_title = { always = yes }
+	persistent_event_target:stalinist_roman_title = { always = yes }
+	persistent_event_target:christian_roman_title = { always = yes }
+	OR = {
+	    has_title_flag = novelist_roman_title
+	    has_title_flag = stalinist_roman_title
+		has_title_flag = christian_roman_title
+	}
+	PREV = {
+		NOR = { 
+		    religion_group = christian
+		    is_russian_communist_religion_trigger = yes
+		    religion_openly_novelist_or_reformed_trigger = yes 
+		}
+	}
+}

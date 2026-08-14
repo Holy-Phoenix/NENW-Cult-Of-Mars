@@ -1,0 +1,21 @@
+RETTYPE_CUL_ROMAN = 
+{
+	first_type = 2
+	first_amount = 400
+	second_type = 1
+	second_amount = 150
+	
+	potential = {
+		is_nomadic = no
+		culture = roman
+	}
+	
+	modifier = {
+		pikemen_offensive = 0.2
+		pikemen_defensive = 0.2
+		pikemen_morale = 0.4
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.25
+		heavy_infantry_morale = 0.2
+	}
+}

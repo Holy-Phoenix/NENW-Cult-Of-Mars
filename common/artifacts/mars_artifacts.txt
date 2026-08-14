@@ -1,0 +1,105 @@
+#Helmet of Legate Lanius
+crown_face_of_mars = { 
+	monthly_character_piety = 0.05
+	martial = 3
+	combat_rating = 10
+	quality = 4
+	command_modifier = {
+		religious_enemy = 0.15
+	}
+	active = {
+		is_adult = yes
+		OR = {
+		    religion = cult_of_mars
+			religion = cult_of_pompeius
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			culture = roman
+			culture = riman
+			culture = rhomaion
+		}
+	}
+	indestructible = yes
+	flags = { religious crown }
+	stacking = no
+	picture = "GFX_crown_face_of_mars"
+	slot = crown
+}
+
+commentaries_of_gallic_war { #It is a sacred manuscript!
+    quality = 5
+	monthly_character_prestige = 1
+	martial = 5
+	cult_of_mars_opinion = 10
+	flags = { book about_martial fiction }
+	picture = "GFX_book_red"
+	stacking = no
+	slot = library
+}
+
+bust_of_caesar = {
+	quality = 4
+	active = {
+		is_adult = yes
+		OR = {
+		    religion = cult_of_mars
+			religion = cult_of_pompeius
+			religion = hellenic_pagan
+			religion = hellenic_pagan_reformed
+			religion = marblists
+			culture = roman
+			culture = riman
+			culture = rhomaion
+		}
+	}
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	cult_of_mars_opinion = 10
+	marblists_opinion = 5
+	scholar_opinion = 5
+	flags = { about_religion religious }
+	stacking = no
+	indestructible = yes
+	picture = "GFX_bust_of_caesar"
+}
+
+bust_of_antedeluvian_emperor = {
+	quality = 3
+	monthly_character_prestige = 1.0
+	cult_of_mars_opinion = 5
+	marblists_opinion = 5
+	scholar_opinion = 5
+	flags = { about_religion religious }
+	stacking = no
+	picture = "GFX_bust_of_antedeluvian_emperor"
+}
+
+the_last_day_of_pompeii = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	cult_of_mars_opinion = 5
+	cult_of_pompeius_opinion = 5
+	quality = 2
+	stacking = no
+	flags = { religious art decor }
+	picture = "GFX_the_last_day_of_pompeii"
+}
+
+caesars_sword = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.2
+	cult_of_mars_opinion = 15
+	cult_of_pompeius_opinion = -5
+	martial = 1
+	combat_rating = 25
+	indestructible = yes
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	quality = 5
+	flags = { religious very_rare troops_morale sword }
+	stacking = no
+	picture = "GFX_caesars_sword"
+	slot = weapon
+}
