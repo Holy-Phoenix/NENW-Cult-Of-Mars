@@ -1,0 +1,22 @@
+song = {
+	name = "The_Imperial_Guard.ogg"
+	song_name = "The Imperial Guard"
+
+	chance = {
+		factor = 2
+		modifier = {
+            factor = 0
+            NAND = { 
+				OR = {
+					culture = roman
+					culture = rhomaion
+					culture = riman
+					religion = cult_of_mars
+					religion = cult_of_pompeius
+                }					
+				war = yes
+			}
+        }
+	}
+#	volume = 0.55
+}
