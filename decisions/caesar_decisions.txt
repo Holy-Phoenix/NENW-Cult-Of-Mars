@@ -414,7 +414,7 @@ decisions = {
 				religion = cult_of_mars
 				religion = cult_of_pompeius
 			}
-			NOT = (
+			NOT = {
 				culture = roman
 			}
 		}

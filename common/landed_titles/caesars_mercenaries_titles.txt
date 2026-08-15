@@ -24,7 +24,7 @@ d_the_disfavored = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
@@ -72,7 +72,7 @@ d_volki_rima = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
@@ -120,7 +120,7 @@ d_spire_guard = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
@@ -168,7 +168,7 @@ d_the_unbroken = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
@@ -217,7 +217,7 @@ d_boatmen_of_styx = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
@@ -265,7 +265,7 @@ d_ardites = {
 	}
 	
 	# Parent Religion 
-	religion = cult_of_caesar
+	religion = cult_of_mars
 	
 	culture = roman
 
